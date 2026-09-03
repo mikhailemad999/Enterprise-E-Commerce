@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Lumio Enterprise Admin</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#f1edec","surface-dim":"#ddd9d8","surface-container-lowest":"#ffffff","background":"#fdf8f7","on-primary-fixed":"#1b1b1b","surface-bright":"#fdf8f7","surface-container-high":"#ebe7e6","primary-fixed-dim":"#c6c6c6","on-error-container":"#93000a","on-primary-container":"#848484","inverse-on-surface":"#f4f0ef","on-surface-variant":"#444748","error-container":"#ffdad6","surface-container-low":"#f7f3f2","secondary":"#615e58","on-tertiary-fixed":"#1c1b1a","on-surface":"#1c1b1b","secondary-container":"#e7e2da","on-secondary-container":"#67645e","tertiary-fixed":"#e6e2df","on-error":"#ffffff","surface-variant":"#e6e2e0","tertiary":"#000000","on-secondary":"#ffffff","outline-variant":"#c4c7c7","surface":"#fdf8f8","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#494641","on-secondary-fixed":"#1d1b17","surface-container-highest":"#e6e2e0","on-primary-fixed-variant":"#474747","outline":"#747878","on-tertiary-fixed-variant":"#484645","primary-fixed":"#e2e2e2","tertiary-fixed-dim":"#cac6c4","tertiary-container":"#1c1b1a","error":"#ba1a1a","on-tertiary-container":"#868382","inverse-surface":"#313030","secondary-fixed":"#e7e2da","on-primary":"#ffffff","secondary-fixed-dim":"#cbc6be","primary":"#000000","primary-container":"#1b1b1b","surface-tint":"#5e5e5e","on-background":"#1c1b1b","inverse-primary":"#c6c6c6"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"40px","md":"32px","xl":"128px","base":"4px","xs":"8px","gutter":"24px","sm":"16px","lg":"64px"},"fontFamily":{"body-sm":["Inter"],"headline-lg-mobile":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"display-mobile":["Inter"],"title-md":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"display":["Inter"],"headline-lg":["Inter"]},"fontSize":{"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"12px","letterSpacing":"0.06em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"display-mobile":["40px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"600"}],"title-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-md":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"500"}],"headline-sm":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"display":["72px",{"lineHeight":"76px","letterSpacing":"-0.04em","fontWeight":"600"}],"headline-lg":["48px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed top-0 left-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-md shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex flex-col gap-md"><div class="px-gutter flex items-center gap-xs"><img alt="Lumio Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwQScX6ztmbl9AzkOCNF0FfMvWwxOBJjErnk2fH-pu5bVmKhioSHEYY-TE4W4XGhKy8W-73idWWI3GmvcRvr0Ya_UYlCYO0j0nFK8mx-Do_kLN2rDy0XycweD3ciBEY5bo7L9t8UBFx814SvDFo7SSiCmiY_S_RkSbPfE3zLV7Kb_F2le-2CRI_sDCEHzPe3Bc_TQee0oyNmARu89pqef_-qS-XSUQ2MFFP2OMklWRTbn30XlVFpFOobQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase leading-none">LUMIO</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase mt-base">Console</span></div></div><div class="px-sm"><div class="px-xs mb-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operations Core</div><nav class="flex flex-col gap-base" data-active-classes="bg-primary text-on-primary font-medium"><a class="px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="overview" href="#">Dashboard (Overview)</a><a class="px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="order-management" href="#">Order Management (OMS)</a><a class="px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-fleet-dispatch" href="#">Live Fleet Dispatch</a><a class="px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="multi-warehouse-inventory-replenishment" href="#">Multi-Warehouse Inventory &amp; Replenishment</a><a class="px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="catalog-products" href="#">Catalog &amp; Products</a><a class="px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="analytics-financials" href="#">Analytics &amp; Financial Reports</a><a class="px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="store-settings" href="#">Store Settings</a></nav></div></div><div class="px-gutter flex flex-col gap-xs"><div class="p-xs rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex items-center justify-between mb-base"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System Status</span><span class="w-2 h-2 rounded-full bg-primary"></span></div><div class="font-body-sm text-body-sm text-on-surface">Enterprise v2.4</div><div class="font-label-sm text-label-sm text-on-surface-variant">All regional nodes synced</div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-xs text-on-surface-variant pointer-events-none text-title-md">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm pl-md pr-lg py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest" placeholder="Search orders, inventory SKUs, waybills..." type="text"/><div class="absolute right-xs flex items-center gap-base px-base py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><span>⌘</span><span>K</span></div></div></div><div class="flex items-center gap-sm"><div class="flex items-center gap-xs bg-surface-container-low px-xs py-base rounded-lg"><span class="material-symbols-outlined text-on-surface-variant text-body-md">location_on</span><select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer"><option class="bg-surface-container-lowest text-on-surface" value="cairo">Cairo Central</option><option class="bg-surface-container-lowest text-on-surface" value="alexandria">Alexandria Hub</option><option class="bg-surface-container-lowest text-on-surface" value="dubai">Dubai Flagship</option></select></div><button class="relative p-base rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-title-md">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-primary"></span></button><div class="flex items-center gap-xs pl-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WzGJlzRZYy0h3QOs8fkIp0NdCKdT7lzKmLOzuwppC8qQNfGyHb1RfGeCU5mLzGxF2qpQLspaIAZ4K-cggmoq1fHsLU9Zocxn7U1Skm7CO2HmvomYLGSgMOy1gFG1Jz-rhFYrcg-DnxdgJmp1mfhK91brWe9O5CymsV7Jn1CDPlEV1RUhv0qqBuOhtdjp5u-84Lk_YYN5VsReCRe7DuaooXHP58pc0zNd8AhHwrXjvEIXA59GSN5euJjhE"/><div class="hidden xl:flex flex-col leading-tight"><span class="font-body-sm text-body-sm text-on-surface">Director Suite</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Operations</span></div></div></div></header><main class="w-full pt-16 px-margin bg-background min-h-screen"><div class="flex flex-col w-full pb-xl">
+<!-- Page Header / Editorial Title Block -->
+<section class="pt-sm pb-md">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-gutter">
+<div class="flex flex-col">
+<div class="flex items-center gap-xs mb-base">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Logistics &amp; Supply Infrastructure</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Synchronized 3m ago</span>
+</div>
+<div class="flex items-baseline gap-sm">
+<h1 class="font-headline-lg text-headline-lg tracking-tight text-on-surface font-semibold">Multi-Warehouse Inventory &amp; Replenishment</h1>
+<span class="font-label-md text-label-md px-xs py-0.5 rounded-full bg-surface-container-high text-on-surface uppercase tracking-wider">Node Mesh 4.2</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-base max-w-3xl">
+          Real-time stock balance, quarry-to-atelier batch allocation, and multi-hub transit orchestration across architectural stone, timber, and sculptural fixtures.
+        </p>
+</div>
+<!-- Action Suite -->
+<div class="flex flex-wrap items-center gap-xs">
+<button class="group flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-colors shadow-sm" id="open-transfer-modal" type="button">
+<span class="material-symbols-outlined text-body-md text-on-surface group-hover:rotate-45 transition-transform duration-300">swap_horiz</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Inter-Hub Transfer</span>
+</button>
+<button class="group flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-colors" id="btn-rebalance" type="button">
+<span class="material-symbols-outlined text-body-md text-on-surface group-hover:scale-110 transition-transform duration-200">auto_awesome</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">AI Stock Rebalance</span>
+</button>
+<button class="flex items-center gap-xs px-sm py-xs rounded-lg bg-primary hover:bg-on-surface-variant text-on-primary transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-body-md text-on-primary">add_box</span>
+<span class="font-body-sm text-body-sm font-medium tracking-wide">Intake PO</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Key Metrics Matrix -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter mb-lg">
+<!-- Metric 1 -->
+<div class="p-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Valuation Index</span>
+<span class="font-headline-md text-headline-md tracking-tight font-medium text-on-surface mt-xs">42,850,000 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">EGP</span></span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-title-md">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex items-center justify-between border-t-0">
+<div class="flex items-center gap-base">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-body-sm mr-0.5">trending_up</span> +6.4% YoY
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs. FY24 Q1</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Slab Liquidity: 94%</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Active Regional Hubs</span>
+<span class="font-headline-md text-headline-md tracking-tight font-medium text-on-surface mt-xs">4 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">Nodes Active</span></span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-title-md">domain</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-sm text-body-sm text-on-surface">18,450 m² Managed Floor</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">11 Bays Loaded</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="p-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Stock Health Index</span>
+<span class="font-headline-md text-headline-md tracking-tight font-medium text-on-surface mt-xs">96.8%</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-title-md">inventory_2</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="px-base py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">14 Low Alerts</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Depleting</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Fill Rate 99.2%</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="p-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Inbound Heavy Freight</span>
+<span class="font-headline-md text-headline-md tracking-tight font-medium text-on-surface mt-xs">8 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">Containers</span></span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-title-md">local_shipping</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Aswan &amp; Carrara Slabs</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">ETA: 18h</span>
+</div>
+</div>
+</section>
+<!-- Multi-Hub Capacity & Telemetry Matrix -->
+<section class="mb-lg">
+<div class="flex items-center justify-between mb-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-medium">Regional Hub Telemetry &amp; Throughput</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live sensory metrics, bay commitments, and micro-climate control for raw travertine, marble, and cured timber.</p>
+</div>
+<div class="hidden sm:flex items-center gap-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>Sensors Online (Mesh ID #EG-CAI-ALL)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- Hub 1: Cairo Central Mega-Hub -->
+<div class="p-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Hub 01 • Mega-Hub</span>
+<span class="px-xs py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface font-semibold">Primary Node</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mt-xs font-semibold">Cairo Central</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">10th of Ramadan Logistics Zone</p>
+<!-- Capacity Bar -->
+<div class="mt-md">
+<div class="flex justify-between font-label-sm text-label-sm mb-base">
+<span class="text-on-surface-variant">Capacity Utilized</span>
+<span class="text-on-surface font-semibold">88.4% (9,280 / 10,500 m²)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 88.4%"></div>
+</div>
+</div>
+<!-- Telemetry Specs -->
+<div class="grid grid-cols-2 gap-xs mt-md pt-sm bg-surface-container-low p-xs rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Humidity (Travertine)</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm text-primary">water_drop</span> 42% RH
+              </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Climate Ambient</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm text-primary">thermostat</span> 21.5°C
+              </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Bays</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">5 / 6 Operational</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Crane Gantry</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">25T Heavy Lift OK</span>
+</div>
+</div>
+</div>
+<div class="mt-md pt-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKUs Stored: 342</span>
+<button class="font-label-sm text-label-sm font-medium text-primary hover:text-on-surface-variant transition-colors flex items-center gap-base" type="button">
+            Inspect Bay Map <span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Hub 2: Alexandria Coastal Depot -->
+<div class="p-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Hub 02 • Coastal Depot</span>
+<span class="px-xs py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface font-semibold">Maritime Gate</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mt-xs font-semibold">Alexandria Depot</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Borg El Arab Heavy Port Corridors</p>
+<!-- Capacity Bar -->
+<div class="mt-md">
+<div class="flex justify-between font-label-sm text-label-sm mb-base">
+<span class="text-on-surface-variant">Capacity Utilized</span>
+<span class="text-on-surface font-semibold">64.0% (3,200 / 5,000 m²)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 64%"></div>
+</div>
+</div>
+<!-- Telemetry Specs -->
+<div class="grid grid-cols-2 gap-xs mt-md pt-sm bg-surface-container-low p-xs rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Salinity / Dehumid</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm text-primary">air</span> Filtered Dry
+              </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Climate Ambient</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm text-primary">thermostat</span> 19.8°C
+              </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Bays</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">3 / 4 Operational</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Port Transit</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">4 Sea Containers In</span>
+</div>
+</div>
+</div>
+<div class="mt-md pt-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKUs Stored: 128</span>
+<button class="font-label-sm text-label-sm font-medium text-primary hover:text-on-surface-variant transition-colors flex items-center gap-base" type="button">
+            Inspect Bay Map <span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Hub 3: New Cairo Micro-Fulfillment Hub -->
+<div class="p-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Hub 03 • Micro-Hub</span>
+<span class="px-xs py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface font-semibold">Direct VIP Dispatch</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mt-xs font-semibold">New Cairo Micro</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Industrial Zone 5, 5th Settlement</p>
+<!-- Capacity Bar -->
+<div class="mt-md">
+<div class="flex justify-between font-label-sm text-label-sm mb-base">
+<span class="text-on-surface-variant">Capacity Utilized</span>
+<span class="text-on-surface font-semibold">92.1% (1,842 / 2,000 m²)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 92.1%"></div>
+</div>
+</div>
+<!-- Telemetry Specs -->
+<div class="grid grid-cols-2 gap-xs mt-md pt-sm bg-surface-container-low p-xs rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fine Finishes Zone</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm text-primary">tune</span> Dust-Free #02
+              </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Climate Ambient</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm text-primary">thermostat</span> 22.0°C
+              </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Bays</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">2 / 2 At Capacity</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">White-Glove Fleet</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">6 Vans Ready</span>
+</div>
+</div>
+</div>
+<div class="mt-md pt-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKUs Stored: 86</span>
+<button class="font-label-sm text-label-sm font-medium text-primary hover:text-on-surface-variant transition-colors flex items-center gap-base" type="button">
+            Inspect Bay Map <span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Hub 4: Zamalek Atelier Vault -->
+<div class="p-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Hub 04 • Atelier Vault</span>
+<span class="px-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Gallery &amp; Prototype</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mt-xs font-semibold">Zamalek Atelier</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Brazil St. Heritage Sanctuary</p>
+<!-- Capacity Bar -->
+<div class="mt-md">
+<div class="flex justify-between font-label-sm text-label-sm mb-base">
+<span class="text-on-surface-variant">Capacity Utilized</span>
+<span class="text-on-surface font-semibold">47.5% (450 / 950 m²)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-on-surface-variant rounded-full" style="width: 47.5%"></div>
+</div>
+</div>
+<!-- Telemetry Specs -->
+<div class="grid grid-cols-2 gap-xs mt-md pt-sm bg-surface-container-low p-xs rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Museum Humidity</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm text-primary">verified</span> 45% Stable
+              </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Climate Ambient</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm text-primary">thermostat</span> 20.0°C
+              </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Craft Racks</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">14 Master Lockers</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Client Salons</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Private Viewing Open</span>
+</div>
+</div>
+</div>
+<div class="mt-md pt-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKUs Stored: 32</span>
+<button class="font-label-sm text-label-sm font-medium text-primary hover:text-on-surface-variant transition-colors flex items-center gap-base" type="button">
+            Inspect Bay Map <span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Split Panel: Live Operational Dispatch Runs & Conditioning Quarantine -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-lg">
+<!-- Active Transit Run Card (7 Cols) -->
+<div class="lg:col-span-7 p-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface text-title-md">local_shipping</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Active Inter-Hub Transit Run</h3>
+</div>
+<span class="px-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Run #TR-402</span>
+</div>
+<!-- Transit Route Visualization -->
+<div class="p-sm rounded-lg bg-surface-container-low mb-md">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-sm mb-xs">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Origin Node</div>
+<div class="font-body-md text-body-md text-on-surface font-semibold">Cairo Central Mega-Hub (Bay 04)</div>
+</div>
+<div class="flex items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-body-md">arrow_forward</span>
+<span class="font-label-sm text-label-sm">48 km Transit</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Destination Node</div>
+<div class="font-body-md text-body-md text-on-surface font-semibold">New Cairo Micro-Hub (VIP Dock)</div>
+</div>
+</div>
+<!-- Progress Bar & Specs -->
+<div class="mt-xs">
+<div class="flex justify-between font-label-sm text-label-sm mb-base">
+<span class="text-on-surface-variant font-medium">Flatbed Heavy Hauler #FL-08 • Driver: M. El-Sayed</span>
+<span class="text-on-surface font-semibold">ETA: 38 mins (Ring Road Eastbound)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 68%"></div>
+</div>
+</div>
+</div>
+<!-- Manifest Items inside truck -->
+<div class="flex flex-col gap-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Manifest Inventory Payload</span>
+<div class="flex items-center justify-between py-base">
+<div class="flex items-center gap-xs">
+<img class="w-10 h-10 rounded object-cover bg-surface-container" data-alt="Brutalist dining table crafted from heavy honed Roman travertine, showing architectural linear grain and monumental monolithic legs in studio museum lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9fkh68TLdwfs7ieyjvxszJQxNPpQP_3Orre8DT1ugY83kIWlUrfo9sPJDZm9Gqb_hda5_t6s0Dttb7gq7fauSFbqxGkTOwoTOTp-v38U8vjlhBPN58sJpnE7kAP5wANdnHUJCA2dMh_YKFM0Gn0OPBxmoJvmbRWUH7JX7lOeuzP2T4MTIk7b57z9L43sHJH1nSykBqxG3JrJqb8dDkx7lfCZ9Amue3Z3frKm5EnFeTVUdxySMOGgN"/>
+<div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface">Brutalist Monolith Table (Roman Travertine)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">BRT-TAB-012 • 4 Slabs (Total 1,840 kg)</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-xs py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface font-medium">Auto-Allocated for Order #LUM-9082</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-md pt-sm flex items-center justify-between border-t-0">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant">gps_fixed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">GPS Telematics Locked &amp; Insured</span>
+</div>
+<div class="flex items-center gap-xs">
+<button class="px-xs py-base rounded text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm" type="button">Logistics Telemetry</button>
+<button class="px-sm py-base rounded bg-primary text-on-primary font-body-sm text-body-sm font-medium" type="button">Verify Delivery Inward</button>
+</div>
+</div>
+</div>
+<!-- Stone Conditioning & Raw Quarantine Bay (5 Cols) -->
+<div class="lg:col-span-5 p-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface text-title-md">shield</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Material Conditioning &amp; QA</h3>
+</div>
+<span class="px-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">Chamber B</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">
+          Raw organic alabaster and open-vein travertine require 72h moisture stabilization and diamond bevel inspection before release to saleable catalog inventory.
+        </p>
+<!-- Stone conditioning progress cards -->
+<div class="flex flex-col gap-xs">
+<div class="p-xs rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<img class="w-10 h-10 rounded object-cover bg-surface-container" data-alt="Close up of raw milky white Egyptian translucent alabaster stone block with natural mineral veins under focused inspection lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGuQ56F0CwmND_KTuOt-mWt3LIUB_awD8CjD3WK7P7mCzAgwgnV8EvoMOwaviNOUYlvM2OctV7WQxxbbn4lL-9g-_60-qWYq4ZSqBMyxUrz33dIRUhsgB7bBl-E-BZ4LHy9nZpGzZK3wshjA95KEK2a8yQzEind2DvBxT2tdxtJBII8mpl3VTeaWNP10FxAulMj0TMv2g4aE4iccW_nxp9g9PdT7ENF6cND0rpCMHhlJ2ONpiUgigy"/>
+<div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface">Raw Aswan Alabaster Core (Lot #ASW-89)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Stage: Moisture Desiccation (48h / 72h)</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary">66% Ready</span>
+</div>
+<div class="p-xs rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<img class="w-10 h-10 rounded object-cover bg-surface-container" data-alt="Dense brushed smoked oak timber beam showing dark deep grain with matte oil sealant finish on workbench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaLLXZ_0nmXrb9IpUyzPb27eJLjojukqmL3bC6MW0CpBvdUguDz6Zge6uPvZ3EKCEAFWNgoM2XffhsiRWrc2ipsb4P-rmAigoSa3j6GIWcTbk8eeOTpxbSL_cBfsX0ZN1Kjcut4o4Ep5YNk47ntBOhSxlKxINaQHvVm4KGaAwQbNILe_udOV8kERjtKZCgmgCAY1vNsi4-gZiqVShilCPwpS58Of-iSO_r1n0_eoLj88bopGosFUd3"/>
+<div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface">Smoked Ash Lumber Batches (Lot #ASH-11)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Stage: Kiln Curing Equilibrium (5.8% Moisture)</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">QA Cleared</span>
+</div>
+</div>
+</div>
+<div class="mt-md pt-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">6 Units Under Observation</span>
+<button class="font-label-sm text-label-sm font-medium text-primary hover:text-on-surface-variant transition-colors flex items-center gap-base" type="button">
+          Release Cleared Lots <span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Central Multi-Hub Inventory Ledger -->
+<section class="p-md rounded-xl bg-surface-container-lowest shadow-sm">
+<!-- Filter Toolbar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-sm mb-md">
+<!-- Search & Filters -->
+<div class="flex flex-wrap items-center gap-xs flex-1">
+<div class="relative min-w-[260px] flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-xs top-1/2 -translate-y-1/2 text-on-surface-variant text-body-md pointer-events-none">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-md pr-xs py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest transition-colors" id="inventory-search" placeholder="Filter by SKU, Stone Material, or Collection..." type="text"/>
+</div>
+<!-- Material Filter Dropdown -->
+<select class="bg-surface-container-low text-on-surface font-body-sm text-body-sm px-xs py-base rounded-lg focus:outline-none cursor-pointer" id="filter-material">
+<option value="all">All Materials</option>
+<option value="travertine">Roman Travertine</option>
+<option value="alabaster">Egyptian Alabaster</option>
+<option value="ash">Smoked Ash</option>
+<option value="bronze">Cast Bronze</option>
+</select>
+<!-- Hub Filter Dropdown -->
+<select class="bg-surface-container-low text-on-surface font-body-sm text-body-sm px-xs py-base rounded-lg focus:outline-none cursor-pointer" id="filter-hub">
+<option value="all">All 4 Hubs</option>
+<option value="cairo">Cairo Central</option>
+<option value="alex">Alexandria Depot</option>
+<option value="newcairo">New Cairo Micro</option>
+<option value="zamalek">Zamalek Vault</option>
+</select>
+<!-- Velocity Pill Toggle -->
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container-low">
+<button class="px-xs py-0.5 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-sm" type="button">All SKUs</button>
+<button class="px-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">Low Buffer</button>
+<button class="px-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">Fast Movers</button>
+</div>
+</div>
+<!-- Quick Export & Table Preferences -->
+<div class="flex items-center gap-xs">
+<button class="p-base rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" title="Export Stock Manifest as CSV" type="button">
+<span class="material-symbols-outlined text-title-md">download</span>
+</button>
+<button class="p-base rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" title="Print Inventory Tags" type="button">
+<span class="material-symbols-outlined text-title-md">print</span>
+</button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant bg-surface-container-low/50">
+<th class="py-sm px-xs font-semibold">Master Asset &amp; SKU</th>
+<th class="py-sm px-xs font-semibold">Material Grade</th>
+<th class="py-sm px-xs font-semibold text-right">Global Total</th>
+<th class="py-sm px-xs font-semibold text-right">Cairo Central</th>
+<th class="py-sm px-xs font-semibold text-right">Alex Depot</th>
+<th class="py-sm px-xs font-semibold text-right">New Cairo</th>
+<th class="py-sm px-xs font-semibold text-right">Zamalek</th>
+<th class="py-sm px-xs font-semibold text-center">Safety Buffer</th>
+<th class="py-sm px-xs font-semibold">Velocity</th>
+<th class="py-sm px-xs font-semibold text-right">Orchestration</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="inventory-table-body">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-sm px-xs">
+<div class="flex items-center gap-xs">
+<img class="w-10 h-10 rounded object-cover bg-surface-container shrink-0" data-alt="Monolithic travertine coffee table with architectural geometric pedestal, high-end warm minimalist interior setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa4-XzeNbkjoKiTVxXAlvUJnaw8-jXmBzxifKHJnYPLdCmiCrEdnpp6E6D7N717v8k3vsFliAWnoAg0jeuuyUvZd09n3R4FpMVn2vZZ5g8qUg3qK3p1QyIEmhdxkUJoT9u9X6J-tWyFgjGiPxW6B9NulEL5NUoHciHggLWrweMU4pxKTvZZeFOLFTzZUHI3HixE2oo0eoxssp67hc8Ux2a2DDFfgBCy5SOswQH4so60TVn8JAAGwvn"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Brutalist Monolith Table</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">BRT-TAB-012</span>
+</div>
+</div>
+</td>
+<td class="py-sm px-xs">
+<span class="font-body-sm text-body-sm text-on-surface">Roman Travertine (Honed)</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Tier I Architectural Slab</span>
+</td>
+<td class="py-sm px-xs text-right">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">22 Units</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">4 in Transit</span>
+</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">14</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">4</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">3</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">1</td>
+<td class="py-sm px-xs text-center">
+<div class="inline-flex items-center gap-base">
+<span class="w-16 h-1.5 rounded-full bg-surface-container overflow-hidden inline-block">
+<span class="h-full bg-primary block" style="width: 75%"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Min 8</span>
+</div>
+</td>
+<td class="py-sm px-xs">
+<span class="inline-flex items-center px-xs py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm font-semibold text-on-surface">Fast Mover</span>
+</td>
+<td class="py-sm px-xs text-right">
+<div class="flex items-center justify-end gap-base">
+<button class="p-base rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Trigger Transfer" type="button">
+<span class="material-symbols-outlined text-body-md">swap_horiz</span>
+</button>
+<button class="p-base rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Reorder Slab Batch" type="button">
+<span class="material-symbols-outlined text-body-md">post_add</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-sm px-xs">
+<div class="flex items-center gap-xs">
+<img class="w-10 h-10 rounded object-cover bg-surface-container shrink-0" data-alt="Sculptural alabaster luminaire glowing warmly with soft diffuse light, organic curved stone form on dark minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGScXa9RfhfZNccjwO417ypnj82gtD8_clNBivw-ndrkbT7nh-HmmWkjAveYxqPH0T-ZfyT4HRkR0oYrtVBT-WGaSYoz5En55RVybsxSws3G6KkiZZft6h2yC5UIWp1cP3B2oLBzswel9aAVlzfSwHPW5H_VhAIxkP9M5uoz_7TIjIiCLbPlT1-riduLUTdxjfnI9jZIY91OSjoFdHncq4TFEohwxiFuOhL5MTkK6ISvQYChGeAk4h"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Nocturne Sculptural Lamp</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">NOC-ALB-809</span>
+</div>
+</div>
+</td>
+<td class="py-sm px-xs">
+<span class="font-body-sm text-body-sm text-on-surface">Egyptian Alabaster</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Translucent Veined Mastercut</span>
+</td>
+<td class="py-sm px-xs text-right">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">8 Units</span>
+<span class="block font-label-sm text-label-sm text-error font-medium">Low Buffer!</span>
+</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">3</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">1</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">2</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">2</td>
+<td class="py-sm px-xs text-center">
+<div class="inline-flex items-center gap-base">
+<span class="w-16 h-1.5 rounded-full bg-surface-container overflow-hidden inline-block">
+<span class="h-full bg-error block" style="width: 25%"></span>
+</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Min 12</span>
+</div>
+</td>
+<td class="py-sm px-xs">
+<span class="inline-flex items-center px-xs py-0.5 rounded-full bg-error-container font-label-sm text-label-sm font-semibold text-on-error-container">Critical Low</span>
+</td>
+<td class="py-sm px-xs text-right">
+<div class="flex items-center justify-end gap-base">
+<button class="px-xs py-base rounded bg-primary text-on-primary font-label-sm text-label-sm font-medium hover:bg-on-surface-variant transition-colors" type="button">Reorder</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-sm px-xs">
+<div class="flex items-center gap-xs">
+<img class="w-10 h-10 rounded object-cover bg-surface-container shrink-0" data-alt="Bespoke smoked ash dining chair with woven tactile linen cushion, elegant Danish minimalist lines in studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwANl3Zrt-bevmlWLYPnclfIA0KKPQlpSL-P3_C1XwkT1amoLv2BokR2vIUW-FILIJBIQAIO-R5llBCteCB2vV9OubKcmM3HtjkPmYOfvFV_VNzBnefz4NKSExhgV6JvrhwrHSZSjOzWgweDsy9iGOJVhqi1JzTuRVaUkXShVU2OTvlBYlsc1ny_IkSYEGgiOCvJprP4fAJL-vDEQUNdqIKGrY2awBEh3bajP6i8CYR1nCxOCiYdiS"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Sakkara Smoked Ash Chair</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKR-ASH-404</span>
+</div>
+</div>
+</td>
+<td class="py-sm px-xs">
+<span class="font-body-sm text-body-sm text-on-surface">Smoked Ash Solid</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Kiln-cured Egyptian Oak Joinery</span>
+</td>
+<td class="py-sm px-xs text-right">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">46 Units</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">12 Reserved</span>
+</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">26</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">12</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">6</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">2</td>
+<td class="py-sm px-xs text-center">
+<div class="inline-flex items-center gap-base">
+<span class="w-16 h-1.5 rounded-full bg-surface-container overflow-hidden inline-block">
+<span class="h-full bg-primary block" style="width: 85%"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Min 15</span>
+</div>
+</td>
+<td class="py-sm px-xs">
+<span class="inline-flex items-center px-xs py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-medium text-on-surface">Steady Run</span>
+</td>
+<td class="py-sm px-xs text-right">
+<div class="flex items-center justify-end gap-base">
+<button class="p-base rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Trigger Transfer" type="button">
+<span class="material-symbols-outlined text-body-md">swap_horiz</span>
+</button>
+<button class="p-base rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Options" type="button">
+<span class="material-symbols-outlined text-body-md">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-sm px-xs">
+<div class="flex items-center gap-xs">
+<img class="w-10 h-10 rounded object-cover bg-surface-container shrink-0" data-alt="Cast bronze heavy plinth side stool with organic textured tactile surface, raw sculptural elegance in architectural studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDytKYcdKor2QbTTcQQCvgXOAfRR240XB9WQbB0wQTl39afOJq919ZViBbI5TY_9PgML5DmvEXWpZz4vilwF7Crv2UB-8bx30Xu3dvHfduzff7QQLIhoM50qQ7tKbUSESB_CA1yHUkTy6tiRjr8RDJ7aJceyFRGO8YCyhxnzJFvv1EjfCBmVXFdcLJtjMSS6XQI3jbGhWjbeQnhZ643Inr3U_llJBUmxSBsc-bmKEiyPQRDTHSeRlXm"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Karnak Low Plinth Stool</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">KRN-PLN-105</span>
+</div>
+</div>
+</td>
+<td class="py-sm px-xs">
+<span class="font-body-sm text-body-sm text-on-surface">Cast Bronze &amp; Basalt</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Lost-wax Hand Foundry Lot</span>
+</td>
+<td class="py-sm px-xs text-right">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">15 Units</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Limited Batch</span>
+</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">8</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">2</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">3</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">2</td>
+<td class="py-sm px-xs text-center">
+<div class="inline-flex items-center gap-base">
+<span class="w-16 h-1.5 rounded-full bg-surface-container overflow-hidden inline-block">
+<span class="h-full bg-primary block" style="width: 60%"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Min 6</span>
+</div>
+</td>
+<td class="py-sm px-xs">
+<span class="inline-flex items-center px-xs py-0.5 rounded-full bg-secondary-container font-label-sm text-label-sm font-medium text-on-secondary-container">Bespoke Slow</span>
+</td>
+<td class="py-sm px-xs text-right">
+<div class="flex items-center justify-end gap-base">
+<button class="p-base rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Trigger Transfer" type="button">
+<span class="material-symbols-outlined text-body-md">swap_horiz</span>
+</button>
+<button class="p-base rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Options" type="button">
+<span class="material-symbols-outlined text-body-md">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-sm px-xs">
+<div class="flex items-center gap-xs">
+<img class="w-10 h-10 rounded object-cover bg-surface-container shrink-0" data-alt="Fluted luxury stone bathroom washbasin carved from single block of honed beige Egyptian travertine stone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6MZZ1gLIwt58jVBAPbC4Q03DjsYWL0DhiqaOImGUA7voZjy-Sj_0e034B_xWz1gjWoAF2YUuY_bJYYKu_g60yXDTyi2HVaGru2YjvXSko20vJl4WmR8NVE479AH4PfakyvEEN7KDSrs7Lx269UVn3x_DghZl0cOCg20S7eSCZAMSwsdhHXzFDjzX7JwMV5SNummKUksKKSu8w6CdmyRSoLUqYMlcJNA3J1W9Rc6RQF63GAtm1XIG8"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Luxor Fluted Basin</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">LXR-BSN-602</span>
+</div>
+</div>
+</td>
+<td class="py-sm px-xs">
+<span class="font-body-sm text-body-sm text-on-surface">Upper Egypt Travertine</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Fluted Radial Relief</span>
+</td>
+<td class="py-sm px-xs text-right">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">31 Units</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Stable Flow</span>
+</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">19</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">6</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">4</td>
+<td class="py-sm px-xs text-right font-body-sm text-body-sm text-on-surface">2</td>
+<td class="py-sm px-xs text-center">
+<div class="inline-flex items-center gap-base">
+<span class="w-16 h-1.5 rounded-full bg-surface-container overflow-hidden inline-block">
+<span class="h-full bg-primary block" style="width: 80%"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Min 10</span>
+</div>
+</td>
+<td class="py-sm px-xs">
+<span class="inline-flex items-center px-xs py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm font-semibold text-on-surface">Fast Mover</span>
+</td>
+<td class="py-sm px-xs text-right">
+<div class="flex items-center justify-end gap-base">
+<button class="p-base rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Trigger Transfer" type="button">
+<span class="material-symbols-outlined text-body-md">swap_horiz</span>
+</button>
+<button class="p-base rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Options" type="button">
+<span class="material-symbols-outlined text-body-md">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & SKU Summary Footer -->
+<div class="mt-md pt-sm flex flex-col sm:flex-row items-center justify-between gap-sm">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+        Displaying <span class="font-medium text-on-surface">5 of 148 Master SKUs</span> across 4 Synchronized Warehouses
+      </div>
+<div class="flex items-center gap-xs">
+<button class="p-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-body-md">chevron_left</span>
+</button>
+<span class="px-xs py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary">1</span>
+<button class="px-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-low" type="button">2</button>
+<button class="px-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-low" type="button">3</button>
+<button class="p-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-body-md">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Modal Drawer: Inter-Hub Transfer Request -->
+<div class="fixed inset-0 bg-primary-container/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-sm" id="transfer-modal-backdrop">
+<div class="bg-surface-container-lowest rounded-xl max-w-xl w-full p-md shadow-2xl relative">
+<!-- Modal Header -->
+<div class="flex items-center justify-between pb-sm mb-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Internal Logistics Order</span>
+<h3 class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-semibold">Initiate Inter-Hub Stock Transfer</h3>
+</div>
+<button class="p-base rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" id="close-transfer-modal" type="button">
+<span class="material-symbols-outlined text-title-md">close</span>
+</button>
+</div>
+<!-- Form Body -->
+<form class="flex flex-col gap-sm" id="transfer-form">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-base">Origin Hub</label>
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-xs py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest">
+<option value="cairo">Cairo Central Mega-Hub (10th of Ramadan)</option>
+<option value="alex">Alexandria Coastal Depot</option>
+<option value="newcairo">New Cairo Micro-Fulfillment</option>
+<option value="zamalek">Zamalek Atelier Vault</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-base">Destination Hub</label>
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-xs py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest">
+<option value="newcairo">New Cairo Micro-Fulfillment (VIP Fleet)</option>
+<option value="zamalek">Zamalek Atelier Vault</option>
+<option value="cairo">Cairo Central Mega-Hub</option>
+<option value="alex">Alexandria Coastal Depot</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-base">Select Material SKU</label>
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-xs py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest">
+<option value="BRT-TAB-012">Brutalist Monolith Table (BRT-TAB-012) — 14 Avail at Origin</option>
+<option value="NOC-ALB-809">Nocturne Sculptural Lamp (NOC-ALB-809) — 3 Avail at Origin</option>
+<option value="SKR-ASH-404">Sakkara Smoked Ash Chair (SKR-ASH-404) — 26 Avail at Origin</option>
+<option value="LXR-BSN-602">Luxor Fluted Basin (LXR-BSN-602) — 19 Avail at Origin</option>
+</select>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-base">Units to Transfer</label>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-xs py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest" max="50" min="1" type="number" value="4"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-base">Transport Class</label>
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-xs py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest">
+<option value="flatbed">Heavy Flatbed Crane Truck (Stone Slabs)</option>
+<option value="whiteglove">Climate-Padded White Glove Van</option>
+<option value="standard">Standard Enclosed Cargo Carrier</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-base">Fulfillment Rationale / Allocation Code</label>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-xs py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest" placeholder="e.g., Immediate VIP staging for Villa Palm Hills #402" type="text"/>
+</div>
+<!-- Submit Buttons -->
+<div class="mt-md pt-sm flex items-center justify-end gap-xs">
+<button class="px-sm py-xs rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" id="cancel-transfer-modal" type="button">Cancel</button>
+<button class="px-md py-xs rounded-lg bg-primary hover:bg-on-surface-variant text-on-primary font-body-sm text-body-sm font-medium transition-colors shadow-sm" type="submit">Authorize Dispatch &amp; Lock Stock</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Micro-interaction & UI Logic -->
+<script>
+    (function() {
+      // Transfer modal open/close handlers
+      const openBtn = document.getElementById('open-transfer-modal');
+      const closeBtn = document.getElementById('close-transfer-modal');
+      const cancelBtn = document.getElementById('cancel-transfer-modal');
+      const modalBackdrop = document.getElementById('transfer-modal-backdrop');
+      const transferForm = document.getElementById('transfer-form');
+      const rebalanceBtn = document.getElementById('btn-rebalance');
+
+      function openModal() {
+        if (modalBackdrop) modalBackdrop.classList.remove('hidden');
+      }
+
+      function closeModal() {
+        if (modalBackdrop) modalBackdrop.classList.add('hidden');
+      }
+
+      if (openBtn) openBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+      if (modalBackdrop) {
+        modalBackdrop.addEventListener('click', function(e) {
+          if (e.target === modalBackdrop) closeModal();
+        });
+      }
+
+      if (transferForm) {
+        transferForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          closeModal();
+          // Visual confirmation toast
+          const alertBanner = document.createElement('div');
+          alertBanner.className = 'fixed bottom-6 right-6 z-50 p-sm rounded-lg bg-primary text-on-primary font-body-sm text-body-sm shadow-xl flex items-center gap-xs transition-all duration-300 transform translate-y-0';
+          alertBanner.innerHTML = '<span class="material-symbols-outlined text-title-md">check_circle</span> <span>Transfer Manifest #TR-403 initiated. Logistics dispatch alerted.</span>';
+          document.body.appendChild(alertBanner);
+          setTimeout(() => {
+            alertBanner.classList.add('opacity-0', 'translate-y-2');
+            setTimeout(() => alertBanner.remove(), 300);
+          }, 3500);
+        });
+      }
+
+      // Rebalance action trigger
+      if (rebalanceBtn) {
+        rebalanceBtn.addEventListener('click', function() {
+          const originalText = rebalanceBtn.innerHTML;
+          rebalanceBtn.innerHTML = '<span class="material-symbols-outlined text-body-md animate-spin">sync</span> <span class="font-body-sm text-body-sm text-on-surface font-medium">Analyzing Hub Depletions...</span>';
+          setTimeout(() => {
+            rebalanceBtn.innerHTML = '<span class="material-symbols-outlined text-body-md text-primary">done_all</span> <span class="font-body-sm text-body-sm text-on-surface font-medium">Nodes Balanced</span>';
+            setTimeout(() => {
+              rebalanceBtn.innerHTML = originalText;
+            }, 2500);
+          }, 1400);
+        });
+      }
+
+      // Realtime in-table search filter
+      const searchInput = document.getElementById('inventory-search');
+      const tableBody = document.getElementById('inventory-table-body');
+      if (searchInput && tableBody) {
+        searchInput.addEventListener('input', function(e) {
+          const query = e.target.value.toLowerCase();
+          const rows = tableBody.querySelectorAll('tr');
+          rows.forEach(row => {
+            const text = row.innerText.toLowerCase();
+            row.style.display = text.includes(query) ? '' : 'none';
+          });
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

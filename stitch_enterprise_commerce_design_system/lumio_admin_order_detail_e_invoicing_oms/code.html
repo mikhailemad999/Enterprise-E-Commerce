@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Lumio Enterprise Admin</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary":"#000000","on-secondary":"#ffffff","on-primary-container":"#848484","surface-container-low":"#f7f3f1","on-secondary-container":"#67645e","outline-variant":"#cfc4c5","tertiary-container":"#1c1b1a","on-surface":"#1c1b1b","surface-container-lowest":"#ffffff","on-surface-variant":"#444748","secondary-fixed-dim":"#cbc6be","secondary":"#615e58","error-container":"#ffdad6","on-tertiary":"#ffffff","primary-fixed-dim":"#c6c6c6","secondary-fixed":"#e7e2da","surface-container":"#f1edec","surface-container-highest":"#e5e2e1","inverse-surface":"#313030","on-background":"#1c1b1b","background":"#fdf8f7","primary-container":"#1b1b1b","on-primary-fixed-variant":"#474747","surface":"#fdf8f8","surface-dim":"#ddd9d8","surface-container-high":"#ebe7e6","on-secondary-fixed-variant":"#494641","surface-tint":"#5e5e5e","inverse-on-surface":"#f4f0ef","outline":"#747878","on-tertiary-fixed":"#1c1b1a","on-primary":"#ffffff","primary":"#000000","tertiary-fixed-dim":"#cac6c4","secondary-container":"#e7e2da","on-primary-fixed":"#1b1b1b","surface-bright":"#fdf8f7","on-tertiary-fixed-variant":"#484645","on-secondary-fixed":"#1d1b17","primary-fixed":"#e2e2e2","on-error":"#ffffff","error":"#ba1a1a","surface-variant":"#e6e2e0","on-error-container":"#93000a","tertiary-fixed":"#e6e2df","inverse-primary":"#c6c6c6","on-tertiary-container":"#868382"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"sm":"16px","md":"32px","base":"4px","gutter":"24px","lg":"64px","margin":"40px","xl":"128px","xs":"8px"},fontFamily:{"display":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"title-md":["Inter"],"display-mobile":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"]},fontSize:{"display":["72px",{"lineHeight":"76px","letterSpacing":"-0.04em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg":["48px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-sm":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"title-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-mobile":["40px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-lg-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"12px","letterSpacing":"0.06em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed top-0 left-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-md shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex flex-col gap-md"><div class="px-gutter flex items-center gap-xs"><img alt="Brand logo. - Primary color: #000000
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwQScX6ztmbl9AzkOCNF0FfMvWwxOBJjErnk2fH-pu5bVmKhioSHEYY-TE4W4XGhKy8W-73idWWI3GmvcRvr0Ya_UYlCYO0j0nFK8mx-Do_kLN2rDy0XycweD3ciBEY5bo7L9t8UBFx814SvDFo7SSiCmiY_S_RkSbPfE3zLV7Kb_F2le-2CRI_sDCEHzPe3Bc_TQee0oyNmARu89pqef_-qS-XSUQ2MFFP2OMklWRTbn30XlVFpFOobQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase leading-none">LUMIO</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase mt-base">Console</span></div></div><div class="px-sm"><div class="px-xs mb-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operations Core</div><nav class="flex flex-col gap-base" data-active-classes="bg-primary text-on-primary font-title-md"><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-title-md">grid_view</span><span class="font-body-sm text-body-sm">Dashboard (Overview)</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="order-management" href="#"><span class="material-symbols-outlined text-title-md">receipt_long</span><span class="font-body-sm text-body-sm">Order Management (OMS)</span></a><a aria-current="page" class="flex items-center gap-xs px-xs py-base rounded-lg transition-colors bg-primary text-on-primary font-title-md" data-path="live-fleet-dispatch" href="#"><span class="material-symbols-outlined text-title-md">near_me</span><span class="font-body-sm text-body-sm">Live Fleet Dispatch &amp; Map</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory-warehouses" href="#"><span class="material-symbols-outlined text-title-md">warehouse</span><span class="font-body-sm text-body-sm">Inventory &amp; Multi-Warehouse</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="catalog-products" href="#"><span class="material-symbols-outlined text-title-md">inventory_2</span><span class="font-body-sm text-body-sm">Catalog &amp; Products</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics-financials" href="#"><span class="material-symbols-outlined text-title-md">monitoring</span><span class="font-body-sm text-body-sm">Analytics &amp; Financial Reports</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="store-settings" href="#"><span class="material-symbols-outlined text-title-md">tune</span><span class="font-body-sm text-body-sm">Store Settings</span></a></nav></div></div><div class="px-gutter flex flex-col gap-xs"><div class="p-xs rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex items-center justify-between mb-base"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System Status</span><span class="w-2 h-2 rounded-full bg-primary"></span></div><div class="font-body-sm text-body-sm text-on-surface">Enterprise v2.4</div><div class="font-label-sm text-label-sm text-on-surface-variant">All regional nodes synced</div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-xs text-on-surface-variant pointer-events-none text-title-md">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm pl-md pr-lg py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest" placeholder="Search orders, inventory SKUs, waybills..." type="text"/><div class="absolute right-xs flex items-center gap-base px-base py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><span>⌘</span><span>K</span></div></div></div><div class="flex items-center gap-sm"><div class="flex items-center gap-xs bg-surface-container-low px-xs py-base rounded-lg"><span class="material-symbols-outlined text-on-surface-variant text-body-md">location_on</span><select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer"><option class="bg-surface-container-lowest text-on-surface" value="cairo">Cairo Central</option><option class="bg-surface-container-lowest text-on-surface" value="alexandria">Alexandria Hub</option><option class="bg-surface-container-lowest text-on-surface" value="dubai">Dubai Flagship</option></select></div><button class="relative p-base rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-title-md">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-primary"></span></button><div class="flex items-center gap-xs pl-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WzGJlzRZYy0h3QOs8fkIp0NdCKdT7lzKmLOzuwppC8qQNfGyHb1RfGeCU5mLzGxF2qpQLspaIAZ4K-cggmoq1fHsLU9Zocxn7U1Skm7CO2HmvomYLGSgMOy1gFG1Jz-rhFYrcg-DnxdgJmp1mfhK91brWe9O5CymsV7Jn1CDPlEV1RUhv0qqBuOhtdjp5u-84Lk_YYN5VsReCRe7DuaooXHP58pc0zNd8AhHwrXjvEIXA59GSN5euJjhE"/><div class="hidden xl:flex flex-col leading-tight"><span class="font-body-sm text-body-sm text-on-surface">Director Suite</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Operations</span></div></div></div></header><main class="w-full pt-16 px-margin bg-background min-h-screen"><div class="flex flex-col w-full pb-xl">
+<!-- Top Command Ribbon -->
+<div class="flex flex-col gap-sm py-sm">
+<!-- Breadcrumb & System Context -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<a class="hover:text-primary transition-colors flex items-center gap-base" href="#">
+<span class="material-symbols-outlined text-body-sm">arrow_back</span>
+<span>Order Management</span>
+</a>
+<span>/</span>
+<span class="text-on-surface">Cairo Hub Fulfillment</span>
+<span>/</span>
+<span class="text-primary font-semibold">LM-89241</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="inline-flex items-center gap-base px-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          Telemetry Synced: Realtime
+        </span>
+<span class="text-outline-variant font-body-sm">|</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cairo Node (UTC+3)</span>
+</div>
+</div>
+<!-- Main Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-gutter bg-surface-container-lowest p-md rounded-xl shadow-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex flex-wrap items-center gap-xs">
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Order #LM-89241</h1>
+<span class="inline-flex items-center gap-base px-xs py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            Out for Delivery (White-Glove Fleet)
+          </span>
+<span class="inline-flex items-center gap-base px-xs py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-label-sm">workspace_premium</span>
+            VIP Client
+          </span>
+</div>
+<div class="flex flex-wrap items-center gap-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-base">
+<span class="material-symbols-outlined text-body-md">schedule</span>
+            Today, 14:32 Cairo Time
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-base">
+<span class="material-symbols-outlined text-body-md">storefront</span>
+            Web Storefront (Flagship)
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-base">
+<span class="material-symbols-outlined text-body-md">pin_drop</span>
+            Katameya Heights, Cairo South
+          </span>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="flex flex-wrap items-center gap-xs">
+<button class="inline-flex items-center gap-base px-sm py-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors cursor-pointer shadow-sm" type="button">
+<span class="material-symbols-outlined text-body-md">receipt</span>
+<span>Fiscal E-Invoice (ETA)</span>
+</button>
+<button class="inline-flex items-center gap-base px-sm py-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors cursor-pointer shadow-sm" type="button">
+<span class="material-symbols-outlined text-body-md">local_shipping</span>
+<span>Waybill &amp; Label</span>
+</button>
+<div class="relative inline-block text-left" id="more-actions-container">
+<button class="inline-flex items-center gap-base px-xs py-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors cursor-pointer" onclick="document.getElementById('action-menu').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-body-md">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-xs w-48 rounded-xl bg-surface-container-lowest shadow-xl z-20 py-base" id="action-menu">
+<button class="w-full text-left px-sm py-xs text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm flex items-center gap-xs" type="button">
+<span class="material-symbols-outlined text-body-md">pause_circle</span>
+<span>Hold Dispatch</span>
+</button>
+<button class="w-full text-left px-sm py-xs text-error hover:bg-error-container/30 font-body-sm text-body-sm flex items-center gap-xs" type="button">
+<span class="material-symbols-outlined text-body-md">undo</span>
+<span>Refund / Void Order</span>
+</button>
+</div>
+</div>
+<button class="inline-flex items-center gap-base px-sm py-xs rounded-lg bg-primary hover:bg-tertiary-container text-on-primary font-body-sm text-body-sm transition-colors cursor-pointer shadow-sm" type="button">
+<span class="material-symbols-outlined text-body-md">verified</span>
+<span>Handoff Dispatch</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Stepper / Order Lifecycle -->
+<div class="mt-sm bg-surface-container-lowest p-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface text-body-md">route</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Order Lifecycle Pipeline</span>
+</div>
+<div class="flex items-center gap-base font-label-sm text-label-sm text-on-surface-variant">
+<span>SLA Remaining:</span>
+<span class="font-semibold text-primary">01h 48m</span>
+</div>
+</div>
+<!-- Stepper Graphic -->
+<div class="relative grid grid-cols-1 md:grid-cols-5 gap-sm pt-xs">
+<!-- Step 1 (Completed) -->
+<div class="relative flex flex-col gap-base">
+<div class="flex items-center gap-xs">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div class="hidden md:block flex-1 h-0.5 bg-primary"></div>
+</div>
+<div class="flex flex-col mt-base">
+<span class="font-label-sm text-label-sm text-primary uppercase">Step 01 • Cleared</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Placed &amp; Fraud Passed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">14:32 • Automated Risk 0.01</span>
+</div>
+</div>
+<!-- Step 2 (Completed) -->
+<div class="relative flex flex-col gap-base">
+<div class="flex items-center gap-xs">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div class="hidden md:block flex-1 h-0.5 bg-primary"></div>
+</div>
+<div class="flex flex-col mt-base">
+<span class="font-label-sm text-label-sm text-primary uppercase">Step 02 • Staged</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Warehouse Staging &amp; QC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">15:10 • Cairo Central Sector B3</span>
+</div>
+</div>
+<!-- Step 3 (Completed) -->
+<div class="relative flex flex-col gap-base">
+<div class="flex items-center gap-xs">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div class="hidden md:block flex-1 h-0.5 bg-primary"></div>
+</div>
+<div class="flex flex-col mt-base">
+<span class="font-label-sm text-label-sm text-primary uppercase">Step 03 • Fleet Sync</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Handed to Fleet #042</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">16:04 • Driver Mansour A.</span>
+</div>
+</div>
+<!-- Step 4 (Active / Pulsing) -->
+<div class="relative flex flex-col gap-base">
+<div class="flex items-center gap-xs">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shadow-md animate-pulse">
+<span class="material-symbols-outlined text-body-sm">local_shipping</span>
+</div>
+<div class="hidden md:block flex-1 h-0.5 bg-surface-container-high"></div>
+</div>
+<div class="flex flex-col mt-base">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Step 04 • In Transit</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Out for Delivery</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Ring Rd / Katameya Corridor</span>
+</div>
+</div>
+<!-- Step 5 (Pending) -->
+<div class="relative flex flex-col gap-base">
+<div class="flex items-center gap-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-body-sm">lock</span>
+</div>
+</div>
+<div class="flex flex-col mt-base">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Step 05 • OTP Verify</span>
+<span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Handoff Confirmation</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Pending Client OTP #7249</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Asymmetric Workspace Layout -->
+<div class="mt-gutter grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column (8 cols ~ 67%) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Bill of Lading & Staged Items -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+<div class="flex items-center justify-between pb-sm border-b border-surface-container">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface text-body-md">inventory_2</span>
+<div class="flex flex-col">
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight">Order Items &amp; Manifest</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 Curated Line Items • 84.4 kg total consignment</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-base px-xs py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-label-sm">warehouse</span>
+            Cairo Central - Sector B3
+          </span>
+</div>
+<div class="divide-y divide-surface-container">
+<!-- Item 1 -->
+<div class="py-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-sm hover:bg-surface-container-low/40 p-xs -mx-xs rounded-lg transition-colors">
+<div class="flex items-center gap-sm">
+<div class="relative w-20 h-20 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Nocturne Sculptural Alabaster Lamp crafted in hand-honed translucent white alabaster with warm brushed solid brass hardware, editorial high fashion interior studio photography with soft dramatic raking ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCULdSbag0PLW_Waja0LW9cHcEK069BqmlRoDSnOHP2drbvSXnQPy-APwi83CJHH31Eqgf-sVZkNKUz9BAqEhGUPJWIYpRGu-KTm00mKqxKLBJn8ab2wJXNf6BLGw6dC420rUg94hu_I9FKPHXLvmr-YGcaMrI89Q7IFu4QftHGnvSCTV1tYVpq8cpaB7x-ChzVgs69dxj0Kc7GEeULTR1HWnGxdWBC55YVQVAS9hBrdVcwKZkmYE1P"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-surface-container-lowest/90 font-label-sm text-label-sm text-primary leading-none">x1</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-xs">
+<h3 class="font-body-md text-body-md font-medium text-on-surface">Nocturne Sculptural Alabaster Lamp</h3>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">Fragile</span>
+</div>
+<div class="flex items-center gap-xs font-body-sm text-body-sm text-on-surface-variant">
+<span>SKU: NOC-ALB-809</span>
+<span>•</span>
+<span>Honed Alabaster, Brushed Brass</span>
+</div>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-on-secondary-container mt-1">
+<span class="material-symbols-outlined text-body-sm">qr_code_scanner</span>
+<span>Serial: LUM-809-EG-042</span>
+<span class="text-outline-variant">|</span>
+<span class="text-emerald-700">QC Passed</span>
+</div>
+</div>
+</div>
+<div class="text-left sm:text-right flex sm:flex-col items-baseline sm:items-end justify-between w-full sm:w-auto">
+<span class="font-body-md text-body-md font-semibold text-primary">4,850 EGP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">VAT Incl. (14%)</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="py-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-sm hover:bg-surface-container-low/40 p-xs -mx-xs rounded-lg transition-colors">
+<div class="flex items-center gap-sm">
+<div class="relative w-20 h-20 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Brutalist monolithic coffee table in Roman travertine with architectural fluted pedestal and honed matte stone surface, placed in a serene minimalist gallery setting with warm beige tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7uDqrtwENOjIEp4fKZPHk-REtRqqx37RVcSouwxd8hzV5wONeYh5LcQCB6_phtasBWMqn7omlVBnN43Higbg8cqoc8rkyyW50jzKs-lY-YECSZCdTU36kYMncY7f6HZq9VUIoHAQj-KHEpBgV1pesCbfI6jCsmEQ242CjpMRvY-SVDQHjxJ0CL87ytVfzXt-0I1C3Di-K5whcJbcw6B6afMp71dZq5t5qdjCtmE26wS7FqZ2XQolP"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-surface-container-lowest/90 font-label-sm text-label-sm text-primary leading-none">x1</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-xs">
+<h3 class="font-body-md text-body-md font-medium text-on-surface">Brutalist Monolith Coffee Table</h3>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-fixed">Heavy Crating</span>
+</div>
+<div class="flex items-center gap-xs font-body-sm text-body-sm text-on-surface-variant">
+<span>SKU: BRT-TAB-012</span>
+<span>•</span>
+<span>Roman Travertine (140cm x 80cm)</span>
+</div>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-on-secondary-container mt-1">
+<span class="material-symbols-outlined text-body-sm">fitness_center</span>
+<span>Gross Weight: 84.0 kg</span>
+<span class="text-outline-variant">|</span>
+<span>Dual-Technician Rig Required</span>
+</div>
+</div>
+</div>
+<div class="text-left sm:text-right flex sm:flex-col items-baseline sm:items-end justify-between w-full sm:w-auto">
+<span class="font-body-md text-body-md font-semibold text-primary">28,500 EGP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">VAT Incl. (14%)</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="py-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-sm hover:bg-surface-container-low/40 p-xs -mx-xs rounded-lg transition-colors">
+<div class="flex items-center gap-sm">
+<div class="relative w-20 h-20 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Pair of Sakkara smoked ash wood lounge chairs with natural textured ecru bouclé wool upholstery in a luxury architectural villa interior with soft afternoon sunbeam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0a9igyEQMf-s9pdcwf4U3ib0Hjj-OfIBkIfbZirjhEXFvdJlzv9JXfGlc-A5TNwxaQWhen_g2sQWnFAmW7Os6vLKndtladH67Glt-mgU9d4GcNnoZDSLdlzBgqLOJtsQ8gjJSn0-zJIlLawIl6scS46u02tWMhZUJMY7Hu9qfhUIoSCSgh6vE2xszvkLbSA7voUdrf5CsypDZGOtN2KeruscbkS0Zag-cLnCdjttIQ2NJ4rLCNSTF"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-surface-container-lowest/90 font-label-sm text-label-sm text-primary leading-none">x1</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-xs">
+<h3 class="font-body-md text-body-md font-medium text-on-surface">Sakkara Smoked Ash Lounge Chair (Pair)</h3>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">Set of 2</span>
+</div>
+<div class="flex items-center gap-xs font-body-sm text-body-sm text-on-surface-variant">
+<span>SKU: SKR-ASH-404</span>
+<span>•</span>
+<span>Smoked Black Ash &amp; Textured Bouclé</span>
+</div>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-on-secondary-container mt-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+<span>Inspection Pass: Cairo Central Bay 2</span>
+</div>
+</div>
+</div>
+<div class="text-left sm:text-right flex sm:flex-col items-baseline sm:items-end justify-between w-full sm:w-auto">
+<span class="font-body-md text-body-md font-semibold text-primary">26,000 EGP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">VAT Incl. (14%)</span>
+</div>
+</div>
+</div>
+<div class="pt-sm border-t border-surface-container flex flex-wrap items-center justify-between gap-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-body-md">shield</span>
+<span>All items insured under Lumio White-Glove Inland Transit Policy #EGY-991</span>
+</div>
+<button class="text-primary hover:underline font-label-sm text-label-sm font-semibold uppercase tracking-wider" type="button">
+            Re-run Barcode Audits
+          </button>
+</div>
+</div>
+<!-- Fulfillment & Dispatch Routing Control -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm flex flex-col gap-sm">
+<div class="flex items-center justify-between pb-sm border-b border-surface-container">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface text-body-md">near_me</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight">Fleet Dispatch &amp; Route Telemetry</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dedicated White-Glove Installation Crew</span>
+</div>
+</div>
+<div class="flex items-center gap-base">
+<span class="inline-flex items-center px-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mr-1"></span>
+              Live GPS Feed
+            </span>
+</div>
+</div>
+<!-- Dispatch Details Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-sm">
+<!-- Driver & Carrier -->
+<div class="p-sm rounded-lg bg-surface-container-low flex flex-col justify-between gap-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Assigned Crew</span>
+<div class="flex items-center gap-xs mt-base">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center font-title-md text-title-md text-on-surface font-semibold">
+                  AM
+                </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface leading-tight">Ahmed Mansour</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Van #042 (Sprinter Extended)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-xs border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Phone: +20 122 931 0023</span>
+<button class="text-primary hover:underline font-label-sm text-label-sm font-semibold" type="button">Call</button>
+</div>
+</div>
+<!-- Dispatch Protocol -->
+<div class="p-sm rounded-lg bg-surface-container-low flex flex-col justify-between gap-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Carrier Protocol</span>
+<div class="flex items-center justify-between mt-base">
+<span class="font-body-md text-body-md font-medium text-on-surface">Lumio Fleet (Internal)</span>
+<span class="material-symbols-outlined text-body-md text-on-surface-variant">local_shipping</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Waybill: #BST-9082-CAI</span>
+</div>
+<div class="flex items-center justify-between pt-xs border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Switch Courier:</span>
+<button class="text-primary hover:underline font-label-sm text-label-sm font-semibold" type="button">Hand to Bosta</button>
+</div>
+</div>
+<!-- Verification OTP -->
+<div class="p-sm rounded-lg bg-surface-container-low flex flex-col justify-between gap-xs">
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Delivery Handoff OTP</span>
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant">key</span>
+</div>
+<div class="mt-base flex items-center gap-xs">
+<span class="font-headline-sm text-headline-sm tracking-widest font-mono text-primary">7 2 4 9</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-normal">Active</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-xs border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Client SMS Sent: 14:35</span>
+<button class="text-primary hover:underline font-label-sm text-label-sm font-semibold" type="button">Resend OTP</button>
+</div>
+</div>
+</div>
+<!-- Live Destination Map & Instructions -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-sm items-stretch">
+<div class="md:col-span-7 h-52 rounded-lg overflow-hidden relative shadow-sm">
+<div class="w-full h-full bg-cover bg-center" data-location="Katameya Heights, Cairo, Egypt" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAB_Tee94tj0o-fliLThBuER9j_Xt7DNTAsjeRUUx4P8O2mjaEIdXV2FaV6k1vsNZKYhdjxjvWqB0UNJZ5BQA2BRcNXp5hU86aqSk4A4G_LZcCrDLT1B3dAHCP7SEFDBYVQ1YZyMOFMlpWOZhkNzXLRETquXsu6CiXkKB1Iy6v1Xe3Co07ouVPXwjzs_SJd4bu0406uUlsMGT25xBxmoYZ4_a1wYnGnYdr4gddsJUcCQOySvlhh-Ga')"></div>
+<div class="absolute bottom-2 left-2 right-2 bg-surface/90 backdrop-blur-md px-xs py-base rounded-md flex items-center justify-between text-on-surface font-body-sm text-body-sm">
+<div class="flex items-center gap-base">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-ping"></span>
+<span class="font-medium text-xs">Van #042 approx 4.2 km away</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ETA: 19:15</span>
+</div>
+</div>
+<div class="md:col-span-5 p-sm rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center gap-base text-primary">
+<span class="material-symbols-outlined text-body-md">edit_note</span>
+<span class="font-label-sm text-label-sm uppercase font-semibold">Special Delivery Directive</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+                "Client requested delivery strictly after 19:00. Use Service Elevator Gate 3, Katameya Heights Villa 14. Heavy uncrating of Travertine table to Ground Floor Salon."
+              </p>
+</div>
+<div class="flex items-center justify-between pt-xs border-t border-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span>Logged by: Concierge Team</span>
+<span class="text-primary font-semibold">Priority 1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Egyptian Tax Authority (ETA) E-Invoice Details -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+<div class="flex items-center justify-between pb-sm border-b border-surface-container">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface text-body-md">verified_user</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight">Egyptian Tax Authority (ETA) E-Invoice</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Real-Time Fiscal Synchronization &amp; Digital Stamp</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-base px-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-label-sm">check_circle</span>
+            Fiscal Status: Valid &amp; Cleared
+          </span>
+</div>
+<div class="mt-sm grid grid-cols-1 md:grid-cols-12 gap-sm items-center">
+<!-- Fiscal Credentials -->
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">E-Invoice UUID</span>
+<span class="font-body-sm text-body-sm font-mono text-on-surface mt-0.5 break-all">#990142-EG-2025-0819</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Tax Registration (TIN)</span>
+<span class="font-body-sm text-body-sm font-mono text-on-surface mt-0.5">482-910-384</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Standard VAT Rate</span>
+<span class="font-body-sm text-body-sm text-on-surface mt-0.5">14.0% Standard Luxury Furniture</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Total VAT Assessed</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary mt-0.5">8,295.00 EGP</span>
+</div>
+<div class="sm:col-span-2 flex items-center gap-xs p-xs rounded bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-body-md text-on-surface">fingerprint</span>
+<span>Digital SHA-256 Signature Stamp verified by Ministry of Finance e-Receipt Portal.</span>
+</div>
+</div>
+<!-- Official QR Stamp -->
+<div class="md:col-span-4 flex flex-col items-center justify-center p-sm rounded-xl bg-surface-container-low text-center">
+<!-- Inline SVG Representation of ETA Verified QR Stamp -->
+<svg class="w-24 h-24 text-primary" fill="currentColor" viewbox="0 0 100 100">
+<!-- QR Patterns -->
+<rect fill="none" height="24" rx="2" stroke="currentColor" stroke-width="4" width="24" x="10" y="10"></rect>
+<rect fill="currentColor" height="12" width="12" x="16" y="16"></rect>
+<rect fill="none" height="24" rx="2" stroke="currentColor" stroke-width="4" width="24" x="66" y="10"></rect>
+<rect fill="currentColor" height="12" width="12" x="72" y="16"></rect>
+<rect fill="none" height="24" rx="2" stroke="currentColor" stroke-width="4" width="24" x="10" y="66"></rect>
+<rect fill="currentColor" height="12" width="12" x="16" y="72"></rect>
+<!-- Data bits -->
+<rect height="6" width="6" x="42" y="12"></rect>
+<rect height="6" width="6" x="52" y="18"></rect>
+<rect height="6" width="16" x="42" y="28"></rect>
+<rect height="16" width="6" x="42" y="42"></rect>
+<rect height="6" width="16" x="52" y="42"></rect>
+<rect height="6" width="6" x="52" y="52"></rect>
+<rect height="6" width="12" x="68" y="42"></rect>
+<rect height="8" width="8" x="80" y="52"></rect>
+<rect height="10" width="10" x="68" y="68"></rect>
+<rect height="6" width="16" x="42" y="68"></rect>
+<rect height="8" width="6" x="42" y="80"></rect>
+<rect height="6" width="6" x="82" y="82"></rect>
+</svg>
+<span class="font-label-sm text-label-sm text-on-surface uppercase font-semibold mt-xs">ETA QR Validation</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scan to verify e-Invoice</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (4 cols ~ 33%) -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Financial Reconciliation & Settlement Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm flex flex-col gap-sm">
+<div class="flex items-center justify-between pb-sm border-b border-surface-container">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface text-body-md">account_balance_wallet</span>
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight">Settlement</h2>
+</div>
+<span class="inline-flex items-center gap-base px-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mr-0.5"></span>
+            Captured
+          </span>
+</div>
+<div class="flex flex-col gap-xs font-body-sm text-body-sm">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Items Gross Subtotal</span>
+<span class="font-mono text-on-surface">59,350.00 EGP</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<div class="flex items-center gap-base">
+<span>White-Glove Delivery</span>
+<span class="font-label-sm text-label-sm px-1 rounded bg-surface-container text-on-surface-variant">VIP Tier</span>
+</div>
+<span class="font-mono text-emerald-700">0.00 EGP (Free)</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Egyptian VAT (14%)</span>
+<span class="font-mono text-on-surface">8,295.00 EGP</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<div class="flex items-center gap-base">
+<span>Promo: <strong class="text-primary font-semibold">LUMIO10</strong></span>
+</div>
+<span class="font-mono text-primary">-5,935.00 EGP</span>
+</div>
+<div class="pt-sm mt-xs border-t border-surface-container flex justify-between items-baseline">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Total Net Settlement</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">All taxes included</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-semibold text-primary font-mono">61,710.00</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface-variant ml-1">EGP</span>
+</div>
+</div>
+</div>
+<!-- Payment Gateway Metadata -->
+<div class="mt-xs p-sm rounded-lg bg-surface-container-low flex flex-col gap-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase">Payment Processor</span>
+<span class="font-semibold text-on-surface">Paymob Enterprise</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Reference ID</span>
+<span class="font-mono text-primary font-medium">PMB_TX_98213894</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Channel</span>
+<span class="text-on-surface">Mastercard Commercial (•••• 8820)</span>
+</div>
+<div class="pt-base border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Settled at: 14:32:09 UTC+3</span>
+<span class="text-emerald-700 font-medium">Auth 3D-Secure 2.2</span>
+</div>
+</div>
+</div>
+<!-- Customer 360 Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm flex flex-col gap-sm">
+<div class="flex items-center justify-between pb-sm border-b border-surface-container">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface text-body-md">person</span>
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight">Customer 360</h2>
+</div>
+<a class="font-label-sm text-label-sm font-semibold text-primary hover:underline uppercase" href="#">View Dossier</a>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Sophisticated portrait of an Egyptian architect and interior designer in a minimalist atelier, natural window light, black polo shirt, quiet confidence and elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz5b_4Vn9D3s1mydRY4dI7_X614qzhdq_VTNCD3Wbu4B3jPx6m-pfa8BaiNQlh5maalehOKZp0BPjlWpHpGA7Jp5T2UpfJP2i69iDGiVsI0i6A-y0CscJ9oca4kVX08jx4a_0LSS53Zo1eTTOsnRZTQtDGlM1pESDIG5TUK-AsS08_eHlzeCpdy6qe9MpZI5yQh_Udu0KTrimtKFz1Zj24eivCII-ZZDwjT9JeoGYhUi-BcwgkCc7K"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-xs">
+<span class="font-body-md text-body-md font-medium text-on-surface">Tarek El-Mansouri</span>
+<span class="material-symbols-outlined text-body-sm text-primary" title="Identity Verified">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Architectural Director &amp; Private Collector</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-xs pt-xs">
+<div class="p-xs rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Lifetime Value (LTV)</span>
+<span class="font-body-md text-body-md font-semibold text-primary mt-base font-mono">184,200 EGP</span>
+</div>
+<div class="p-xs rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Order Frequency</span>
+<span class="font-body-md text-body-md font-semibold text-primary mt-base font-mono">6 Orders (Zero Returns)</span>
+</div>
+</div>
+<div class="flex flex-col gap-xs font-body-sm text-body-sm pt-xs">
+<div class="flex items-start gap-xs text-on-surface">
+<span class="material-symbols-outlined text-body-md text-on-surface-variant shrink-0 mt-0.5">location_on</span>
+<span class="leading-snug">Katameya Heights, Villa 14, Ring Road Extension, New Cairo South, 11835</span>
+</div>
+<div class="flex items-center gap-xs text-on-surface">
+<span class="material-symbols-outlined text-body-md text-on-surface-variant shrink-0">call</span>
+<span class="font-mono">+20 100 482 9104</span>
+<span class="font-label-sm text-label-sm text-emerald-700 ml-auto">Verified Mobile</span>
+</div>
+<div class="flex items-center gap-xs text-on-surface">
+<span class="material-symbols-outlined text-body-md text-on-surface-variant shrink-0">mail</span>
+<span class="font-mono truncate">t.mansouri@mansouri-studios.eg</span>
+</div>
+</div>
+<!-- Internal Logistics Flag -->
+<div class="p-sm rounded-lg bg-secondary-container/60 flex items-start gap-xs">
+<span class="material-symbols-outlined text-body-md text-on-secondary-fixed shrink-0 mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-on-secondary-fixed">Internal Curator Flag</span>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed mt-0.5 leading-snug">
+              High-value fragile items collector. Client inspects stone veining upon delivery. Always assign certified installation crew.
+            </p>
+</div>
+</div>
+</div>
+<!-- Operational Audit & Activity Log -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm flex flex-col gap-sm">
+<div class="flex items-center justify-between pb-sm border-b border-surface-container">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface text-body-md">history</span>
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight">Activity &amp; Audit Log</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Automated WMS</span>
+</div>
+<!-- Timeline Log -->
+<div class="relative pl-sm flex flex-col gap-sm">
+<div class="absolute top-2 bottom-2 left-1.5 w-0.5 bg-surface-container"></div>
+<!-- Log Event 1 -->
+<div class="relative flex flex-col gap-0.5">
+<div class="absolute -left-[19px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Approaching Gate 3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">16:48</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+              Van #042 driver notified Katameya Heights security.
+            </span>
+</div>
+<!-- Log Event 2 -->
+<div class="relative flex flex-col gap-0.5">
+<div class="absolute -left-[19px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Assigned to Fleet Van #042</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">16:04</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+              AI Route Optimizer matched schedule with Katameya cluster.
+            </span>
+</div>
+<!-- Log Event 3 -->
+<div class="relative flex flex-col gap-0.5">
+<div class="absolute -left-[19px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Quality Control Passed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">15:38</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+              Travertine surface checked for transit crate structural integrity.
+            </span>
+</div>
+<!-- Log Event 4 -->
+<div class="relative flex flex-col gap-0.5">
+<div class="absolute -left-[19px] top-1.5 w-2 h-2 rounded-full bg-surface-dim ring-4 ring-surface-container-lowest"></div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Payment Webhook Processed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14:32</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+              Paymob webhook acknowledged. 61,710 EGP booked to general ledger.
+            </span>
+</div>
+</div>
+<button class="w-full py-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase font-semibold transition-colors mt-xs" type="button">
+          View Complete System Trace (18 events)
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

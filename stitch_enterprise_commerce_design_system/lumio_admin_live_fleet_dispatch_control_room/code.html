@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Lumio Enterprise Admin</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary":"#000000","on-secondary":"#ffffff","on-primary-container":"#848484","surface-container-low":"#f7f3f1","on-secondary-container":"#67645e","outline-variant":"#cfc4c5","tertiary-container":"#1c1b1a","on-surface":"#1c1b1b","surface-container-lowest":"#ffffff","on-surface-variant":"#444748","secondary-fixed-dim":"#cbc6be","secondary":"#615e58","error-container":"#ffdad6","on-tertiary":"#ffffff","primary-fixed-dim":"#c6c6c6","secondary-fixed":"#e7e2da","surface-container":"#f1edec","surface-container-highest":"#e5e2e1","inverse-surface":"#313030","on-background":"#1c1b1b","background":"#fdf8f7","primary-container":"#1b1b1b","on-primary-fixed-variant":"#474747","surface":"#fdf8f8","surface-dim":"#ddd9d8","surface-container-high":"#ebe7e6","on-secondary-fixed-variant":"#494641","surface-tint":"#5e5e5e","inverse-on-surface":"#f4f0ef","outline":"#747878","on-tertiary-fixed":"#1c1b1a","on-primary":"#ffffff","primary":"#000000","tertiary-fixed-dim":"#cac6c4","secondary-container":"#e7e2da","on-primary-fixed":"#1b1b1b","surface-bright":"#fdf8f7","on-tertiary-fixed-variant":"#484645","on-secondary-fixed":"#1d1b17","primary-fixed":"#e2e2e2","on-error":"#ffffff","error":"#ba1a1a","surface-variant":"#e6e2e0","on-error-container":"#93000a","tertiary-fixed":"#e6e2df","inverse-primary":"#c6c6c6","on-tertiary-container":"#868382"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"sm":"16px","md":"32px","base":"4px","gutter":"24px","lg":"64px","margin":"40px","xl":"128px","xs":"8px"},fontFamily:{"display":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"title-md":["Inter"],"display-mobile":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"]},fontSize:{"display":["72px",{"lineHeight":"76px","letterSpacing":"-0.04em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg":["48px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-sm":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"title-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-mobile":["40px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-lg-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"12px","letterSpacing":"0.06em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed top-0 left-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-md shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex flex-col gap-md"><div class="px-gutter flex items-center gap-xs"><img alt="Brand logo. - Primary color: #000000
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwQScX6ztmbl9AzkOCNF0FfMvWwxOBJjErnk2fH-pu5bVmKhioSHEYY-TE4W4XGhKy8W-73idWWI3GmvcRvr0Ya_UYlCYO0j0nFK8mx-Do_kLN2rDy0XycweD3ciBEY5bo7L9t8UBFx814SvDFo7SSiCmiY_S_RkSbPfE3zLV7Kb_F2le-2CRI_sDCEHzPe3Bc_TQee0oyNmARu89pqef_-qS-XSUQ2MFFP2OMklWRTbn30XlVFpFOobQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase leading-none">LUMIO</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase mt-base">Console</span></div></div><div class="px-sm"><div class="px-xs mb-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operations Core</div><nav class="flex flex-col gap-base" data-active-classes="bg-primary text-on-primary font-title-md"><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-title-md">grid_view</span><span class="font-body-sm text-body-sm">Dashboard (Overview)</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="order-management" href="#"><span class="material-symbols-outlined text-title-md">receipt_long</span><span class="font-body-sm text-body-sm">Order Management (OMS)</span></a><a aria-current="page" class="flex items-center gap-xs px-xs py-base rounded-lg transition-colors bg-primary text-on-primary font-title-md" data-path="live-fleet-dispatch" href="#"><span class="material-symbols-outlined text-title-md">near_me</span><span class="font-body-sm text-body-sm">Live Fleet Dispatch &amp; Map</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory-warehouses" href="#"><span class="material-symbols-outlined text-title-md">warehouse</span><span class="font-body-sm text-body-sm">Inventory &amp; Multi-Warehouse</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="catalog-products" href="#"><span class="material-symbols-outlined text-title-md">inventory_2</span><span class="font-body-sm text-body-sm">Catalog &amp; Products</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics-financials" href="#"><span class="material-symbols-outlined text-title-md">monitoring</span><span class="font-body-sm text-body-sm">Analytics &amp; Financial Reports</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="store-settings" href="#"><span class="material-symbols-outlined text-title-md">tune</span><span class="font-body-sm text-body-sm">Store Settings</span></a></nav></div></div><div class="px-gutter flex flex-col gap-xs"><div class="p-xs rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex items-center justify-between mb-base"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System Status</span><span class="w-2 h-2 rounded-full bg-primary"></span></div><div class="font-body-sm text-body-sm text-on-surface">Enterprise v2.4</div><div class="font-label-sm text-label-sm text-on-surface-variant">All regional nodes synced</div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-xs text-on-surface-variant pointer-events-none text-title-md">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm pl-md pr-lg py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest" placeholder="Search orders, inventory SKUs, waybills..." type="text"/><div class="absolute right-xs flex items-center gap-base px-base py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><span>⌘</span><span>K</span></div></div></div><div class="flex items-center gap-sm"><div class="flex items-center gap-xs bg-surface-container-low px-xs py-base rounded-lg"><span class="material-symbols-outlined text-on-surface-variant text-body-md">location_on</span><select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer"><option class="bg-surface-container-lowest text-on-surface" value="cairo">Cairo Central</option><option class="bg-surface-container-lowest text-on-surface" value="alexandria">Alexandria Hub</option><option class="bg-surface-container-lowest text-on-surface" value="dubai">Dubai Flagship</option></select></div><button class="relative p-base rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-title-md">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-primary"></span></button><div class="flex items-center gap-xs pl-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WzGJlzRZYy0h3QOs8fkIp0NdCKdT7lzKmLOzuwppC8qQNfGyHb1RfGeCU5mLzGxF2qpQLspaIAZ4K-cggmoq1fHsLU9Zocxn7U1Skm7CO2HmvomYLGSgMOy1gFG1Jz-rhFYrcg-DnxdgJmp1mfhK91brWe9O5CymsV7Jn1CDPlEV1RUhv0qqBuOhtdjp5u-84Lk_YYN5VsReCRe7DuaooXHP58pc0zNd8AhHwrXjvEIXA59GSN5euJjhE"/><div class="hidden xl:flex flex-col leading-tight"><span class="font-body-sm text-body-sm text-on-surface">Director Suite</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Operations</span></div></div></div></header><main class="w-full pt-16 px-margin bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="flex flex-col xl:flex-row items-stretch gap-gutter pb-lg">
+<!-- Dispatch Panel (380px fixed width on desktop) -->
+<div class="w-full xl:w-[380px] shrink-0 flex flex-col gap-sm">
+<!-- Operational Metric Ticker -->
+<div class="bg-surface-container-lowest rounded-xl p-xs shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+<div class="flex items-center justify-between px-xs py-base">
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Cairo Fleet Hub</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary">LIVE TELEMETRY</span>
+</div>
+<div class="grid grid-cols-2 gap-base mt-xs">
+<div class="p-xs bg-surface-container-low rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Drivers On-Shift</span>
+<div class="flex items-baseline justify-between mt-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">18</span>
+<span class="font-label-sm text-label-sm text-secondary">4 Reserve</span>
+</div>
+</div>
+<div class="p-xs bg-surface-container-low rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Active Deliveries</span>
+<div class="flex items-baseline justify-between mt-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">34</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">8 Express</span>
+</div>
+</div>
+<div class="p-xs bg-surface-container-low rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Pending Queue</span>
+<div class="flex items-baseline justify-between mt-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">12</span>
+<span class="font-label-sm text-label-sm px-base py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-semibold">Auto-Run</span>
+</div>
+</div>
+<div class="p-xs bg-surface-container-low rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SLA Fulfillment</span>
+<div class="flex items-baseline justify-between mt-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">99.2%</span>
+<span class="font-label-sm text-label-sm text-secondary">±4m ETA</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Command Action Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-xs shadow-[0_4px_24px_rgba(0,0,0,0.02)] flex flex-col gap-xs">
+<button class="w-full bg-primary text-on-primary py-xs px-sm rounded-lg flex items-center justify-between hover:bg-inverse-surface transition-all" type="button">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-title-md">auto_awesome</span>
+<span class="font-body-sm text-body-sm font-medium">Auto-Optimize Routes</span>
+</div>
+<span class="font-label-sm text-label-sm px-base py-0.5 bg-primary-container text-on-primary rounded">AI ENGINE</span>
+</button>
+<div class="grid grid-cols-2 gap-xs">
+<button class="p-xs bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg flex items-center justify-center gap-base transition-colors" type="button">
+<span class="material-symbols-outlined text-body-md text-on-surface-variant">sms</span>
+<span class="font-label-md text-label-md">Delay SMS</span>
+</button>
+<button class="p-xs bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg flex items-center justify-center gap-base transition-colors" type="button">
+<span class="material-symbols-outlined text-body-md text-on-surface-variant">sync_alt</span>
+<span class="font-label-md text-label-md">Bosta API</span>
+</button>
+</div>
+</div>
+<!-- Driver Fleet Queue Section -->
+<div class="bg-surface-container-lowest rounded-xl p-xs shadow-[0_4px_24px_rgba(0,0,0,0.02)] flex flex-col gap-xs">
+<div class="flex items-center justify-between px-xs py-base">
+<div class="flex items-center gap-xs">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Active Fleet</span>
+<span class="font-label-sm text-label-sm px-xs py-0.5 rounded-full bg-surface-container-high text-on-surface">3 In Field</span>
+</div>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center gap-base">
+<span>Filter</span>
+<span class="material-symbols-outlined text-body-sm">filter_list</span>
+</button>
+</div>
+<div class="flex flex-col gap-xs">
+<!-- Driver Card 1: Selected / Highlighted -->
+<div class="p-xs bg-surface-container-low rounded-lg transition-all cursor-pointer shadow-sm">
+<div class="flex items-start justify-between gap-xs">
+<div class="flex items-center gap-xs">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait photo of a professional delivery courier wearing a black minimalist uniform with a discreet luxury insignia, soft studio lighting on neutral cream background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmFLxKc1-CCjsAQSqCNf1mkmlLsRVY_PTanVZqmz4HgV0idXn19tpf8oMhrfNKIYpWtwMLnZpc01HAiVYvgGFc62beTyXpLTV5ynID760tDAS_CERNDWI2gj4To2V0VJVvsHyBas-_ktGGcB2VWBvoLuB00tMa_L3TyYjcrwM5Vd27xgk4MvFA8FzPvgFx9qVg9VOnQZEagQpOqI_eisEw60mK26Ov01YrYs2USujjUTXSm3mEFjj-"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-base">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Ahmed Mansour</span>
+<span class="font-label-sm text-label-sm px-base py-0.5 rounded bg-primary text-on-primary font-semibold">Van #042</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Sector: Katameya Heights</span>
+</div>
+</div>
+<button class="p-base rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface transition-colors" title="Call Driver" type="button">
+<span class="material-symbols-outlined text-body-md">call</span>
+</button>
+</div>
+<!-- Telemetry & Load Status -->
+<div class="mt-xs pt-xs flex flex-col gap-base">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Capacity Load</span>
+<span class="font-medium text-on-surface">92% (Heavy)</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 92%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-base">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm text-primary">navigation</span>
+<span>34 km/h • 3 stops left</span>
+</div>
+<div class="flex items-center gap-base font-mono">
+<span class="material-symbols-outlined text-body-sm">battery_charging_full</span>
+<span>98%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Driver Card 2 -->
+<div class="p-xs bg-surface-container-lowest hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<div class="flex items-start justify-between gap-xs">
+<div class="flex items-center gap-xs">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Close-up headshot of a female logistics coordinator and executive driver in a tailored charcoal jacket, clean modern editorial composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQ0wHSARd64QWjohvbxQPxJ1Jr1c3-4mr92xd3R6jPYI0lejKwbTmmq8Zol1J2kBvXQooqNaalHFII62BQQmJBwUt2p2uzkinHBvKU01eKSV_91x91zOfqpREF6S-5hj58cLxOBMum7-ooUm1kbGupgRibNtdVbBkTR_Da-gjTx5r5CPmq-7fZVQJRmE-k2wOOD3n8JOD8L7qM3jFkOmRpx4UIX0h0PWzb7NKnfTZkXdYrM5Ni3QL"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-base">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Omar Khaled</span>
+<span class="font-label-sm text-label-sm px-base py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">Van #018</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Sector: Zamalek Flagship</span>
+</div>
+</div>
+<button class="p-base rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface transition-colors" title="Call Driver" type="button">
+<span class="material-symbols-outlined text-body-md">call</span>
+</button>
+</div>
+<div class="mt-xs pt-xs flex flex-col gap-base">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Capacity Load</span>
+<span class="font-medium text-on-surface">45% (Unloading)</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 45%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-base">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm">pause_circle</span>
+<span>Stationary • Zamalek Walk</span>
+</div>
+<div class="flex items-center gap-base font-mono">
+<span class="material-symbols-outlined text-body-sm">battery_6_bar</span>
+<span>81%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Driver Card 3 -->
+<div class="p-xs bg-surface-container-lowest hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<div class="flex items-start justify-between gap-xs">
+<div class="flex items-center gap-xs">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of an urban courier in black technical apparel standing beside a matte delivery bike, ambient city morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY-esJbJLRCKG1nccMGPyCmcd6iztnmfmIa9h5j-2anSgu6kSDc4kSvHaiVSVSPJ4rnmP1_F-8q3Uw2YLhS01q7_FZB9Ish5NjDVuV_9eCXGvE-qdOGm3RBr8ERN2t9xgphW52Bg-X8ii_-URqyNNtOiFsveMEV3a5AcuE9ElrWo8eIdiqkj_sJn_zhtKpmpDptkOyM8KyTsE58w3JZCTTAkPkgFreImBHJhMrXFWwaA79E6pT9dXi"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-base">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Tarek Farouk</span>
+<span class="font-label-sm text-label-sm px-base py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">Moto #009</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Sector: Mohandessin Express</span>
+</div>
+</div>
+<button class="p-base rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface transition-colors" title="Call Driver" type="button">
+<span class="material-symbols-outlined text-body-md">call</span>
+</button>
+</div>
+<div class="mt-xs pt-xs flex flex-col gap-base">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-body-sm text-primary">speed</span>
+<span>48 km/h • 1 stop remaining</span>
+</div>
+<div class="flex items-center gap-base font-mono">
+<span class="material-symbols-outlined text-body-sm">battery_full</span>
+<span>95%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Unassigned High-Priority Orders Tray -->
+<div class="bg-surface-container-lowest rounded-xl p-xs shadow-[0_4px_24px_rgba(0,0,0,0.02)] flex flex-col gap-xs">
+<div class="flex items-center justify-between px-xs py-base">
+<div class="flex items-center gap-xs">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Unassigned Tray</span>
+<span class="font-label-sm text-label-sm px-xs py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">4 Urgent</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Drag to assign</span>
+</div>
+<div class="flex flex-col gap-xs">
+<!-- Draggable Order Card 1 -->
+<div class="p-xs bg-surface-container-low rounded-lg cursor-grab hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-primary font-mono">#LM-89241</span>
+<span class="font-label-sm text-label-sm px-base py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">WHITE-GLOVE</span>
+</div>
+<p class="font-body-sm text-body-sm font-medium text-on-surface mt-base">Travertine Plinth Console</p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-xs">
+<span class="flex items-center gap-base"><span class="material-symbols-outlined text-body-sm">pin_drop</span> Katameya Heights Villa 14</span>
+<span class="font-mono">84 kg</span>
+</div>
+<div class="mt-base pt-base flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Window: 14:00 - 15:30</span>
+<button class="text-primary font-semibold hover:underline" type="button">Quick Assign →</button>
+</div>
+</div>
+<!-- Draggable Order Card 2 -->
+<div class="p-xs bg-surface-container-low rounded-lg cursor-grab hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-primary font-mono">#LM-89248</span>
+<span class="font-label-sm text-label-sm px-base py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-semibold">SAME-DAY</span>
+</div>
+<p class="font-body-sm text-body-sm font-medium text-on-surface mt-base">Silk Velvet Accent Armchair (Pair)</p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-xs">
+<span class="flex items-center gap-base"><span class="material-symbols-outlined text-body-sm">pin_drop</span> Sheikh Zayed Allegria</span>
+<span class="font-mono">32 kg</span>
+</div>
+<div class="mt-base pt-base flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Window: 16:00 - 17:30</span>
+<button class="text-primary font-semibold hover:underline" type="button">Quick Assign →</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Cairo Metro Command Map View -->
+<div class="flex-1 min-w-0 flex flex-col gap-xs">
+<!-- Live Map Header Toolbar -->
+<div class="bg-surface-container-lowest rounded-xl px-sm py-xs shadow-[0_4px_24px_rgba(0,0,0,0.02)] flex flex-wrap items-center justify-between gap-sm">
+<div class="flex items-center gap-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-title-md">map</span>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-semibold text-on-surface leading-tight">Greater Cairo Logistics Network</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Live coordinate sync: 30.0444° N, 31.2357° E • Zoom Level 12.4</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-xs">
+<!-- Layer Toggles -->
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg">
+<button class="px-xs py-base rounded-md bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-xs">Traffic Density</button>
+<button class="px-xs py-base rounded-md text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface">Fulfillment Hubs</button>
+<button class="px-xs py-base rounded-md text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface">Geofence Zones</button>
+</div>
+<button class="p-xs bg-surface-container-low hover:bg-surface-container rounded-lg text-on-surface transition-colors" title="Full Screen Map">
+<span class="material-symbols-outlined text-body-md">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Main Map Stage -->
+<div class="relative w-full h-[680px] xl:h-[820px] rounded-xl overflow-hidden shadow-[0_4px_30px_rgba(0,0,0,0.03)] bg-surface-container-high">
+<!-- Base Map Canvas (Styled Static Map Grounding Cairo Region) -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" data-location="Cairo, Egypt" style=""></div>
+<!-- Editorial Map Scrim Overlay for Contrast and Luxury Cartography Vibe -->
+<div class="absolute inset-0 bg-background/70 backdrop-blur-[2px] pointer-events-none"></div>
+<!-- SVG Vector Overlays: Optimized Multi-stop Sequence Route & Geofence Rings -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Flowing dash pattern for active route -->
+<lineargradient id="routeGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#000000" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#615e58" stop-opacity="0.5"></stop>
+</lineargradient>
+<lineargradient id="secondaryRoute" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#747878" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#c4c7c7" stop-opacity="0.2"></stop>
+</lineargradient>
+</defs>
+<!-- Geofence Zone 1: Cairo Central Fulfillment -->
+<circle cx="280" cy="240" fill="#000000" fill-opacity="0.03" r="110" stroke="#1c1b1b" stroke-dasharray="4 4" stroke-width="1"></circle>
+<!-- Geofence Zone 2: New Cairo Staging Depot -->
+<circle cx="780" cy="460" fill="#000000" fill-opacity="0.03" r="140" stroke="#1c1b1b" stroke-dasharray="4 4" stroke-width="1"></circle>
+<!-- Secondary Inactive/Completed Route Branch (Zamalek to Mohandessin) -->
+<path d="M 280 240 Q 210 320, 180 390" fill="none" stroke="url(#secondaryRoute)" stroke-dasharray="6 6" stroke-linecap="round" stroke-width="3"></path>
+<!-- Primary Active Route: Van #042 Delivery Run (Cairo Central -> Katameya Stop 1 -> New Cairo Stop 2 -> Madinaty Stop 3) -->
+<path d="M 280 240 C 440 280, 520 420, 640 430 S 760 380, 890 510" fill="none" stroke="url(#routeGrad)" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+</svg>
+<!-- Dynamic Map Marker: Cairo Central Warehouse Hub -->
+<div class="absolute top-[200px] left-[240px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-12 h-12 rounded-full bg-primary/10 animate-ping"></span>
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-title-md">warehouse</span>
+</div>
+</div>
+<div class="mt-xs px-xs py-base bg-surface-container-lowest rounded-lg shadow-md flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Cairo Central Warehouse</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">1,420 SKUs In Stock</span>
+</div>
+</div>
+<!-- Dynamic Map Marker: New Cairo Staging Hub -->
+<div class="absolute top-[460px] left-[780px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-10 h-10 rounded-full bg-secondary/15 animate-pulse"></span>
+<div class="w-9 h-9 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-title-md">hub</span>
+</div>
+</div>
+<div class="mt-xs px-xs py-base bg-surface-container-lowest rounded-lg shadow-md flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">New Cairo Depot</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Staging &amp; Transit</span>
+</div>
+</div>
+<!-- Active Vehicle Marker 1: Van #042 (Live moving en route) -->
+<div class="absolute top-[380px] left-[520px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-20">
+<!-- Pulse radar -->
+<span class="absolute -top-1 w-14 h-14 rounded-full bg-primary/15 animate-ping pointer-events-none"></span>
+<div class="relative bg-primary text-on-primary px-xs py-1 rounded-full flex items-center gap-xs shadow-xl ring-2 ring-surface-container-lowest hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-body-md animate-bounce">local_shipping</span>
+<span class="font-label-sm text-label-sm font-semibold font-mono">VAN-042</span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+<span class="font-label-sm text-label-sm">34 km/h</span>
+</div>
+<!-- Expanded Real-Time Driver Pill Dropdown -->
+<div class="mt-xs bg-surface-container-lowest/95 backdrop-blur-md p-xs rounded-xl shadow-xl w-64 flex flex-col gap-base transition-all">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Ahmed Mansour</span>
+<span class="text-primary font-mono font-semibold">ETA 14:18 (On Time)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface truncate">Next: Katameya Heights Villa 14</p>
+<div class="flex items-center justify-between pt-base text-on-surface-variant font-label-sm text-label-sm">
+<span>Order #LM-89241</span>
+<span class="text-primary font-medium cursor-pointer hover:underline">Open Waybill</span>
+</div>
+</div>
+</div>
+<!-- Active Vehicle Marker 2: Van #018 (Unloading in Zamalek) -->
+<div class="absolute top-[320px] left-[200px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10">
+<div class="bg-surface-container-lowest text-on-surface px-xs py-1 rounded-full flex items-center gap-xs shadow-md hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-body-md text-on-surface-variant">inventory</span>
+<span class="font-label-sm text-label-sm font-semibold font-mono">VAN-018</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unloading</span>
+</div>
+</div>
+<!-- Active Vehicle Marker 3: Moto #009 (Mohandessin Express) -->
+<div class="absolute top-[410px] left-[170px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10">
+<div class="bg-surface-container-lowest text-on-surface px-xs py-1 rounded-full flex items-center gap-xs shadow-md hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-body-md text-primary">two_wheeler</span>
+<span class="font-label-sm text-label-sm font-semibold font-mono">MOTO-009</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">48 km/h</span>
+</div>
+</div>
+<!-- Numbered Waypoints for Van #042's Optimized Route -->
+<!-- Waypoint 1 -->
+<div class="absolute top-[430px] left-[640px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-semibold shadow-md">
+            1
+          </div>
+<div class="mt-base bg-surface-container-lowest/90 backdrop-blur-xs px-base py-0.5 rounded text-on-surface font-label-sm text-label-sm shadow-xs whitespace-nowrap">
+            Stop 1: Katameya Heights
+          </div>
+</div>
+<!-- Waypoint 2 -->
+<div class="absolute top-[390px] left-[760px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-sm text-label-sm font-semibold shadow-md">
+            2
+          </div>
+<div class="mt-base bg-surface-container-lowest/90 backdrop-blur-xs px-base py-0.5 rounded text-on-surface font-label-sm text-label-sm shadow-xs whitespace-nowrap">
+            Stop 2: Golden Square
+          </div>
+</div>
+<!-- Waypoint 3 -->
+<div class="absolute top-[510px] left-[890px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-sm text-label-sm font-semibold shadow-md">
+            3
+          </div>
+<div class="mt-base bg-surface-container-lowest/90 backdrop-blur-xs px-base py-0.5 rounded text-on-surface font-label-sm text-label-sm shadow-xs whitespace-nowrap">
+            Stop 3: Madinaty Privado
+          </div>
+</div>
+<!-- Floating Map Legend & Telemetry Overlay (Bottom Left) -->
+<div class="absolute bottom-sm left-sm bg-surface-container-lowest/95 backdrop-blur-md p-xs rounded-xl shadow-xl flex flex-col gap-xs max-w-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Route Telemetry &amp; Legend</span>
+<div class="flex flex-col gap-base">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-xs">
+<span class="w-3 h-1 bg-primary rounded-full"></span>
+<span class="text-on-surface">Active Dispatch Route</span>
+</div>
+<span class="font-mono text-on-surface-variant">Ring Rd Corridor</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></span>
+<span class="text-on-surface">Fulfillment Staging Node</span>
+</div>
+<span class="font-mono text-on-surface-variant">2 Hubs</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="text-on-surface">Heavy Congestion Alert</span>
+</div>
+<span class="font-mono text-error">+11m Delay</span>
+</div>
+</div>
+</div>
+<!-- Floating Quick Zoom & Map Controls (Bottom Right) -->
+<div class="absolute bottom-sm right-sm flex flex-col gap-base">
+<div class="bg-surface-container-lowest rounded-xl shadow-lg flex flex-col p-0.5">
+<button class="p-xs hover:bg-surface-container-low text-on-surface transition-colors rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-title-md">add</span>
+</button>
+<div class="h-[1px] bg-surface-container-high mx-xs"></div>
+<button class="p-xs hover:bg-surface-container-low text-on-surface transition-colors rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-title-md">remove</span>
+</button>
+</div>
+<button class="p-xs bg-surface-container-lowest hover:bg-surface-container-low text-on-surface rounded-xl shadow-lg flex items-center justify-center transition-colors" title="Recenter Cairo Hub">
+<span class="material-symbols-outlined text-title-md">my_location</span>
+</button>
+</div>
+</div>
+<!-- Live Dispatch Status Sub-Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-sm shadow-[0_4px_24px_rgba(0,0,0,0.02)] flex flex-col md:flex-row items-start md:items-center justify-between gap-sm">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-title-md">alt_route</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Dynamic Re-routing Active</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">AI detected 6th October Bridge slowdown; rerouted 4 vans via Mehwar Corridor seamlessly.</span>
+</div>
+</div>
+<div class="flex items-center gap-xs self-end md:self-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Last calculation: 42s ago</span>
+<button class="px-xs py-base bg-surface-container hover:bg-surface-container-high rounded-lg text-on-surface font-label-sm text-label-sm font-medium transition-colors" type="button">
+            Audit Log
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

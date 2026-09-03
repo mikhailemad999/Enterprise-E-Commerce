@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#615e58", "outline": "#747878", "secondary-fixed-dim": "#cbc6be", "error-container": "#ffdad6", "inverse-on-surface": "#f4f0ef", "on-secondary-container": "#67645d", "on-background": "#1c1b1b", "on-surface": "#1c1b1b", "on-primary-fixed-variant": "#474747", "secondary-container": "#e7e2da", "surface-container": "#f1edec", "surface-container-lowest": "#ffffff", "background": "#fdf8f7", "surface-container-low": "#f7f3f2", "on-secondary-fixed-variant": "#494641", "inverse-surface": "#313030", "surface-container-highest": "#e6e2e0", "on-surface-variant": "#4c4546", "on-primary-fixed": "#1b1b1b", "outline-variant": "#c4c7c7", "on-error-container": "#93000a", "tertiary-fixed": "#e6e2df", "secondary-fixed": "#e7e2da", "inverse-primary": "#c6c6c6", "on-tertiary-fixed-variant": "#484645", "on-primary-container": "#848484", "surface-bright": "#fdf8f7", "on-secondary": "#ffffff", "surface-tint": "#5e5e5e", "primary-container": "#1b1b1b", "primary-fixed-dim": "#c6c6c6", "error": "#ba1a1a", "on-secondary-fixed": "#1d1b17", "on-tertiary": "#ffffff", "surface": "#fdf8f8", "surface-dim": "#ddd9d8", "primary": "#000000", "tertiary": "#000000", "tertiary-container": "#1c1b1a", "surface-variant": "#e6e2e0", "primary-fixed": "#e2e2e2", "on-tertiary-container": "#868382", "on-primary": "#ffffff", "on-tertiary-fixed": "#1c1b1a", "on-error": "#ffffff", "tertiary-fixed-dim": "#cac6c4", "surface-container-high": "#ebe7e6" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "xs": "8px", "md": "32px", "gutter": "24px", "xl": "128px", "lg": "64px", "base": "4px", "margin": "40px", "sm": "16px" }, "fontFamily": { "display-mobile": [ "Inter" ], "title-md": [ "Inter" ], "display": [ "Inter" ], "headline-lg": [ "Inter" ], "headline-lg-mobile": [ "Inter" ], "label-sm": [ "Inter" ], "body-sm": [ "Inter" ], "label-md": [ "Inter" ], "headline-sm": [ "Inter" ], "body-lg": [ "Inter" ], "body-md": [ "Inter" ], "headline-md": [ "Inter" ] }, "fontSize": { "display-mobile": [ "40px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "title-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "display": [ "72px", { "lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "600" } ], "headline-lg": [ "48px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "headline-lg-mobile": [ "32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" } ], "headline-sm": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="bg-secondary-container text-on-secondary-fixed-variant px-margin py-base"><div class="max-w-7xl mx-auto flex items-center justify-between font-label-sm text-label-sm tracking-wider uppercase"><span>Complimentary White-Glove Regional Delivery on Orders Over 5,000 EGP</span><div class="flex items-center gap-sm"><span class="text-secondary">Cairo • Giza Same-Day Priority</span><span class="text-outline">|</span><span class="cursor-pointer hover:text-on-surface transition-colors">العربية (RTL)</span></div></div></div><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-md"><a class="flex items-center gap-xs" data-path="collection" href="#"><img alt="Lumio Wordmark Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwQScX6ztmbl9AzkOCNF0FfMvWwxOBJjErnk2fH-pu5bVmKhioSHEYY-TE4W4XGhKy8W-73idWWI3GmvcRvr0Ya_UYlCYO0j0nFK8mx-Do_kLN2rDy0XycweD3ciBEY5bo7L9t8UBFx814SvDFo7SSiCmiY_S_RkSbPfE3zLV7Kb_F2le-2CRI_sDCEHzPe3Bc_TQee0oyNmARu89pqef_-qS-XSUQ2MFFP2OMklWRTbn30XlVFpFOobQ"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">Lumio</span></a><nav class="hidden lg:flex items-center gap-xs p-base" data-active-classes="bg-primary-container text-on-primary font-label-md rounded"><a aria-current="page" class="px-sm py-xs transition-colors tracking-wider uppercase bg-primary-container text-on-primary font-label-md rounded" data-path="collection" href="#">Collection</a><a class="px-sm py-xs rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors tracking-wider uppercase" data-path="new-arrivals" href="#">New Arrivals</a><a class="px-sm py-xs rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors tracking-wider uppercase" data-path="editorial" href="#">Editorial</a><a class="px-sm py-xs rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors tracking-wider uppercase" data-path="stores" href="#">Stores</a></nav></div><div class="hidden md:flex flex-1 max-w-md items-center px-sm py-xs bg-surface-container-low rounded-xl"><span class="material-symbols-outlined text-outline mr-xs text-[20px]">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search bespoke furniture, lighting, objects..." type="text"/><kbd class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-xs py-base rounded">⌘K</kbd></div><div class="flex items-center gap-sm"><div class="hidden sm:flex items-center gap-xs font-label-md text-label-md text-on-surface-variant px-xs py-base bg-surface-container-low rounded"><span class="font-medium text-on-surface">EGP</span><span class="text-outline">•</span><span>EN</span></div><button aria-label="Wishlist" class="relative p-xs rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center font-bold">2</span></button><button aria-label="Cart Drawer" class="relative p-xs rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center font-bold">3</span></button><div class="flex items-center pl-xs"><a class="block p-base rounded-full hover:ring-2 hover:ring-outline transition-all" data-path="client-account" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvfFspuDR2TVxYGPgMVLoDrLi50D8KniBvgt11a1C_gREJvb9lzK7-5Bg70-fzQFKeaBk9rAtmTg2ItVXcR6Ul-jz1TqmZNBUmUfWw3ch0AmkXVqRFJRQ0HV6efLF6IK3AciuglcOwV3IUL64YXCwMlKLyDKxpbOGrdmqOFNg0V_wq5rm3ZuvYfjcaUiPATRSesjd-yciLCMG2xUPv00ssWVaGBhlqPEG9i5KEwSX5APDgRH-n_7sY"/></a></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<section class="max-w-7xl mx-auto px-margin py-md w-full">
+<!-- Top Progress Bar & Breadcrumbs -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-sm mb-lg">
+<div>
+<div class="flex items-center gap-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-xs">
+<span>Cart</span>
+<span class="text-outline">•</span>
+<span class="text-on-surface font-semibold">Review &amp; Logistics</span>
+<span class="text-outline">•</span>
+<span>Confirmation</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Checkout Order Registry</h1>
+</div>
+<!-- Real-time stock reservation timer -->
+<div class="flex items-center gap-sm bg-surface-container-low px-sm py-xs rounded-full shadow-sm" id="reservationTimerCard">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container text-on-surface">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">timer</span>
+</div>
+<div class="flex items-center gap-xs font-label-md text-label-md">
+<span class="text-on-surface-variant uppercase tracking-wider">Inventory Reserved:</span>
+<span class="font-bold text-on-surface tracking-mono tabular-nums" id="countdownDisplay">14:59</span>
+</div>
+</div>
+</div>
+<!-- Main Two-Column Architectural Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-start">
+<!-- LEFT COLUMN: Cart Review, Fulfillment, & Payment Engine (8 Cols) -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-md">
+<!-- MODULE 1: Cart Items Summary -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-md flex flex-col">
+<div class="flex items-center justify-between pb-sm mb-sm border-b-0">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">01 // Architectural Manifest</span>
+<span class="px-xs py-base rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">2 Selected</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Provenance Inspected</span>
+</div>
+<!-- Item 1 -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-gutter py-sm group transition-all" id="item-row-1">
+<div class="flex items-center gap-sm">
+<div class="w-20 h-24 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A minimalist architectural alabaster lamp emitting warm diffused ambient light, set against a quiet neutral brutalist concrete wall, warm tones, quiet luxury aesthetics, high end editorial product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpHFMeRmMyQ7gj4vOwqizmXzRoTRiyuQ9GRTJHh99AJK8QcpchEKl_t7GIEFpZJq8-lWFVGPTirrauDPB5AHipcmuK7TdHjhmp6nGGDi8rsE_GdDSTL5knsPaKlt6eLNQFG1qQCdO0XlC9nHoDTDR-zAecZkr2wP2Qj87r02YNfHCxA_jrTwPafDunUf9IO5FoizTecHYuowoNc_roEMTUm2_KdK8flM_IZ_WrK1_MW-evkI5VyUqX"/>
+</div>
+<div class="space-y-base min-w-0">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Lighting • Bespoke</span>
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight truncate">Nocturne Sculptural Alabaster Lamp</h2>
+<div class="flex items-center gap-xs font-body-sm text-body-sm text-secondary">
+<span>Honed Egyptian Alabaster</span>
+<span>•</span>
+<span>Dimmer-Integrated</span>
+</div>
+<div class="flex items-center gap-sm pt-base">
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-surface underline tracking-wider uppercase transition-colors" onclick="saveForLater('item-row-1', 'Nocturne Sculptural Alabaster Lamp')" type="button">Save to Registry</button>
+<button class="font-label-sm text-label-sm text-error hover:opacity-80 underline tracking-wider uppercase transition-colors" onclick="removeItem('item-row-1')" type="button">Remove</button>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-xs pt-xs sm:pt-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight" id="item-price-1">4,850 <span class="font-label-sm text-label-sm text-secondary font-normal">EGP</span></span>
+<!-- Quantity Stepper -->
+<div class="flex items-center bg-surface-container-low rounded-lg p-base">
+<button class="w-6 h-6 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors" onclick="adjustQty(1, -1)" type="button">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="w-8 text-center font-label-md text-label-md font-semibold text-on-surface" id="qty-count-1">1</span>
+<button class="w-6 h-6 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors" onclick="adjustQty(1, 1)" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Subtle separation via tonal strip -->
+<div class="w-full h-px bg-surface-container-high my-xs"></div>
+<!-- Item 2 -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-gutter py-sm group transition-all" id="item-row-2">
+<div class="flex items-center gap-sm">
+<div class="w-20 h-24 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="An intricately textured hand-woven pure organic linen throw folded elegantly over a raw oak minimalist chair, soft gallery shadows, natural beige and ecru tones, architectural interior design styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdrpQVwaVX_aZ2jn06DCj7ac14WcUAKtLf21RLxE_XWcnJwPDmzWuxN8578qkBz_sbbla4ZFzQwFBe9EAZ9iJl21SkPF7eF5vy3UA159fAWCYu4ArkEItHIBfrh0p4wA64SNxnbEWN3H8-2V9q0SIRQRjr0DXuDH_IpZzk6RbY7oGKky_DZiRrIDrNGUy9QUsN4cXSECb0nnlwz1fU3IV5nYBupCVY9BRjqsEgRp18obnTRITsvuXU"/>
+</div>
+<div class="space-y-base min-w-0">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Textiles • Handcrafted</span>
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight truncate">Organic Linen Throw</h2>
+<div class="flex items-center gap-xs font-body-sm text-body-sm text-secondary">
+<span>100% Raw Egyptian Flax</span>
+<span>•</span>
+<span>Ecru Mist</span>
+</div>
+<div class="flex items-center gap-sm pt-base">
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-surface underline tracking-wider uppercase transition-colors" onclick="saveForLater('item-row-2', 'Organic Linen Throw')" type="button">Save to Registry</button>
+<button class="font-label-sm text-label-sm text-error hover:opacity-80 underline tracking-wider uppercase transition-colors" onclick="removeItem('item-row-2')" type="button">Remove</button>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-xs pt-xs sm:pt-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight" id="item-price-2">1,200 <span class="font-label-sm text-label-sm text-secondary font-normal">EGP</span></span>
+<!-- Quantity Stepper -->
+<div class="flex items-center bg-surface-container-low rounded-lg p-base">
+<button class="w-6 h-6 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors" onclick="adjustQty(2, -1)" type="button">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="w-8 text-center font-label-md text-label-md font-semibold text-on-surface" id="qty-count-2">1</span>
+<button class="w-6 h-6 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors" onclick="adjustQty(2, 1)" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODULE 2: Delivery Address Selection -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-md flex flex-col">
+<div class="flex items-center justify-between pb-sm mb-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">02 // Spatial Destination</span>
+<button class="font-label-md text-label-md text-on-surface hover:text-secondary uppercase tracking-wider font-semibold flex items-center gap-base transition-colors" onclick="showAddressModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Add New Address</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<!-- Selected Saved Address Card -->
+<div class="relative bg-surface-container-low p-sm rounded-xl cursor-pointer shadow-sm transition-all">
+<div class="flex items-start justify-between mb-xs">
+<div class="flex items-center gap-xs">
+<span class="px-xs py-base bg-primary text-on-primary rounded font-label-sm text-label-sm uppercase tracking-wider">Primary Studio</span>
+<span class="flex items-center gap-base px-xs py-base bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm rounded">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    GPS Verified
+                  </span>
+</div>
+<div class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mb-base">Tarek El-Mansouri</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Villa 42, District 1, Choueifat Zone</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-xs">New Cairo, Cairo Governorate, 11835</p>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">call</span>
+<span>+20 100 482 9104</span>
+</div>
+</div>
+<!-- Alternate Address Card -->
+<div class="relative bg-surface p-sm rounded-xl cursor-pointer hover:bg-surface-container-low transition-all" onclick="selectAddress(this)">
+<div class="flex items-start justify-between mb-xs">
+<span class="px-xs py-base bg-surface-container-high text-on-surface-variant rounded font-label-sm text-label-sm uppercase tracking-wider">Zamalek Atelier</span>
+<div class="w-4 h-4 rounded-full bg-surface-container-highest"></div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mb-base">Lumio Design Lab</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">14 Brazil Street, 3rd Floor</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Zamalek, Cairo, 11211</p>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">call</span>
+<span>+20 122 890 3341</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MODULE 3: Delivery Method Selection -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-md flex flex-col">
+<div class="flex items-center justify-between pb-sm mb-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">03 // Fulfillment Protocol</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Select Transit Standard</span>
+</div>
+<div class="space-y-xs" id="deliveryMethodsContainer">
+<!-- Option 1: Selected Lumio Private Fleet -->
+<label class="flex flex-col sm:flex-row sm:items-center justify-between p-sm rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all group" onclick="setShippingMethod(75, 'Lumio Private Fleet')">
+<div class="flex items-start gap-sm">
+<div class="pt-base">
+<input checked="" class="w-4 h-4 text-primary accent-primary cursor-pointer" name="delivery_method" type="radio"/>
+</div>
+<div>
+<div class="flex items-center gap-xs mb-base">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Lumio Private Fleet</span>
+<span class="px-xs py-base bg-primary text-on-primary font-label-sm text-label-sm rounded uppercase tracking-wider">Fastest</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Climate-controlled white-glove van, live telemetric driver tracking, white glove unpacking.</p>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-secondary mt-base">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="text-on-surface font-medium">Estimated Delivery: Today by 8:00 PM</span>
+</div>
+</div>
+</div>
+<div class="text-left sm:text-right mt-xs sm:mt-0 pl-md sm:pl-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">75 <span class="font-label-sm text-label-sm text-secondary font-normal">EGP</span></span>
+</div>
+</label>
+<!-- Option 2: Standard Carrier via Bosta -->
+<label class="flex flex-col sm:flex-row sm:items-center justify-between p-sm rounded-xl bg-surface cursor-pointer hover:bg-surface-container-low transition-all group" onclick="setShippingMethod(45, 'Bosta Standard')">
+<div class="flex items-start gap-sm">
+<div class="pt-base">
+<input class="w-4 h-4 text-primary accent-primary cursor-pointer" name="delivery_method" type="radio"/>
+</div>
+<div>
+<div class="flex items-center gap-xs mb-base">
+<span class="font-title-md text-title-md font-medium text-on-surface">Standard Regional Carrier via Bosta</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Secured courier ground transit across Greater Cairo &amp; Giza districts.</p>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-secondary mt-base">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+<span>1–2 Business Days</span>
+</div>
+</div>
+</div>
+<div class="text-left sm:text-right mt-xs sm:mt-0 pl-md sm:pl-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">45 <span class="font-label-sm text-label-sm text-secondary font-normal">EGP</span></span>
+</div>
+</label>
+<!-- Option 3: Boutique Store Pickup -->
+<label class="flex flex-col sm:flex-row sm:items-center justify-between p-sm rounded-xl bg-surface cursor-pointer hover:bg-surface-container-low transition-all group" onclick="setShippingMethod(0, 'Zamalek Flagship Pickup')">
+<div class="flex items-start gap-sm">
+<div class="pt-base">
+<input class="w-4 h-4 text-primary accent-primary cursor-pointer" name="delivery_method" type="radio"/>
+</div>
+<div>
+<div class="flex items-center gap-xs mb-base">
+<span class="font-title-md text-title-md font-medium text-on-surface">Boutique Store Concierge Pickup</span>
+<span class="px-xs py-base bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm rounded uppercase">Zero Freight</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zamalek Flagship Atelier • Prepared in bespoke archival unboxing crate.</p>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-secondary mt-base">
+<span class="material-symbols-outlined text-[14px]">storefront</span>
+<span>Available tomorrow from 11:00 AM</span>
+</div>
+</div>
+</div>
+<div class="text-left sm:text-right mt-xs sm:mt-0 pl-md sm:pl-0">
+<span class="font-title-md text-title-md text-on-surface font-bold uppercase tracking-wider">Free</span>
+</div>
+</label>
+</div>
+</div>
+<!-- MODULE 4: Payment Method Selector -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-md flex flex-col">
+<div class="flex items-center justify-between pb-sm mb-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">04 // Settlement Instrument</span>
+<div class="flex items-center gap-base font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Encrypted Transaction</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm mb-md">
+<!-- Method 1: Cards -->
+<div class="payment-card active p-sm rounded-xl bg-surface-container-low cursor-pointer transition-all flex flex-col justify-between" onclick="selectPayment(this, 'card-form')">
+<div>
+<div class="flex items-center justify-between mb-xs">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Credit / Debit Card</span>
+<div class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-sm">Instant processing via authorized Egyptian &amp; international gateways.</p>
+</div>
+<div class="flex items-center gap-xs pt-xs">
+<span class="px-xs py-base bg-surface-container-highest rounded font-label-sm text-label-sm font-semibold text-on-surface">Visa</span>
+<span class="px-xs py-base bg-surface-container-highest rounded font-label-sm text-label-sm font-semibold text-on-surface">Mastercard</span>
+<span class="px-xs py-base bg-surface-container-highest rounded font-label-sm text-label-sm font-semibold text-on-surface">Meeza</span>
+</div>
+</div>
+<!-- Method 2: Paymob Mobile Wallets -->
+<div class="payment-card p-sm rounded-xl bg-surface cursor-pointer hover:bg-surface-container-low transition-all flex flex-col justify-between" onclick="selectPayment(this, 'wallet-form')">
+<div>
+<div class="flex items-center justify-between mb-xs">
+<span class="font-title-md text-title-md font-medium text-on-surface">Paymob Digital Wallets</span>
+<div class="w-4 h-4 rounded-full bg-surface-container-highest"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-sm">Direct OTP dispatch via InstaPay, Vodafone Cash &amp; telecom channels.</p>
+</div>
+<div class="flex items-center gap-xs pt-xs">
+<span class="px-xs py-base bg-surface-container-high rounded font-label-sm text-label-sm font-medium text-on-surface">Vodafone</span>
+<span class="px-xs py-base bg-surface-container-high rounded font-label-sm text-label-sm font-medium text-on-surface">InstaPay</span>
+<span class="px-xs py-base bg-surface-container-high rounded font-label-sm text-label-sm font-medium text-on-surface">Orange</span>
+</div>
+</div>
+<!-- Method 3: Paymob valU -->
+<div class="payment-card p-sm rounded-xl bg-surface cursor-pointer hover:bg-surface-container-low transition-all flex flex-col justify-between" onclick="selectPayment(this, 'valu-form')">
+<div>
+<div class="flex items-center justify-between mb-xs">
+<div class="flex items-center gap-xs">
+<span class="font-title-md text-title-md font-medium text-on-surface">Paymob valU</span>
+<span class="px-xs py-base bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm rounded uppercase">Installments</span>
+</div>
+<div class="w-4 h-4 rounded-full bg-surface-container-highest"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-sm">Split total over up to 36 months starting from ~195 EGP/mo.</p>
+</div>
+<div class="flex items-center gap-xs pt-xs font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[15px]">credit_score</span>
+<span>Instant approval with National ID</span>
+</div>
+</div>
+<!-- Method 4: Cash on Delivery -->
+<div class="payment-card p-sm rounded-xl bg-surface cursor-pointer hover:bg-surface-container-low transition-all flex flex-col justify-between" onclick="selectPayment(this, 'cod-form')">
+<div>
+<div class="flex items-center justify-between mb-xs">
+<span class="font-title-md text-title-md font-medium text-on-surface">Cash On Delivery</span>
+<div class="w-4 h-4 rounded-full bg-surface-container-highest"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-sm">Settle directly upon physical curation and inspection at your doorstep.</p>
+</div>
+<div class="flex items-center gap-xs pt-xs font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+<span>SMS confirmation code needed upon arrival</span>
+</div>
+</div>
+</div>
+<!-- Dynamic Payment Sub-Panels -->
+<div class="bg-surface-container-low p-sm rounded-xl" id="paymentDetailsZone">
+<!-- Sub-panel: Credit Card Form -->
+<div class="space-y-sm" id="card-form">
+<div class="flex flex-col gap-base">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Cardholder Full Name</label>
+<input class="px-sm py-xs bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" type="text" value="Tarek M. El-Mansouri"/>
+</div>
+<div class="flex flex-col gap-base">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Card Number</label>
+<div class="relative">
+<input class="w-full px-sm py-xs bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface tracking-mono focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" type="text" value="•••• •••• •••• 9012"/>
+<span class="absolute right-3 top-2.5 font-label-sm text-label-sm uppercase font-bold text-secondary">VISA</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<div class="flex flex-col gap-base">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Expiry Date</label>
+<input class="px-sm py-xs bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="MM / YY" type="text" value="08 / 28"/>
+</div>
+<div class="flex flex-col gap-base">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Security Code</label>
+<input class="px-sm py-xs bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="CVV" type="password" value="882"/>
+</div>
+</div>
+</div>
+<!-- Sub-panel: Mobile Wallets (hidden by default) -->
+<div class="hidden space-y-sm" id="wallet-form">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Enter your registered mobile number associated with your electronic wallet account.</p>
+<div class="flex flex-col gap-base">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Mobile Wallet Number</label>
+<div class="flex gap-xs">
+<span class="px-sm py-xs bg-surface-container-highest rounded-xl font-body-sm text-body-sm font-semibold flex items-center">+20</span>
+<input class="flex-1 px-sm py-xs bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none shadow-sm" placeholder="010 xxxx xxxx" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Sub-panel: Valu (hidden by default) -->
+<div class="hidden space-y-sm" id="valu-form">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Provide your valU-registered Egyptian cell phone number to retrieve eligible tenure options.</p>
+<div class="flex gap-xs">
+<input class="flex-1 px-sm py-xs bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none shadow-sm" placeholder="valU Registered Mobile" type="tel"/>
+<button class="px-sm py-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-xl hover:bg-inverse-surface transition-colors" type="button">Verify</button>
+</div>
+</div>
+<!-- Sub-panel: COD (hidden by default) -->
+<div class="hidden space-y-xs" id="cod-form">
+<div class="flex items-center gap-xs font-label-md text-label-md text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Physical Cash Settlement Protocol</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Our concierge white-glove driver will carry an exact change receipt. A prompt SMS authorization token will be sent 30 minutes prior to delivery.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sticky Order Summary & Affirmation (4-5 Cols) -->
+<div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-sm sticky top-24">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-md flex flex-col">
+<div class="flex items-center justify-between pb-sm mb-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Summary</h2>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">EGP Currency</span>
+</div>
+<!-- Promo Code Section -->
+<div class="py-sm mb-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary block mb-xs">Promotional Voucher</span>
+<div class="flex items-center gap-xs">
+<div class="relative flex-1">
+<input class="w-full px-sm py-xs bg-surface-container-low rounded-xl font-label-md text-label-md uppercase tracking-widest text-on-surface focus:outline-none uppercase font-semibold" id="promoInput" type="text" value="LUMIO10"/>
+<button class="absolute right-2 top-2 text-outline hover:text-on-surface" onclick="clearPromo()" type="button">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+</button>
+</div>
+<button class="px-sm py-xs bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-xl hover:bg-surface-container transition-colors" id="applyPromoBtn" onclick="togglePromo()" type="button">Applied</button>
+</div>
+<div class="flex items-center gap-base mt-xs text-on-surface-variant font-label-sm text-label-sm" id="promoNotice">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+<span>10% Spatial Opening Privileges (-605 EGP)</span>
+</div>
+</div>
+<!-- Price Calculation Ledger -->
+<div class="space-y-xs py-sm">
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Items Subtotal</span>
+<span class="text-on-surface font-medium" id="summarySubtotal">6,050 EGP</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-center gap-base">
+<span>Shipping Fee</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low px-xs py-base rounded text-secondary" id="shippingMethodBadge">Private Fleet</span>
+</div>
+<span class="text-on-surface font-medium" id="summaryShipping">75 EGP</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Value Added Tax (14% Included)</span>
+<span class="text-secondary font-medium" id="summaryVat">742.98 EGP</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-secondary" id="summaryDiscountRow">
+<span>Promo Code (LUMIO10)</span>
+<span class="text-on-surface font-medium" id="summaryDiscount">-605 EGP</span>
+</div>
+</div>
+<!-- Divider Tonal Strip -->
+<div class="w-full h-px bg-surface-container-high my-sm"></div>
+<!-- Grand Total -->
+<div class="flex justify-between items-baseline mb-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block">Total Procurement</span>
+<span class="font-label-sm text-label-sm text-secondary">All Duties &amp; White-Glove Staging Included</span>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight" id="grandTotal">5,520</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium ml-base">EGP</span>
+</div>
+</div>
+<!-- Primary CTA Button -->
+<button class="w-full py-sm px-md bg-primary text-on-primary rounded-xl font-label-md text-label-md uppercase tracking-widest hover:bg-inverse-surface active:scale-[0.99] transition-all flex items-center justify-center gap-xs shadow-md" id="placeOrderBtn" onclick="handlePlaceOrder()" type="button">
+<span>Place Order</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Security Badges & Trust Assurance -->
+<div class="mt-md pt-sm space-y-xs">
+<div class="flex items-center justify-center gap-md text-secondary font-label-sm text-label-sm">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+<span>256-Bit SSL Encrypted</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-[15px]">security</span>
+<span>PCI DSS Compliant</span>
+</div>
+</div>
+<!-- Guarantee text card -->
+<div class="bg-surface-container-low p-xs rounded-lg flex items-start gap-xs mt-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-base">spatial_audio_off</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Every Lumio artifact includes an authenticated Certificate of Provenance and a 3-year structural warranty.
+              </p>
+</div>
+</div>
+</div>
+<!-- Curated Assistance Concierge Widget -->
+<div class="bg-surface-container-low rounded-xl p-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Questions Regarding Spatial Scale?</span>
+<span class="font-body-sm text-body-sm text-secondary">Connect with our Cairo Studio Director</span>
+</div>
+</div>
+<button class="px-sm py-xs bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase tracking-wider rounded-lg hover:bg-surface-container-high transition-colors" type="button">Chat</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Client-side Interaction JavaScript -->
+<script>
+    // State
+    let cart = {
+      1: { qty: 1, unitPrice: 4850 },
+      2: { qty: 1, unitPrice: 1200 }
+    };
+    let currentShippingFee = 75;
+    let promoDiscount = 605;
+    let promoActive = true;
+
+    // Reservation Timer (15:00 countdown)
+    let secondsLeft = 899;
+    const timerElement = document.getElementById('countdownDisplay');
+    const interval = setInterval(() => {
+      if (secondsLeft <= 0) {
+        clearInterval(interval);
+        if (timerElement) timerElement.textContent = "00:00 Expired";
+        return;
+      }
+      secondsLeft--;
+      const m = Math.floor(secondsLeft / 60).toString().padStart(2, '0');
+      const s = (secondsLeft % 60).toString().padStart(2, '0');
+      if (timerElement) timerElement.textContent = `${m}:${s}`;
+    }, 1000);
+
+    // Recalculate Ledger
+    function recalculateTotal() {
+      let subtotal = 0;
+      for (const id in cart) {
+        subtotal += cart[id].qty * cart[id].unitPrice;
+      }
+
+      const vat = subtotal * 0.14;
+      const discount = promoActive ? (subtotal > 0 ? promoDiscount : 0) : 0;
+      const total = Math.max(0, subtotal + currentShippingFee - discount);
+
+      // DOM Updates
+      const subtotalEl = document.getElementById('summarySubtotal');
+      const vatEl = document.getElementById('summaryVat');
+      const grandTotalEl = document.getElementById('grandTotal');
+      const discountEl = document.getElementById('summaryDiscount');
+      const discountRow = document.getElementById('summaryDiscountRow');
+
+      if (subtotalEl) subtotalEl.textContent = subtotal.toLocaleString('en-US') + " EGP";
+      if (vatEl) vatEl.textContent = vat.toFixed(2) + " EGP";
+      if (grandTotalEl) grandTotalEl.textContent = total.toLocaleString('en-US');
+      
+      if (discountRow) {
+        discountRow.style.display = promoActive ? 'flex' : 'none';
+      }
+      if (discountEl) {
+        discountEl.textContent = `-${discount.toLocaleString('en-US')} EGP`;
+      }
+    }
+
+    // Adjust Item Quantity
+    function adjustQty(itemId, delta) {
+      if (!cart[itemId]) return;
+      cart[itemId].qty = Math.max(1, cart[itemId].qty + delta);
+      const countEl = document.getElementById(`qty-count-${itemId}`);
+      if (countEl) countEl.textContent = cart[itemId].qty;
+      recalculateTotal();
+    }
+
+    // Remove Item
+    function removeItem(rowId) {
+      const row = document.getElementById(rowId);
+      if (row) {
+        row.style.opacity = '0';
+        setTimeout(() => {
+          row.remove();
+          const idNum = rowId === 'item-row-1' ? 1 : 2;
+          delete cart[idNum];
+          recalculateTotal();
+        }, 200);
+      }
+    }
+
+    // Save For Later
+    function saveForLater(rowId, itemName) {
+      alert(`"${itemName}" has been shifted to your Lumio Private Wishlist.`);
+      removeItem(rowId);
+    }
+
+    // Change Delivery Option
+    function setShippingMethod(fee, label) {
+      currentShippingFee = fee;
+      const shippingEl = document.getElementById('summaryShipping');
+      const badgeEl = document.getElementById('shippingMethodBadge');
+      if (shippingEl) shippingEl.textContent = fee === 0 ? 'Free' : `${fee} EGP`;
+      if (badgeEl) badgeEl.textContent = label;
+      recalculateTotal();
+    }
+
+    // Toggle Promo Code
+    function togglePromo() {
+      const input = document.getElementById('promoInput');
+      const btn = document.getElementById('applyPromoBtn');
+      const notice = document.getElementById('promoNotice');
+      
+      if (promoActive) {
+        promoActive = false;
+        if (btn) {
+          btn.textContent = "Apply";
+          btn.classList.remove('bg-surface-container-highest');
+          btn.classList.add('bg-primary', 'text-on-primary');
+        }
+        if (notice) notice.style.display = 'none';
+      } else {
+        if (input && input.value.trim().toUpperCase() === 'LUMIO10') {
+          promoActive = true;
+          if (btn) {
+            btn.textContent = "Applied";
+            btn.classList.remove('bg-primary', 'text-on-primary');
+            btn.classList.add('bg-surface-container-highest');
+          }
+          if (notice) notice.style.display = 'flex';
+        } else {
+          alert('Invalid promo voucher code.');
+        }
+      }
+      recalculateTotal();
+    }
+
+    function clearPromo() {
+      const input = document.getElementById('promoInput');
+      if (input) input.value = '';
+      if (promoActive) togglePromo();
+    }
+
+    // Payment Selection
+    function selectPayment(element, targetFormId) {
+      const cards = document.querySelectorAll('.payment-card');
+      cards.forEach(card => {
+        card.classList.remove('bg-surface-container-low');
+        card.classList.add('bg-surface');
+        const indicator = card.querySelector('.rounded-full:last-child');
+        if (indicator) {
+          indicator.className = 'w-4 h-4 rounded-full bg-surface-container-highest';
+          indicator.innerHTML = '';
+        }
+      });
+
+      element.classList.remove('bg-surface');
+      element.classList.add('bg-surface-container-low');
+      const activeIndicator = element.querySelector('.rounded-full:last-child');
+      if (activeIndicator) {
+        activeIndicator.className = 'w-4 h-4 rounded-full bg-primary flex items-center justify-center text-on-primary';
+        activeIndicator.innerHTML = '<span class="material-symbols-outlined text-[10px]">check</span>';
+      }
+
+      // Toggle form sections
+      const forms = ['card-form', 'wallet-form', 'valu-form', 'cod-form'];
+      forms.forEach(id => {
+        const f = document.getElementById(id);
+        if (f) {
+          if (id === targetFormId) {
+            f.classList.remove('hidden');
+          } else {
+            f.classList.add('hidden');
+          }
+        }
+      });
+    }
+
+    // Modal dummy trigger
+    function showAddressModal() {
+      const newAddress = prompt("Enter delivery destination (Format: Street, District, City):", "Road 9, Maadi, Cairo");
+      if (newAddress) {
+        alert("New address successfully added to registry: " + newAddress);
+      }
+    }
+
+    // Order Placement confirmation simulation
+    function handlePlaceOrder() {
+      const btn = document.getElementById('placeOrderBtn');
+      if (btn) {
+        btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span> Settle &amp; Dispatching...';
+        btn.disabled = true;
+        setTimeout(() => {
+          alert('Procurement Successful! Order #LM-89204 has been transferred to Lumio White-Glove dispatch. A confirmation sms and consignment manifest have been sent to your primary correspondence.');
+          btn.innerHTML = '<span>Order Confirmed</span><span class="material-symbols-outlined text-[18px]">check</span>';
+        }, 1200);
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-xl"><div class="max-w-7xl mx-auto px-margin py-lg"><div class="grid grid-cols-1 md:grid-cols-4 gap-md mb-lg"><div class="space-y-sm md:col-span-1"><div class="flex items-center gap-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">Lumio</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Architectural discipline meets silent luxury. Curated collections engineered for discerning enterprise interiors and refined spaces.</p><div class="pt-xs flex items-center gap-xs font-label-sm text-label-sm text-secondary"><span class="material-symbols-outlined text-[16px]">warehouse</span><span>Fulfillment Hubs: Cairo, Dubai, Riyadh</span></div></div><div class="space-y-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-on-surface block">Collections</span><ul class="space-y-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="collection" href="#">Architectural Seating</a></li><li><a class="hover:text-on-surface transition-colors" data-path="collection" href="#">Monolithic Tables</a></li><li><a class="hover:text-on-surface transition-colors" data-path="collection" href="#">Acoustic Partitioning</a></li><li><a class="hover:text-on-surface transition-colors" data-path="collection" href="#">Minimalist Luminescence</a></li></ul></div><div class="space-y-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-on-surface block">Client Concierge</span><ul class="space-y-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="stores" href="#">Private Flagship Consultations</a></li><li><a class="hover:text-on-surface transition-colors" data-path="editorial" href="#">Logistics &amp; Installation</a></li><li><a class="hover:text-on-surface transition-colors" data-path="editorial" href="#">Enterprise Trade Terms</a></li><li><a class="hover:text-on-surface transition-colors" data-path="editorial" href="#">Care &amp; Provenance</a></li></ul></div><div class="space-y-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-on-surface block">The Editorial Registry</span><p class="font-body-sm text-body-sm text-on-surface-variant">Receive private quarterly editions on spatial curation and limited inventory releases.</p><div class="flex flex-col sm:flex-row gap-xs"><input class="flex-1 px-sm py-xs bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Enter your correspondence email" type="email"/><button class="px-sm py-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-xl hover:bg-inverse-surface transition-colors" type="button">Subscribe</button></div></div></div><div class="pt-md flex flex-col md:flex-row items-center justify-between gap-gutter font-body-sm text-body-sm text-on-surface-variant"><div class="flex flex-wrap items-center gap-md"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">© 2025 Lumio Editions. All rights reserved.</span><div class="flex items-center gap-sm"><a class="hover:text-on-surface transition-colors" data-path="editorial" href="#">Privacy Standard</a><span class="text-outline">•</span><a class="hover:text-on-surface transition-colors" data-path="editorial" href="#">Terms of Procurement</a><span class="text-outline">•</span><a class="hover:text-on-surface transition-colors" data-path="editorial" href="#">Regional Compliance</a></div></div><div class="flex items-center gap-xs"><span class="px-xs py-base bg-surface-container rounded font-label-sm text-label-sm text-on-surface font-semibold">VISA</span><span class="px-xs py-base bg-surface-container rounded font-label-sm text-label-sm text-on-surface font-semibold">MASTERCARD</span><span class="px-xs py-base bg-surface-container rounded font-label-sm text-label-sm text-on-surface font-semibold">MEEZA</span><span class="px-xs py-base bg-surface-container rounded font-label-sm text-label-sm text-on-surface font-semibold">VALU</span><span class="px-xs py-base bg-surface-container rounded font-label-sm text-label-sm text-on-surface font-semibold">PAYMOB</span><span class="px-xs py-base bg-surface-container rounded font-label-sm text-label-sm text-secondary font-medium">COD</span></div></div></div></footer></body></html>

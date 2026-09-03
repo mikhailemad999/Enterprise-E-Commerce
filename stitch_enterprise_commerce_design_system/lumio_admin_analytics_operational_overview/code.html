@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Lumio Enterprise Admin</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary":"#000000","on-secondary":"#ffffff","on-primary-container":"#848484","surface-container-low":"#f7f3f1","on-secondary-container":"#67645e","outline-variant":"#cfc4c5","tertiary-container":"#1c1b1a","on-surface":"#1c1b1b","surface-container-lowest":"#ffffff","on-surface-variant":"#444748","secondary-fixed-dim":"#cbc6be","secondary":"#615e58","error-container":"#ffdad6","on-tertiary":"#ffffff","primary-fixed-dim":"#c6c6c6","secondary-fixed":"#e7e2da","surface-container":"#f1edec","surface-container-highest":"#e5e2e1","inverse-surface":"#313030","on-background":"#1c1b1b","background":"#fdf8f7","primary-container":"#1b1b1b","on-primary-fixed-variant":"#474747","surface":"#fdf8f8","surface-dim":"#ddd9d8","surface-container-high":"#ebe7e6","on-secondary-fixed-variant":"#494641","surface-tint":"#5e5e5e","inverse-on-surface":"#f4f0ef","outline":"#747878","on-tertiary-fixed":"#1c1b1a","on-primary":"#ffffff","primary":"#000000","tertiary-fixed-dim":"#cac6c4","secondary-container":"#e7e2da","on-primary-fixed":"#1b1b1b","surface-bright":"#fdf8f7","on-tertiary-fixed-variant":"#484645","on-secondary-fixed":"#1d1b17","primary-fixed":"#e2e2e2","on-error":"#ffffff","error":"#ba1a1a","surface-variant":"#e6e2e0","on-error-container":"#93000a","tertiary-fixed":"#e6e2df","inverse-primary":"#c6c6c6","on-tertiary-container":"#868382"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"sm":"16px","md":"32px","base":"4px","gutter":"24px","lg":"64px","margin":"40px","xl":"128px","xs":"8px"},fontFamily:{"display":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"title-md":["Inter"],"display-mobile":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"]},fontSize:{"display":["72px",{"lineHeight":"76px","letterSpacing":"-0.04em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg":["48px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-sm":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"title-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-mobile":["40px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-lg-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"12px","letterSpacing":"0.06em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed top-0 left-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-md shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex flex-col gap-md"><div class="px-gutter flex items-center gap-xs"><img alt="Brand logo. - Primary color: #000000
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwQScX6ztmbl9AzkOCNF0FfMvWwxOBJjErnk2fH-pu5bVmKhioSHEYY-TE4W4XGhKy8W-73idWWI3GmvcRvr0Ya_UYlCYO0j0nFK8mx-Do_kLN2rDy0XycweD3ciBEY5bo7L9t8UBFx814SvDFo7SSiCmiY_S_RkSbPfE3zLV7Kb_F2le-2CRI_sDCEHzPe3Bc_TQee0oyNmARu89pqef_-qS-XSUQ2MFFP2OMklWRTbn30XlVFpFOobQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase leading-none">LUMIO</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase mt-base">Console</span></div></div><div class="px-sm"><div class="px-xs mb-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operations Core</div><nav class="flex flex-col gap-base" data-active-classes="bg-primary text-on-primary font-title-md"><a aria-current="page" class="flex items-center gap-xs px-xs py-base rounded-lg transition-colors bg-primary text-on-primary font-title-md" data-path="overview" href="#"><span class="material-symbols-outlined text-title-md">grid_view</span><span class="font-body-sm text-body-sm">Dashboard (Overview)</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="order-management" href="#"><span class="material-symbols-outlined text-title-md">receipt_long</span><span class="font-body-sm text-body-sm">Order Management (OMS)</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="live-fleet-dispatch" href="#"><span class="material-symbols-outlined text-title-md">near_me</span><span class="font-body-sm text-body-sm">Live Fleet Dispatch &amp; Map</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory-warehouses" href="#"><span class="material-symbols-outlined text-title-md">warehouse</span><span class="font-body-sm text-body-sm">Inventory &amp; Multi-Warehouse</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="catalog-products" href="#"><span class="material-symbols-outlined text-title-md">inventory_2</span><span class="font-body-sm text-body-sm">Catalog &amp; Products</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics-financials" href="#"><span class="material-symbols-outlined text-title-md">monitoring</span><span class="font-body-sm text-body-sm">Analytics &amp; Financial Reports</span></a><a class="flex items-center gap-xs px-xs py-base rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="store-settings" href="#"><span class="material-symbols-outlined text-title-md">tune</span><span class="font-body-sm text-body-sm">Store Settings</span></a></nav></div></div><div class="px-gutter flex flex-col gap-xs"><div class="p-xs rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex items-center justify-between mb-base"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System Status</span><span class="w-2 h-2 rounded-full bg-primary"></span></div><div class="font-body-sm text-body-sm text-on-surface">Enterprise v2.4</div><div class="font-label-sm text-label-sm text-on-surface-variant">All regional nodes synced</div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-xs text-on-surface-variant pointer-events-none text-title-md">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm pl-md pr-lg py-base rounded-lg focus:outline-none focus:bg-surface-container-lowest" placeholder="Search orders, inventory SKUs, waybills..." type="text"/><div class="absolute right-xs flex items-center gap-base px-base py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><span>⌘</span><span>K</span></div></div></div><div class="flex items-center gap-sm"><div class="flex items-center gap-xs bg-surface-container-low px-xs py-base rounded-lg"><span class="material-symbols-outlined text-on-surface-variant text-body-md">location_on</span><select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer"><option class="bg-surface-container-lowest text-on-surface" value="cairo">Cairo Central</option><option class="bg-surface-container-lowest text-on-surface" value="alexandria">Alexandria Hub</option><option class="bg-surface-container-lowest text-on-surface" value="dubai">Dubai Flagship</option></select></div><button class="relative p-base rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-title-md">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-primary"></span></button><div class="flex items-center gap-xs pl-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WzGJlzRZYy0h3QOs8fkIp0NdCKdT7lzKmLOzuwppC8qQNfGyHb1RfGeCU5mLzGxF2qpQLspaIAZ4K-cggmoq1fHsLU9Zocxn7U1Skm7CO2HmvomYLGSgMOy1gFG1Jz-rhFYrcg-DnxdgJmp1mfhK91brWe9O5CymsV7Jn1CDPlEV1RUhv0qqBuOhtdjp5u-84Lk_YYN5VsReCRe7DuaooXHP58pc0zNd8AhHwrXjvEIXA59GSN5euJjhE"/><div class="hidden xl:flex flex-col leading-tight"><span class="font-body-sm text-body-sm text-on-surface">Director Suite</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Operations</span></div></div></div></header><main class="w-full pt-16 px-margin bg-background min-h-screen"><div class="flex flex-col w-full pb-xl">
+<!-- Operational Header Strip -->
+<div class="flex flex-col md:flex-row md:items-end justify-between py-md gap-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-xs mb-base">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Real-time Telemetry Active</span>
+<span class="text-on-surface-variant">/</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Zone: North Africa &amp; Levant</span>
+</div>
+<div class="flex items-baseline gap-sm">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Enterprise Overview</h1>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fiscal Cycle Q3 • Live Sync</span>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="flex items-center gap-xs">
+<div class="flex items-center bg-surface-container p-0.5 rounded-lg shadow-sm">
+<button class="px-xs py-1 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all" type="button">Today</button>
+<button class="px-xs py-1 rounded text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-all" type="button">7D</button>
+<button class="px-xs py-1 rounded text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-all" type="button">30D</button>
+</div>
+<button class="flex items-center gap-xs bg-surface-container-low hover:bg-surface-container text-on-surface px-sm py-xs rounded-lg transition-colors font-body-sm text-body-sm" type="button">
+<span class="material-symbols-outlined text-body-lg">download</span>
+<span>Export Manifest</span>
+</button>
+<button class="flex items-center gap-xs bg-primary text-on-primary hover:bg-primary-container px-sm py-xs rounded-lg transition-colors font-body-sm text-body-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-body-lg">add</span>
+<span>Manual Order</span>
+</button>
+</div>
+</div>
+<!-- KPI Quadrant Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-lg">
+<!-- GMV Metric -->
+<div class="bg-surface-container-lowest p-sm rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Gross Merchandise Value</span>
+<span class="inline-flex items-center text-xs font-semibold px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface">
+          +14.2%
+        </span>
+</div>
+<div class="flex items-baseline gap-xs my-base">
+<span class="font-headline-sm text-headline-sm text-on-surface">1,842,500</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">EGP</span>
+</div>
+<div class="flex items-center justify-between pt-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">vs 1.61M prior cycle</span>
+<!-- Sparkline -->
+<svg class="w-24 h-7 text-primary overflow-visible" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 100 30">
+<path d="M0,25 Q15,22 30,12 T60,18 T85,6 L100,2"></path>
+</svg>
+</div>
+</div>
+<!-- Active Pipeline -->
+<div class="bg-surface-container-lowest p-sm rounded-xl shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active In Pipeline</span>
+<span class="w-2 h-2 rounded-full bg-primary mt-1"></span>
+</div>
+<div class="flex items-baseline gap-xs my-base">
+<span class="font-headline-sm text-headline-sm text-on-surface">128</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Consignments</span>
+</div>
+<!-- Mini Breakdown bar -->
+<div class="flex flex-col gap-1 pt-xs">
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 32.8%"></div>
+<div class="bg-secondary h-full" style="width: 18.7%"></div>
+<div class="bg-surface-dim h-full" style="width: 48.5%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mt-1">
+<span>42 Transit</span>
+<span>24 Queue</span>
+<span>62 Staging</span>
+</div>
+</div>
+</div>
+<!-- On-Time SLA -->
+<div class="bg-surface-container-lowest p-sm rounded-xl shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">On-Time Delivery SLA</span>
+<span class="material-symbols-outlined text-title-md text-on-surface">verified</span>
+</div>
+<div class="flex items-baseline gap-xs my-base">
+<span class="font-headline-sm text-headline-sm text-on-surface">98.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Global Target: 97%</span>
+</div>
+<div class="flex items-center justify-between pt-xs text-on-surface font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Own Fleet 99.1%
+        </span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Bosta 96.8%
+        </span>
+</div>
+</div>
+<!-- Multi-Warehouse Health -->
+<div class="bg-surface-container-lowest p-sm rounded-xl shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Multi-Warehouse Network</span>
+<span class="material-symbols-outlined text-title-md text-on-surface-variant">hub</span>
+</div>
+<div class="flex items-baseline gap-xs my-base">
+<span class="font-headline-sm text-headline-sm text-on-surface">4 / 4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hubs Nominal</span>
+</div>
+<div class="flex items-center justify-between pt-xs">
+<div class="flex -space-x-1.5 overflow-hidden">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface" title="Cairo Central">CAI</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface" title="Alex Coastal">ALX</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface" title="New Cairo">NC</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface" title="Giza Express">GZ</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">0 latency errors</span>
+</div>
+</div>
+</div>
+<!-- Bento Section 1: Main Velocity Chart & Bespoke Pieces -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-lg">
+<!-- Left 8 Cols: Hourly Telemetry Chart -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-sm mb-md">
+<div>
+<div class="flex items-center gap-xs">
+<h2 class="font-title-md text-title-md text-on-surface">Telemetry Velocity &amp; Revenue Flow</h2>
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant cursor-pointer" title="Realtime order influx vs baseline target">info</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Continuous hourly transactions against modeled daily projection</p>
+</div>
+<!-- Regional Filters -->
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded-lg self-start sm:self-auto text-on-surface-variant font-label-sm text-label-sm">
+<button class="px-xs py-1 rounded bg-surface-container-lowest text-on-surface shadow-sm font-medium">Cairo Metro</button>
+<button class="px-xs py-1 rounded hover:text-on-surface transition-colors">Alexandria</button>
+<button class="px-xs py-1 rounded hover:text-on-surface transition-colors">Delta Hub</button>
+<button class="px-xs py-1 rounded hover:text-on-surface transition-colors">Upper EG</button>
+</div>
+</div>
+<!-- Rich Inline SVG Area Chart -->
+<div class="w-full relative h-64 flex flex-col justify-end">
+<svg class="w-full h-56 overflow-visible" preserveaspectratio="none" viewbox="0 0 760 220">
+<defs>
+<lineargradient id="velocityGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#000000" stop-opacity="0.12"></stop>
+<stop offset="100%" stop-color="#000000" stop-opacity="0.0"></stop>
+</lineargradient>
+<pattern height="44" id="gridLines" patternunits="userSpaceOnUse" width="76">
+<path d="M 0 44 L 76 44" fill="none" stroke="#ebe7e6" stroke-width="1"></path>
+</pattern>
+</defs>
+<!-- Grid Background -->
+<rect fill="url(#gridLines)" height="220" width="760"></rect>
+<!-- Baseline Target Line (Dashed) -->
+<line stroke="#c4c7c7" stroke-dasharray="4 4" stroke-width="1.5" x1="0" x2="760" y1="120" y2="90"></line>
+<!-- Area Fill -->
+<path d="M0,180 C80,170 140,150 200,110 C260,70 320,130 380,80 C440,30 500,75 560,40 C620,10 680,60 760,25 L760,220 L0,220 Z" fill="url(#velocityGrad)"></path>
+<!-- Smooth Line Stroke -->
+<path d="M0,180 C80,170 140,150 200,110 C260,70 320,130 380,80 C440,30 500,75 560,40 C620,10 680,60 760,25" fill="none" stroke="#000000" stroke-width="2.5"></path>
+<!-- High Point Marker -->
+<circle class="animate-ping" cx="560" cy="40" fill="#000000" opacity="0.4" r="5"></circle>
+<circle cx="560" cy="40" fill="#000000" r="4"></circle>
+</svg>
+<!-- Dynamic Indicator Card Overlay -->
+<div class="absolute top-2 right-48 hidden md:flex flex-col bg-surface-container-lowest/90 backdrop-blur-md px-xs py-1 rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">16:00 Peak Demand</span>
+<span class="font-label-md text-label-md text-on-surface">194,200 EGP / hr</span>
+</div>
+<!-- X-Axis Labels -->
+<div class="flex justify-between w-full pt-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>08:00</span>
+<span>10:00</span>
+<span>12:00</span>
+<span>14:00</span>
+<span>16:00 (Peak)</span>
+<span>18:00</span>
+<span>20:00</span>
+<span>Live (22:00)</span>
+</div>
+</div>
+<!-- Quick Metrics Footer inside Graph -->
+<div class="flex flex-wrap items-center justify-between pt-sm mt-sm border-t-0 bg-surface-container-low px-sm py-xs rounded-lg">
+<div class="flex items-center gap-md">
+<div class="flex items-center gap-xs">
+<span class="w-3 h-0.5 bg-primary"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Actual Inflow</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(1.84M EGP)</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="w-3 h-0.5 bg-outline border-dashed"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Target Pace</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(1.70M EGP)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Updated 34s ago via Kafka Pipeline</span>
+</div>
+</div>
+<!-- Right 4 Cols: Top Moving Bespoke Pieces -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-sm">
+<h2 class="font-title-md text-title-md text-on-surface">Top Moving Bespoke Pieces</h2>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Today</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">High-ticket items dominating atelier fulfillment priority</p>
+<!-- Product Cards Stack -->
+<div class="flex flex-col gap-xs">
+<!-- Item 1 -->
+<div class="flex items-center gap-sm p-xs rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<img class="w-14 h-14 object-cover rounded-md flex-shrink-0 shadow-sm" data-alt="Minimalist luxury handcrafted alabaster lamp glowing with warm ambient light, white stone textures, architectural monochrome aesthetic, studio luxury photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATSiXPBnRDGj9-onMlXxHtaqZI16qJWqm36n5D5qlHeKpT8rxkiwBQDqiZryuzPtgiT6c-TY0LkBYzwzwqPnkvD3O2UaZ6GMKBIFYdHx7Gse6zVIupdl7TRAuHSRroEonbumISdFlvaHc9rvaqpEQQyvq_k7CchT2PA9rN5P5bBgbJKkEBI_Djp8roLUkJRyXuBewnlxfqTASEWvTGcnDUeXzf_2NlZgP_kjM45FXw6yqCInQVViMK"/>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate group-hover:text-primary">Nocturne Alabaster Lamp</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKU: NOC-ALB-809 • Lighting</span>
+<span class="font-label-md text-label-md text-on-surface mt-0.5">38,500 EGP</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm text-on-surface">48</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">dispatched</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-sm p-xs rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<img class="w-14 h-14 object-cover rounded-md flex-shrink-0 shadow-sm" data-alt="Monolithic travertine brutalist dining table set against clean plaster architectural interior with soft shadows and refined contemporary minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArV0Ad8GJYp2_g5Y4eCFuIe7mD6otao73Fn5hG0rmy5-Nj6JXN1xFB6y142YJHV8Twn55Qvpkb7tyCGFjWKGPWImVrpjWY4kZxsRvBEK-fjrMeN6aBJZG3jVVBgLE6hckt5N_eKY5rd29BOdaTdWwLAm-xNkFrfrKGu2YlbU2OYnY_oii6DxBgL7P7ihEHf7y4rUadDQKzoIVNaMC2m3yVb7hBq-HxT-MLcX4eZoly5YbuMfoyLYGe"/>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate group-hover:text-primary">Brutalist Monolith Table</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKU: BRT-TAB-012 • Travertine</span>
+<span class="font-label-md text-label-md text-on-surface mt-0.5">142,000 EGP</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm text-on-surface">12</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">dispatched</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-sm p-xs rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<img class="w-14 h-14 object-cover rounded-md flex-shrink-0 shadow-sm" data-alt="Bespoke smoked ash wood armchair with raw linen upholstery, sculptural Nordic silhouette, quiet luxury furniture design, gallery setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYcFyZsJUT4mHHTRUSFkKJ9zp-VszGcDWfn80A2fPR2RXLyt2cPeB-pkYd36ZfL61WK0TdqNoIZqPWlqHWr8sXf2I570RNhoSaDaGpNkRDjkwf_BGYHSIBinaYtdUg9-NBohJNeluZix7ixhhFatwIiaxeo5ccAbBcRF9LG6k_F4ZyztN6lTp1wCARGsNVCGl2tYEbgjd-Iol9h8XENjKoPxbEh4mxbejluV7AI1po8tE1lsAmUWLU"/>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate group-hover:text-primary">Sakkara Smoked Ash Chair</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKU: SKR-ASH-404 • Seating</span>
+<span class="font-label-md text-label-md text-on-surface mt-0.5">26,000 EGP</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm text-on-surface">22</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">dispatched</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-sm mt-xs">
+<button class="w-full text-center py-base font-label-md text-label-md text-on-surface hover:text-secondary uppercase tracking-wider transition-colors" type="button">
+          View Full Catalog Performance →
+        </button>
+</div>
+</div>
+</div>
+<!-- Bento Section 2: Interactive Pipeline & Live Fleet/System Stream -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-lg">
+<!-- Left 8 Cols: Operational Queues with Tab Filter -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-sm mb-sm">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Live Pipeline Exceptions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Orders requiring direct operator action or specialist handling</p>
+</div>
+<!-- Pipeline Status Badges / Interactive Tabs -->
+<div class="flex flex-wrap items-center gap-xs" id="pipeline-tabs">
+<button class="px-xs py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-all" data-tab="urgent">
+            Urgent Dispatch (6)
+          </button>
+<button class="px-xs py-1 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-all" data-tab="special">
+            Special Handling (3)
+          </button>
+<button class="px-xs py-1 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-all" data-tab="reconciliation">
+            Payment Recon (18)
+          </button>
+</div>
+</div>
+<!-- Queue Table List -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider border-b-0">
+<th class="py-xs pr-sm">Order Reference</th>
+<th class="py-xs px-sm">Destination &amp; Zone</th>
+<th class="py-xs px-sm">Items / Fragility</th>
+<th class="py-xs px-sm">Financials</th>
+<th class="py-xs px-sm">Status / Flag</th>
+<th class="py-xs pl-sm text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-sm pr-sm">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">#LUM-94812</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Client: T. Mansour</span>
+</div>
+</td>
+<td class="py-sm px-sm">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Katameya Heights, Villa 44</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cairo South (New Cairo Hub)</span>
+</div>
+</td>
+<td class="py-sm px-sm">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container px-xs py-0.5 rounded text-on-surface">
+<span class="material-symbols-outlined text-label-sm">warning</span> Alabaster Glass (High)
+                </span>
+</td>
+<td class="py-sm px-sm">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">78,000 EGP</span>
+<span class="font-label-sm text-label-sm text-secondary">Paymob Authorized</span>
+</div>
+</td>
+<td class="py-sm px-sm">
+<span class="inline-flex items-center gap-1 px-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+                  Driver Unassigned
+                </span>
+</td>
+<td class="py-sm pl-sm text-right">
+<button class="bg-primary text-on-primary hover:bg-primary-container px-xs py-1 rounded text-body-sm font-label-md text-label-md transition-colors shadow-sm" type="button">
+                  Assign Fleet
+                </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-sm pr-sm">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">#LUM-94808</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Client: H. El-Gamil</span>
+</div>
+</td>
+<td class="py-sm px-sm">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Zamalek, Gezira St</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cairo West (Cairo Central)</span>
+</div>
+</td>
+<td class="py-sm px-sm">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container px-xs py-0.5 rounded text-on-surface">
+<span class="material-symbols-outlined text-label-sm">architecture</span> Monolith 320kg (Rigging)
+                </span>
+</td>
+<td class="py-sm px-sm">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">142,000 EGP</span>
+<span class="font-label-sm text-label-sm text-secondary">Direct Wire Cleared</span>
+</div>
+</td>
+<td class="py-sm px-sm">
+<span class="inline-flex items-center gap-1 px-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+                  Crane Required
+                </span>
+</td>
+<td class="py-sm pl-sm text-right">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-xs py-1 rounded text-body-sm font-label-md text-label-md transition-colors" type="button">
+                  Logistics Review
+                </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-sm pr-sm">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">#LUM-94791</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Client: K. Abdel-Rahman</span>
+</div>
+</td>
+<td class="py-sm px-sm">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Sidi Abdel Rahman, Bay 7</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">North Coast Route (Alex Hub)</span>
+</div>
+</td>
+<td class="py-sm px-sm">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container px-xs py-0.5 rounded text-on-surface">
+                  Smoked Ash Set (x4)
+                </span>
+</td>
+<td class="py-sm px-sm">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">104,000 EGP</span>
+<span class="font-label-sm text-label-sm text-secondary">ValU 6M Installment</span>
+</div>
+</td>
+<td class="py-sm px-sm">
+<span class="inline-flex items-center gap-1 px-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+                  Staging Manifest
+                </span>
+</td>
+<td class="py-sm pl-sm text-right">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-xs py-1 rounded text-body-sm font-label-md text-label-md transition-colors" type="button">
+                  Print Waybill
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Right 4 Cols: Real-Time Audit Log & Dispatch Alerts -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-body-lg text-primary">sensors</span>
+<h2 class="font-title-md text-title-md text-on-surface">Live Operations Stream</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Feed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">System state mutations, fleet geo-fences, and settlement hooks</p>
+<!-- Chronological Stream -->
+<div class="relative pl-xs flex flex-col gap-sm">
+<!-- Timeline Marker 1 -->
+<div class="flex items-start gap-xs relative">
+<span class="w-2 h-2 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Driver #042 (Own Fleet)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Arrived at perimeter: Katameya Heights, Gate 3</p>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">2 minutes ago • Geo-fence Ping</span>
+</div>
+</div>
+<!-- Timeline Marker 2 -->
+<div class="flex items-start gap-xs relative">
+<span class="w-2 h-2 rounded-full bg-surface-tint mt-1.5 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Paymob Webhook Settled</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">71,250 EGP captured for consignment #LUM-94801</p>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">7 minutes ago • Gateway ACK 200</span>
+</div>
+</div>
+<!-- Timeline Marker 3 -->
+<div class="flex items-start gap-xs relative">
+<span class="w-2 h-2 rounded-full bg-surface-tint mt-1.5 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Cairo Central Hub Sync</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">RFID Barcode reconciliation: 34 pallets cleared</p>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">18 minutes ago • Multi-Warehouse Daemon</span>
+</div>
+</div>
+<!-- Timeline Marker 4 -->
+<div class="flex items-start gap-xs relative">
+<span class="w-2 h-2 rounded-full bg-secondary mt-1.5 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Carrier Bosta Hand-off</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manifest #BST-9082 received 14 regional parcels</p>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">34 minutes ago • Alex Regional Hub</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-sm mt-xs">
+<a class="inline-flex items-center justify-between w-full p-xs rounded-lg bg-surface-container-low hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors" href="#">
+<span>Inspect Full Audit History</span>
+<span class="material-symbols-outlined text-body-md">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Bento Section 3: Critical Inventory & Stock Rebalance Matrix -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm mb-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-sm mb-md">
+<div>
+<div class="flex items-center gap-xs">
+<h2 class="font-title-md text-title-md text-on-surface">Critical Inventory &amp; Multi-Hub Thresholds</h2>
+<span class="px-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">4 Under Safety Stock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cross-warehouse distribution balance between Cairo Central, Alex Hub, and New Cairo Micro-hub</p>
+</div>
+<div class="flex items-center gap-xs">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-sm py-xs rounded-lg text-body-sm font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-body-md">sync_alt</span>
+<span>Auto-Rebalance Rules</span>
+</button>
+<button class="bg-primary text-on-primary hover:bg-primary-container px-sm py-xs rounded-lg text-body-sm font-label-md text-label-md transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-body-md">note_add</span>
+<span>Draft Bulk PO</span>
+</button>
+</div>
+</div>
+<!-- Inventory Matrix Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider border-b-0">
+<th class="py-xs pr-sm">SKU / Product Entity</th>
+<th class="py-xs px-sm">Category</th>
+<th class="py-xs px-sm">Cairo Central Hub</th>
+<th class="py-xs px-sm">Alex Coastal Hub</th>
+<th class="py-xs px-sm">New Cairo Micro</th>
+<th class="py-xs px-sm">Reorder Point</th>
+<th class="py-xs px-sm">Health State</th>
+<th class="py-xs pl-sm text-right">Quick Dispatch Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Item 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-sm pr-sm">
+<div class="flex items-center gap-xs">
+<img class="w-9 h-9 object-cover rounded shadow-sm" data-alt="Brutalist travertine table top surface close up, showing pore texture, natural stone veins, architectural studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDtjoYdUaSqRhpjcCczyKN0nikzKzcRYsZxRrXbqmiMqpYeSkgBthEC9zg7vnwyo9fQeHgtIwn41wIjBONaepso-OE7ZEYzvK57ImgZLDLFjLV7u6L8ZGnbaBYkfI-CgRWeZn05ldBepasUWDK9ofvmxBNfVcjJx5GLm8xweg9srcKixblt3E2E04BDKZyv_9vfQis9j1QKniGIaBIzReFtVZPZf34mC2sOd97lS1hlZD2zzydEQ01"/>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Brutalist Monolith Table (Raw)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">BRT-TAB-012</span>
+</div>
+</div>
+</td>
+<td class="py-sm px-sm text-on-surface">Architectural Travertine</td>
+<td class="py-sm px-sm">
+<span class="font-medium text-on-surface">3 units</span>
+<span class="font-label-sm text-label-sm text-error block">Critical Level</span>
+</td>
+<td class="py-sm px-sm">
+<span class="font-medium text-on-surface">9 units</span>
+<span class="font-label-sm text-label-sm text-secondary block">Adequate</span>
+</td>
+<td class="py-sm px-sm">
+<span class="font-medium text-on-surface">1 unit</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Showroom only</span>
+</td>
+<td class="py-sm px-sm font-mono text-on-surface">15 units</td>
+<td class="py-sm px-sm">
+<span class="inline-flex items-center gap-1 px-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+                -2 Units vs SLA
+              </span>
+</td>
+<td class="py-sm pl-sm text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-xs py-1 rounded bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-colors" title="Transfer from Alex to Cairo" type="button">
+                  Transfer 4 → CAI
+                </button>
+<button class="px-xs py-1 rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" type="button">
+                  PO Draft
+                </button>
+</div>
+</td>
+</tr>
+<!-- Item 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-sm pr-sm">
+<div class="flex items-center gap-xs">
+<img class="w-9 h-9 object-cover rounded shadow-sm" data-alt="Alabaster pedestal cylinder lamp illuminating warm cream stone room, contemporary luxury home decor editorial visual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZOphi3fjT2jNNAZnkXQytrjR1jdbSBZqMhVrr2RHHo5es_h7BH1Hj1HYPuUXFztwADLA2DDmqXTir-FcHzjOzNJeaWKFSn5OQ-Szf0iDsLHY7JwlHVgpWEAwNnZdr8XQ5BCuYgRdMW8hP8eJR7XCp7R6TFBZpodeer2zJAo1NrX2_fwHeorUX5E95ilsnDgYn0WpnP1xBCCuW6cMD9EpQ_gbWJ2IMC6CiJGqSa_ZuWwecENYvLGKb"/>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Nocturne Alabaster Lamp (Large)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">NOC-ALB-809</span>
+</div>
+</div>
+</td>
+<td class="py-sm px-sm text-on-surface">Bespoke Lighting</td>
+<td class="py-sm px-sm">
+<span class="font-medium text-on-surface">18 units</span>
+<span class="font-label-sm text-label-sm text-secondary block">Fast Velocity</span>
+</td>
+<td class="py-sm px-sm">
+<span class="font-medium text-on-surface">2 units</span>
+<span class="font-label-sm text-label-sm text-error block">Depleted</span>
+</td>
+<td class="py-sm px-sm">
+<span class="font-medium text-on-surface">8 units</span>
+<span class="font-label-sm text-label-sm text-secondary block">Optimal</span>
+</td>
+<td class="py-sm px-sm font-mono text-on-surface">25 units</td>
+<td class="py-sm px-sm">
+<span class="inline-flex items-center gap-1 px-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+                Alex Out-of-Stock Risk
+              </span>
+</td>
+<td class="py-sm pl-sm text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-xs py-1 rounded bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-colors" type="button">
+                  Transfer 6 → ALX
+                </button>
+<button class="px-xs py-1 rounded bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-colors" type="button">
+                  Audit Hub
+                </button>
+</div>
+</td>
+</tr>
+<!-- Item 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-sm pr-sm">
+<div class="flex items-center gap-xs">
+<img class="w-9 h-9 object-cover rounded shadow-sm" data-alt="Charcoal black smoked solid ash wood chair with geometric armrests in quiet luxury architectural interior setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOQ8rz9ISIQxDXljv-aDY_sMLUCGVSziaQQEyvYHOhM1_nPxY5rqyq1ZJk4yV6tWZr6Uxbw15kL33kBVXMGT8WzNKepYhvxUp-ReWWcX0P2P2i09rPwlGyo-N5R24eVTivpYbRafktK8I4F4SXLpxfTGxVQm0JPPQBV9ozzg4GO12l7fp8nHf1ZyH8NR3XX4aJBtq5gG1dtnRMOwKL6AFMO-xPimQdTFvjoTbP1DyVpce2y97Ma30E"/>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Sakkara Smoked Ash Lounge Chair</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">SKR-ASH-404</span>
+</div>
+</div>
+</td>
+<td class="py-sm px-sm text-on-surface">Hardwood Seating</td>
+<td class="py-sm px-sm">
+<span class="font-medium text-on-surface">14 units</span>
+<span class="font-label-sm text-label-sm text-secondary block">Balanced</span>
+</td>
+<td class="py-sm px-sm">
+<span class="font-medium text-on-surface">11 units</span>
+<span class="font-label-sm text-label-sm text-secondary block">Balanced</span>
+</td>
+<td class="py-sm px-sm">
+<span class="font-medium text-on-surface">6 units</span>
+<span class="font-label-sm text-label-sm text-secondary block">Staging</span>
+</td>
+<td class="py-sm px-sm font-mono text-on-surface">20 units</td>
+<td class="py-sm px-sm">
+<span class="inline-flex items-center gap-1 px-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+                Optimal Reserve
+              </span>
+</td>
+<td class="py-sm pl-sm text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-xs py-1 rounded bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-colors" type="button">
+                  View Batches
+                </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<script>
+  // Simple tab toggle micro-interaction for pipeline exceptions
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('#pipeline-tabs button');
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        tabButtons.forEach(btn => {
+          btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          btn.classList.add('bg-surface-container', 'text-on-surface');
+        });
+        button.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        button.classList.remove('bg-surface-container', 'text-on-surface');
+      });
+    });
+  });
+</script></main></div></body></html>
