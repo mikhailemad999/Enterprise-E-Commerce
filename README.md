@@ -6,18 +6,62 @@ Designed with an editorial **Quiet Luxury** aesthetic (natural textures, Egyptia
 
 ---
 
-## Key Highlights
+## 🎨 Design & Visual Showcase
 
-- **Bespoke Architectural Storefront**: Complete luxury customer journey with curated collections, dynamic search autocomplete, category-organized wishlist ("Save for Later"), and 1-click checkout with residence address auto-fill.
-- **Strict Department Isolation (`department.md`)**: 12 autonomous operational departments, each featuring its own dedicated route hierarchy, custom navigation shell, and independent role permissions.
-- **6-Digit Numeric PIN Authentication**: Luxury visual PIN keypad terminal enforcing `/^\d{6}$/` with HMAC SHA-256 signed session tokens.
-- **Cross-Department Security Guard**: Any attempt to authenticate into or access a department not assigned to the user's role is rejected with `HTTP 403 Forbidden`.
-- **Fleet Dispatch & Real-Time Telemetry**: Courier GPS route tracking, order allocation queues, proof-of-delivery (POD) signature capture, and delivery OTP verification.
-- **Egyptian Tax & E-Invoice Compliance**: 14% VAT automated breakdown and exportable ETA tax accounting reports.
+### 1. Storefront & Public Experience
+*Editorial minimalism with natural materials, typography hierarchy, and quiet luxury aesthetics.*
+
+| Homepage & Hero Experience | Dynamic Autocomplete Search |
+| :---: | :---: |
+| ![Homepage Hero](./assets/screenshots/02_storefront_hero.png) | ![Dynamic Search](./assets/screenshots/03_dynamic_search_autocomplete.png) |
+
+| Curated Architectural Collection | Product Detail Page (PDP) & Stock |
+| :---: | :---: |
+| ![Curated Collection](./assets/screenshots/05_curated_collection.png) | ![Product Detail Page](./assets/screenshots/06_product_details_pdp.png) |
 
 ---
 
-## 12 Operational Departments & Credentials Matrix
+### 2. Category-Organized Wishlist ("Save for Later") & Clean Navigation
+*Saved silhouettes with category filtering pills, 1-click "Add to Cart" drawer, and direct "Buy Now" checkout routing.*
+
+| Clean Public Header (Operations Excluded) | Category Wishlist Studio |
+| :---: | :---: |
+| ![Clean Storefront Header](./assets/screenshots/01_storefront_header.png) | ![Category Wishlist](./assets/screenshots/04_category_wishlist.png) |
+
+---
+
+### 3. Department Isolation & 6-Digit Numeric PIN Authentication
+*Strict separation of operations: every department operates under its own isolated URL with a dedicated 6-digit PIN terminal.*
+
+| 6-Digit PIN Keypad Login Gate | Admin Analytics & Operational Control |
+| :---: | :---: |
+| ![Department PIN Login Keypad](./assets/screenshots/07_department_pin_login_keypad.png) | ![Admin Control Room](./assets/screenshots/08_admin_analytics_control_room.png) |
+
+---
+
+### 4. Fleet Dispatch Telemetry & Courier Driver Mobile Portal
+*White-glove delivery coordination across Greater Cairo with live telemetry, GPS routing, and Proof of Delivery (POD).*
+
+| Real-Time Fleet Dispatch Hub | Courier Driver Mobile Web App |
+| :---: | :---: |
+| ![Fleet Dispatch Hub](./assets/screenshots/09_fleet_dispatch_telemetry.png) | ![Courier Mobile Portal](./assets/screenshots/11_courier_mobile_portal.png) |
+
+| Proof of Delivery (POD) Handover | Live Customer Order GPS Tracking |
+| :---: | :---: |
+| ![Driver POD Handover](./assets/screenshots/12_driver_proof_of_delivery_pod.png) | ![Live Order Tracking](./assets/screenshots/13_live_order_gps_tracking.png) |
+
+---
+
+### 5. Multi-Warehouse Inventory (WMS) & Full Arabic RTL Mode
+*Multi-depot stock allocation matrix and native bidirectional Arabic RTL typography.*
+
+| Multi-Warehouse Stock Matrix | Native Arabic (RTL) Luxury Experience |
+| :---: | :---: |
+| ![Multi-Warehouse Inventory](./assets/screenshots/10_multi_warehouse_inventory.png) | ![Arabic RTL Mode](./assets/screenshots/14_arabic_rtl_luxury_experience.png) |
+
+---
+
+## 🏛️ 12 Operational Departments & Credentials Matrix
 
 Access the **Central Department Directory** at `/departments` to launch into any isolated department portal:
 
@@ -38,24 +82,16 @@ Access the **Central Department Directory** at `/departments` to launch into any
 
 ---
 
-## Consumer Storefront Features
+## 🔒 Security & Architecture Principles
 
-1. **Dynamic Search Bar**:
-   - Responsive, wide search input with live instantaneous autocomplete dropdown.
-   - Real-time matches displaying silhouette thumbnails, materials, categories, and prices.
-   - Command palette integration (`⌘K` / `Ctrl+K`).
-2. **Category-Organized Wishlist (`/wishlist`)**:
-   - Filter saved items by category pills (*Sculptural Lighting*, *Monolithic Tables*, *Lounge Seating*, etc.).
-   - 1-click **Add to Cart** (with luxury drawer slide-out) and **Buy Now** (direct checkout routing).
-3. **Customer Profile & Saved Residences (`/account`)**:
-   - Multi-address book with street, building, apartment, district, and white-glove instructions.
-   - Default shipping residence auto-fills directly into `/checkout`.
-4. **Privacy & Security**:
-   - Public customer navigation is clean and private: internal operational links (`Admin OMS`, `Driver App`, `Live Tracking`) are excluded from public view and secured under isolated authentication gates.
+- **Zero Cross-Department Leakage**: `department.md` rules strictly enforced. No common dashboard or navigation leaks between departments. Super Admin accounts cannot log into Store Admin, and Store Admin cannot access Warehouse pick lists.
+- **6-Digit PIN Authentication**: Regex enforcement of `/^\d{6}$/` on `/api/auth/login`. Failed attempts lock after 5 strikes and write to immutable `audit_logs`.
+- **HMAC SHA-256 Tokens**: Cryptographically signed session tokens stored in secure HTTP-only cookies.
+- **Client Route Guard (`DepartmentShell`)**: Automatically redirects unauthenticated or unauthorized users back to the department login terminal with notification toasts.
 
 ---
 
-## Technology Stack
+## 🛠️ Technology Stack
 
 - **Framework**: Next.js 14 (App Router, Server & Client Components)
 - **Language**: TypeScript
@@ -67,7 +103,7 @@ Access the **Central Department Directory** at `/departments` to launch into any
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### 1. Prerequisites
 - **Node.js**: v18.17.0+ or v20+
@@ -111,9 +147,10 @@ Open [http://localhost:3000](http://localhost:3000) for the public storefront or
 
 ---
 
-## Directory Structure
+## 📂 Directory Structure
 
 ```
+├── assets/screenshots/          # High-resolution design and UI screenshots
 ├── scripts/
 │   ├── init_db.js               # MySQL schema creation and initial catalog seeding
 │   ├── run_dept_migration.js    # Department isolation schema & PIN accounts seed
@@ -156,6 +193,13 @@ Open [http://localhost:3000](http://localhost:3000) for the public storefront or
 │       └── departments.ts       # Department metadata and types
 └── package.json
 ```
+
+---
+
+## 📜 Specifications & Documentation Included
+- [recurment.md](./recurment.md): 2,607 lines of enterprise e-commerce requirements and technical constraints.
+- [department.md](./department.md): 770 lines of multi-department isolation specifications and security rules.
+- [stitch_enterprise_commerce_design_system/](./stitch_enterprise_commerce_design_system/): Design system documentation, code tokens, and mockups.
 
 ---
 
