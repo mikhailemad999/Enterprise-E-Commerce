@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FileSpreadsheet, Download, Printer, RefreshCw, CheckCircle2, ShieldCheck, X } from 'lucide-react';
+import { FileSpreadsheet, Download, Printer, RefreshCw, CheckCircle2, ShieldCheck, X, TrendingUp, DollarSign } from 'lucide-react';
 
 export default function AccountingReportsPage() {
   const [data, setData] = useState<any>(null);
@@ -40,9 +40,29 @@ export default function AccountingReportsPage() {
     grossProfit: 61600,
     grossMarginPercent: 56.3,
     totalOrders: 3,
+    opex: {
+      gatewayFees: 1200,
+      fleetTransport: 1050,
+      driverCommissions: 600,
+      warehouseLogistics: 450,
+      totalOpex: 3300,
+    },
+    netOperatingProfit: 58300,
+    netMarginPercent: 53.2,
   };
 
   const reports = [
+    {
+      id: 'pnl',
+      title: 'Corporate Income Statement (P&L & OPEX)',
+      period: 'Fiscal Month (September 2026)',
+      keyMetricLabel: 'Net Operating Profit',
+      keyMetricValue: formatEgp(summary.netOperatingProfit || summary.grossProfit),
+      turnover: formatEgp(summary.grossRevenue),
+      status: `Net Margin: ${summary.netMarginPercent || summary.grossMarginPercent}%`,
+      badgeColor: 'text-emerald-800 bg-emerald-50 border-emerald-300 font-bold',
+      description: 'Comprehensive financial statement deducting COGS, gateway fees, regional fleet fuel (350 EGP/drop), driver commissions (200 EGP/drop), and warehouse logistics.',
+    },
     {
       id: 'vat',
       title: 'Egyptian Tax Authority (ETA) VAT Return',
@@ -101,7 +121,7 @@ export default function AccountingReportsPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
         {reports.map((r) => (
           <div key={r.id} className="p-md bg-surface-container-lowest rounded-2xl border border-surface-container shadow-sm space-y-md flex flex-col justify-between">
             <div className="space-y-sm">
@@ -141,16 +161,16 @@ export default function AccountingReportsPage() {
         ))}
       </div>
 
-      {/* Official Tax Report Modal */}
+      {/* Official Tax / P&L Report Modal */}
       {activeReportModal && (
         <div className="fixed inset-0 z-50 overflow-y-auto p-4 flex items-center justify-center">
           <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setActiveReportModal(null)} />
-          <div className="relative w-full max-w-xl bg-surface-container-lowest rounded-2xl border border-surface-container shadow-2xl p-md z-10 space-y-md">
+          <div className="relative w-full max-w-2xl bg-surface-container-lowest rounded-2xl border border-surface-container shadow-2xl p-md z-10 space-y-md max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b border-surface-container pb-sm">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-emerald-600" />
                 <h3 className="font-title-md text-base text-on-surface font-bold uppercase tracking-wider">
-                  Official Corporate Tax Docket
+                  {activeReportModal === 'pnl' ? 'Official P&L & Operating Statement' : 'Official Corporate Tax Docket'}
                 </h3>
               </div>
               <button onClick={() => setActiveReportModal(null)} className="text-secondary hover:text-on-surface">
@@ -167,34 +187,103 @@ export default function AccountingReportsPage() {
                 </div>
                 <div className="text-right">
                   <span className="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">
-                    ETA VERIFIED
+                    {activeReportModal === 'pnl' ? 'AUDIT VERIFIED (P&L)' : 'ETA VERIFIED'}
                   </span>
                   <p className="text-[10px] text-zinc-500 mt-1">{new Date().toISOString().split('T')[0]}</p>
                 </div>
               </div>
 
-              <div className="space-y-1.5 pt-1">
-                <div className="flex justify-between">
-                  <span>Gross Invoiced Sales (Inclusive of VAT):</span>
-                  <span className="font-bold">{formatEgp(summary.grossRevenue)}</span>
+              {activeReportModal === 'pnl' ? (
+                <div className="space-y-2 pt-1 text-xs">
+                  <div className="bg-zinc-50 p-2 rounded border border-zinc-200 space-y-1">
+                    <div className="flex justify-between font-bold text-zinc-800">
+                      <span>Gross Customer Invoiced Sales (incl. 14% VAT):</span>
+                      <span>{formatEgp(summary.grossRevenue)}</span>
+                    </div>
+                    <div className="flex justify-between text-zinc-500 text-[11px]">
+                      <span>Less: 14% Indirect VAT Remitted to ETA:</span>
+                      <span>-{formatEgp(summary.totalTax14)}</span>
+                    </div>
+                    <div className="flex justify-between font-bold text-primary border-t border-zinc-200 pt-1">
+                      <span>Net Sales Base (Turnover):</span>
+                      <span>{formatEgp(summary.grossRevenue - summary.totalTax14)}</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-zinc-50 p-2 rounded border border-zinc-200 space-y-1">
+                    <div className="flex justify-between text-zinc-600">
+                      <span>Cost of Goods Sold (COGS - Raw Bronze & Alabaster):</span>
+                      <span>-{formatEgp(summary.totalCogs)}</span>
+                    </div>
+                    <div className="flex justify-between font-bold text-emerald-800 border-t border-zinc-200 pt-1">
+                      <span>Gross Profit (Pre-OPEX):</span>
+                      <span>{formatEgp(summary.grossProfit)} ({summary.grossMarginPercent}%)</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-amber-50/60 p-2.5 rounded border border-amber-200 space-y-1.5">
+                    <span className="text-[10px] font-bold uppercase text-amber-900 block tracking-wider">
+                      Operating Expenses (OPEX Breakdown)
+                    </span>
+                    <div className="flex justify-between text-[11px] text-zinc-600">
+                      <span>• Payment Gateway Processing (Paymob / Stripe / COD 1.5%):</span>
+                      <span>-{formatEgp(summary.opex?.gatewayFees || 0)}</span>
+                    </div>
+                    <div className="flex justify-between text-[11px] text-zinc-600">
+                      <span>• Regional Fleet Fuel & Transport (350.00 EGP / drop):</span>
+                      <span>-{formatEgp(summary.opex?.fleetTransport || 0)}</span>
+                    </div>
+                    <div className="flex justify-between text-[11px] text-zinc-600">
+                      <span>• Courier Handover Commission (200.00 EGP / drop):</span>
+                      <span>-{formatEgp(summary.opex?.driverCommissions || 0)}</span>
+                    </div>
+                    <div className="flex justify-between text-[11px] text-zinc-600">
+                      <span>• Fulfillment Warehouse Prep (150.00 EGP / order):</span>
+                      <span>-{formatEgp(summary.opex?.warehouseLogistics || 0)}</span>
+                    </div>
+                    <div className="flex justify-between font-bold text-amber-900 border-t border-amber-200 pt-1">
+                      <span>Total Operating Expenses (OPEX):</span>
+                      <span>-{formatEgp(summary.opex?.totalOpex || 0)}</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-emerald-100/70 p-3 rounded-lg border border-emerald-300 flex justify-between items-center text-emerald-950 font-bold text-sm">
+                    <div>
+                      <span>NET OPERATING PROFIT (EBIT):</span>
+                      <span className="block text-[10px] font-normal text-emerald-800">
+                        After VAT, Artisan COGS, Gateway fees, Fleet fuel & Driver Payouts
+                      </span>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-base">{formatEgp(summary.netOperatingProfit || summary.grossProfit)}</span>
+                      <span className="block text-xs font-mono">Margin: {summary.netMarginPercent || summary.grossMarginPercent}%</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex justify-between">
-                  <span>Net Taxable Base (Subtotal):</span>
-                  <span>{formatEgp(summary.grossRevenue - summary.totalTax14)}</span>
+              ) : (
+                <div className="space-y-1.5 pt-1">
+                  <div className="flex justify-between">
+                    <span>Gross Invoiced Sales (Inclusive of VAT):</span>
+                    <span className="font-bold">{formatEgp(summary.grossRevenue)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Net Taxable Base (Subtotal):</span>
+                    <span>{formatEgp(summary.grossRevenue - summary.totalTax14)}</span>
+                  </div>
+                  <div className="flex justify-between text-primary font-bold">
+                    <span>Accrued 14% Egyptian VAT:</span>
+                    <span>{formatEgp(summary.totalTax14)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Cost of Goods Sold (COGS):</span>
+                    <span>{formatEgp(summary.totalCogs)}</span>
+                  </div>
+                  <div className="flex justify-between text-emerald-700 font-bold border-t border-zinc-200 pt-1">
+                    <span>Gross Realized Profit:</span>
+                    <span>{formatEgp(summary.grossProfit)} ({summary.grossMarginPercent}%)</span>
+                  </div>
                 </div>
-                <div className="flex justify-between text-primary font-bold">
-                  <span>Accrued 14% Egyptian VAT:</span>
-                  <span>{formatEgp(summary.totalTax14)}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Cost of Goods Sold (COGS):</span>
-                  <span>{formatEgp(summary.totalCogs)}</span>
-                </div>
-                <div className="flex justify-between text-emerald-700 font-bold border-t border-zinc-200 pt-1">
-                  <span>Gross Realized Profit:</span>
-                  <span>{formatEgp(summary.grossProfit)} ({summary.grossMarginPercent}%)</span>
-                </div>
-              </div>
+              )}
 
               <div className="pt-2 text-[10px] text-zinc-500 border-t border-zinc-100">
                 Electronically generated under Egyptian Tax Authority e-invoicing SDK v1.0. Certified authentic by Chief Financial Officer & Corporate Audit.
@@ -226,3 +315,4 @@ export default function AccountingReportsPage() {
     </div>
   );
 }
+

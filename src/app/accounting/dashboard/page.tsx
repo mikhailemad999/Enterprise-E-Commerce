@@ -103,23 +103,24 @@ export default function AccountingDashboardPage() {
         </div>
 
         <div className="p-md bg-surface-container-lowest rounded-2xl border border-surface-container shadow-sm">
-          <span className="font-label-sm text-xs uppercase tracking-wider text-secondary block mb-1">Gross Profit Margin</span>
+          <span className="font-label-sm text-xs uppercase tracking-wider text-secondary block mb-1">Net Operating Profit</span>
           <span className="font-headline-lg text-2xl font-bold text-emerald-700 block font-mono">
-            {summary.grossMarginPercent}%
+            {formatEgp(summary.netOperatingProfit || summary.grossProfit)}
           </span>
-          <span className="text-[11px] text-emerald-700 mt-1 block">
-            Gross Profit: {formatEgp(summary.grossProfit)}
+          <span className="text-[11px] text-emerald-700 mt-1 block font-semibold">
+            {summary.netProfitMarginPercent || summary.grossMarginPercent}% Net Margin (After OPEX)
           </span>
         </div>
       </div>
 
-      {/* Inflow breakdown & Tax Audit */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+      {/* Financial Split: Inflow breakdown, OPEX Breakdown & Tax Audit */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+        {/* 1. Payment Methods Inflow */}
         <div className="p-md bg-surface-container-lowest rounded-2xl border border-surface-container shadow-sm space-y-md">
           <div className="flex justify-between items-center">
             <h3 className="font-headline-sm text-base font-bold uppercase text-on-surface">Payment Methods Inflow</h3>
             <Link href="/accounting/payments" className="text-xs text-primary uppercase font-semibold hover:underline">
-              Inspect Ledger →
+              Ledger →
             </Link>
           </div>
           <div className="space-y-2 text-xs divide-y divide-surface-container">
@@ -134,15 +135,52 @@ export default function AccountingDashboardPage() {
           </div>
         </div>
 
+        {/* 2. Operating Expenses Breakdown (OPEX) */}
         <div className="p-md bg-surface-container-lowest rounded-2xl border border-surface-container shadow-sm space-y-md">
           <div className="flex justify-between items-center">
-            <h3 className="font-headline-sm text-base font-bold uppercase text-on-surface">Tax E-Invoice Audit</h3>
+            <h3 className="font-headline-sm text-base font-bold uppercase text-on-surface">Operating Expenses (OPEX)</h3>
+            <span className="font-mono text-xs font-bold text-amber-700 bg-amber-500/10 px-2 py-0.5 rounded">
+              {formatEgp(summary.totalOpex || 0)}
+            </span>
+          </div>
+          <div className="space-y-2 text-xs divide-y divide-surface-container">
+            <div className="pt-2 flex justify-between items-center">
+              <span className="text-secondary">Fleet Freight & Fuel (350 EGP/ea):</span>
+              <span className="font-mono font-bold text-on-surface">
+                {formatEgp(summary.opexBreakdown?.fleetLogisticsExpense || 0)}
+              </span>
+            </div>
+            <div className="pt-2 flex justify-between items-center">
+              <span className="text-secondary">Driver Handover Commissions:</span>
+              <span className="font-mono font-bold text-on-surface">
+                {formatEgp(summary.opexBreakdown?.driverCommissionsExpense || 0)}
+              </span>
+            </div>
+            <div className="pt-2 flex justify-between items-center">
+              <span className="text-secondary">Payment Gateway Processing:</span>
+              <span className="font-mono font-bold text-on-surface">
+                {formatEgp(summary.opexBreakdown?.totalGatewayFees || 0)}
+              </span>
+            </div>
+            <div className="pt-2 flex justify-between items-center">
+              <span className="text-secondary">Warehouse Crating & Prep:</span>
+              <span className="font-mono font-bold text-on-surface">
+                {formatEgp(summary.opexBreakdown?.warehouseFulfillmentExpense || 0)}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* 3. Tax E-Invoice & Driver Remittances */}
+        <div className="p-md bg-surface-container-lowest rounded-2xl border border-surface-container shadow-sm space-y-md">
+          <div className="flex justify-between items-center">
+            <h3 className="font-headline-sm text-base font-bold uppercase text-on-surface">Tax & Fleet Audit</h3>
             <Link href="/accounting/reports" className="text-xs text-primary uppercase font-semibold hover:underline">
-              Full Reports →
+              P&L Reports →
             </Link>
           </div>
           <p className="text-xs text-secondary leading-relaxed">
-            All customer transactions are automatically formatted and stamped with Egyptian Tax Authority e-invoicing schema standards (TRN: 491-882-901).
+            All customer transactions are verified with Egyptian Tax Authority e-invoicing schema (TRN: 491-882-901).
           </p>
           <div className="p-2.5 bg-surface-container-low rounded-xl text-xs font-mono text-secondary space-y-1">
             <div className="flex justify-between">
@@ -150,16 +188,16 @@ export default function AccountingDashboardPage() {
               <span className="text-emerald-700 font-semibold">Real-time (Active)</span>
             </div>
             <div className="flex justify-between">
-              <span>• Total Invoiced Orders:</span>
-              <span className="text-on-surface font-bold">{summary.totalOrders} Commissions</span>
+              <span>• Gross Realized Margin:</span>
+              <span className="text-emerald-700 font-bold">{summary.grossMarginPercent}%</span>
             </div>
             <div className="flex justify-between">
-              <span>• Tax Rate:</span>
-              <span>14.0% Standard Ad Valorem</span>
+              <span>• Active Fleet Couriers:</span>
+              <span className="text-on-surface font-bold">2 Drivers (Sprinter/Van)</span>
             </div>
             <div className="flex justify-between">
-              <span>• Currency ISO:</span>
-              <span>EGP (818 - Egyptian Pound)</span>
+              <span>• Driver Commission Rate:</span>
+              <span>200 EGP / Handover</span>
             </div>
           </div>
         </div>

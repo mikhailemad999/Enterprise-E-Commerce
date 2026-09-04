@@ -1,13 +1,15 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { CreditCard, CheckCircle2, Download, Printer, RefreshCw, Check, Clock, AlertCircle } from 'lucide-react';
+import { CreditCard, CheckCircle2, Download, Printer, RefreshCw, Check, Clock, AlertCircle, Truck, DollarSign } from 'lucide-react';
 
 export default function AccountingPaymentsPage() {
   const [payments, setPayments] = useState<any[]>([]);
+  const [driverPayouts, setDriverPayouts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('all');
   const [settlingId, setSettlingId] = useState<number | null>(null);
+  const [settlingDriverId, setSettlingDriverId] = useState<number | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const fetchPayments = async () => {
@@ -15,8 +17,13 @@ export default function AccountingPaymentsPage() {
     try {
       const res = await fetch('/api/accounting');
       const json = await res.json();
-      if (json.success && json.data?.paymentsLedger) {
-        setPayments(json.data.paymentsLedger);
+      if (json.success && json.data) {
+        if (json.data.paymentsLedger) {
+          setPayments(json.data.paymentsLedger);
+        }
+        if (json.data.driverPayoutLedger) {
+          setDriverPayouts(json.data.driverPayoutLedger);
+        }
       }
     } catch (e) {
       console.error('Failed to fetch payments ledger:', e);
@@ -57,6 +64,32 @@ export default function AccountingPaymentsPage() {
       alert('Error: ' + e.message);
     } finally {
       setSettlingId(null);
+    }
+  };
+
+  const handleSettleDriver = async (driverId: number, driverName: string) => {
+    setSettlingDriverId(driverId);
+    try {
+      const res = await fetch('/api/accounting', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'settle_driver_payout',
+          driverId,
+          notes: `Courier ${driverName} COD collection remitted to treasury and delivery commissions logged.`,
+        }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        showToast(`Courier ${driverName}: Cash remitted to Treasury & orders settled.`);
+        fetchPayments();
+      } else {
+        alert('Courier settlement failed: ' + json.error);
+      }
+    } catch (e: any) {
+      alert('Error: ' + e.message);
+    } finally {
+      setSettlingDriverId(null);
     }
   };
 
@@ -114,7 +147,7 @@ export default function AccountingPaymentsPage() {
             D010 • PAGE 092
           </span>
           <h1 className="font-headline-lg text-2xl md:text-3xl font-bold uppercase tracking-tight text-on-surface">
-            Payments, E-Invoices & COD Settlements
+            Payments, E-Invoices & Courier Settlements
           </h1>
         </div>
 
@@ -136,6 +169,94 @@ export default function AccountingPaymentsPage() {
         </div>
       </div>
 
+      {/* Driver Remittance & Courier Payout Section */}
+      <div className="bg-surface-container-lowest rounded-2xl border border-surface-container overflow-hidden shadow-sm space-y-3 p-md">
+        <div className="flex items-center justify-between border-b border-surface-container pb-2">
+          <div className="flex items-center gap-2">
+            <Truck className="w-5 h-5 text-primary" />
+            <div>
+              <h2 className="font-headline-sm text-base font-bold uppercase text-on-surface">
+                Courier Driver Remittance & Commission Payout Ledger
+              </h2>
+              <p className="text-[11px] text-secondary">
+                Reconciliation of Cash-on-Delivery collections against courier commissions (200.00 EGP / completed drop).
+              </p>
+            </div>
+          </div>
+          <span className="font-mono text-xs px-2.5 py-1 rounded bg-surface-container-low text-secondary font-bold">
+            {driverPayouts.length} Active Couriers
+          </span>
+        </div>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-xs">
+            <thead className="bg-surface-container-low border-b border-surface-container font-label-md uppercase tracking-wider text-secondary">
+              <tr>
+                <th className="p-sm">Courier Name</th>
+                <th className="p-sm">Phone</th>
+                <th className="p-sm text-center">Completed Drops</th>
+                <th className="p-sm">Earned Commission</th>
+                <th className="p-sm">Pending COD in Hand</th>
+                <th className="p-sm">Net Due to Treasury</th>
+                <th className="p-sm text-right">Settlement Action</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-surface-container">
+              {loading ? (
+                <tr>
+                  <td colSpan={7} className="p-4 text-center text-secondary">Loading courier payouts...</td>
+                </tr>
+              ) : driverPayouts.length > 0 ? (
+                driverPayouts.map((d) => {
+                  const hasPendingCod = d.pendingCodCollected > 0;
+                  return (
+                    <tr key={d.driverId} className="hover:bg-surface-container-low/40 transition-colors">
+                      <td className="p-sm font-semibold text-on-surface">
+                        {d.driverName}
+                        <span className="block text-[10px] text-secondary font-mono">ID: #{d.driverId}</span>
+                      </td>
+                      <td className="p-sm font-mono text-secondary">{d.phone}</td>
+                      <td className="p-sm text-center font-bold font-mono text-on-surface">
+                        {d.deliveredOrders} / {d.totalAssignments}
+                      </td>
+                      <td className="p-sm font-mono text-emerald-700 font-bold">
+                        +{new Intl.NumberFormat('en-US').format(d.earnedCommission)} EGP
+                      </td>
+                      <td className="p-sm font-mono text-amber-700 font-bold">
+                        {new Intl.NumberFormat('en-US').format(d.pendingCodCollected)} EGP
+                      </td>
+                      <td className="p-sm font-mono font-bold text-on-surface">
+                        {new Intl.NumberFormat('en-US').format(d.netPayableOrRemittance)} EGP
+                      </td>
+                      <td className="p-sm text-right">
+                        {hasPendingCod ? (
+                          <button
+                            onClick={() => handleSettleDriver(d.driverId, d.driverName)}
+                            disabled={settlingDriverId === d.driverId}
+                            className="px-2.5 py-1.5 rounded bg-primary hover:bg-inverse-surface text-on-primary font-bold text-[10px] uppercase tracking-wider transition-colors shadow-sm inline-flex items-center gap-1"
+                          >
+                            <DollarSign className="w-3 h-3" />
+                            <span>{settlingDriverId === d.driverId ? 'Settling...' : 'Settle to Treasury'}</span>
+                          </button>
+                        ) : (
+                          <span className="text-[10px] text-emerald-700 uppercase font-semibold font-mono bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                            Reconciled ✓
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })
+              ) : (
+                <tr>
+                  <td colSpan={7} className="p-4 text-center text-secondary">No courier delivery records logged yet.</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       {/* Filter Tabs */}
       <div className="flex items-center gap-2 text-xs">
         <button
@@ -146,7 +267,7 @@ export default function AccountingPaymentsPage() {
               : 'bg-surface-container-low text-secondary hover:text-on-surface'
           }`}
         >
-          All Transactions ({payments.length})
+          All Customer Transactions ({payments.length})
         </button>
         <button
           onClick={() => setFilter('settled')}
@@ -264,3 +385,4 @@ export default function AccountingPaymentsPage() {
     </div>
   );
 }
+

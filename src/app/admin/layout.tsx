@@ -14,6 +14,8 @@ import {
   Bell,
   Search,
   Package,
+  Activity,
+  DollarSign,
 } from 'lucide-react';
 
 export default function AdminLayout({
@@ -25,10 +27,12 @@ export default function AdminLayout({
 
   const navigation = [
     { name: 'Operational Overview', href: '/admin', icon: LayoutDashboard },
+    { name: 'Scale & Monitoring', href: '/admin/monitoring', icon: Activity },
     { name: 'Product Catalog & Pricing', href: '/admin/products', icon: Package },
     { name: 'Multi-Warehouse WMS', href: '/admin/inventory', icon: Boxes },
     { name: 'Live Fleet Dispatch', href: '/admin/dispatch', icon: Truck },
     { name: 'OMS & E-Invoicing', href: '/admin/orders/1', icon: FileText },
+    { name: 'Corporate Accounting', href: '/accounting/dashboard', icon: DollarSign },
     { name: 'Returns & RMA', href: '/admin/returns', icon: RotateCcw },
   ];
 
