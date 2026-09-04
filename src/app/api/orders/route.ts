@@ -180,11 +180,13 @@ export async function POST(request: Request) {
         [effectiveCustId]
       );
       const lifetimeSpend = Number(spendRows[0]?.lifetime_spend) || 0;
-      let newTier = 'Standard Client';
+      let newTier: 'Bronze' | 'Silver' | 'Gold' | 'Private Client' = 'Bronze';
       if (lifetimeSpend >= 100000) {
-        newTier = 'Patron VIP';
-      } else if (lifetimeSpend >= 25000) {
         newTier = 'Private Client';
+      } else if (lifetimeSpend >= 50000) {
+        newTier = 'Gold';
+      } else if (lifetimeSpend >= 20000) {
+        newTier = 'Silver';
       }
 
       await conn.execute(
