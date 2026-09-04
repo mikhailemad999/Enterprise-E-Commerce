@@ -11,7 +11,7 @@ ON DUPLICATE KEY UPDATE `email` = VALUES(`email`);
 
 -- Seed Customers
 INSERT INTO `customers` (`id`, `user_id`, `loyalty_points`, `tier`, `referral_code`, `notes`) VALUES
-(1, 5, 4850, 'Private Client', 'LUMIO-FARIDA-88', 'Architectural firm principal; prefers morning white-glove deliveries in Zamalek.')
+(1, 5, 4850, 'Private Client', 'LUMIO-FARIDA-88', 'Architectural firm principal, prefers morning white-glove deliveries in Zamalek.')
 ON DUPLICATE KEY UPDATE `loyalty_points` = VALUES(`loyalty_points`);
 
 -- Seed Addresses
@@ -143,7 +143,7 @@ ON DUPLICATE KEY UPDATE `customer_name` = VALUES(`customer_name`);
 -- Seed RMA / Returns
 INSERT INTO `returns_rma` (`id`, `rma_number`, `order_id`, `customer_name`, `customer_email`, `status`, `reason`, `items_json`, `refund_amount`, `refund_method`, `restock_confirmed`, `notes`) VALUES
 (1, 'RMA-2026-0041', 3, 'Nadia Fahmy', 'nadia.fahmy@design.com', 'inspected', 'Color tone mismatch with natural light in dining gallery.', 
-'[{"product_id": 5, "name": "Egyptian Flax Lounge Chair", "sku": "LUM-FUR-005", "price": 40500.00, "qty": 1}]', 40500.00, 'store_credit', TRUE, 'Inspected at East Depot. Pristine condition; repackaged for gallery catalog.')
+'[{"product_id": 5, "name": "Egyptian Flax Lounge Chair", "sku": "LUM-FUR-005", "price": 40500.00, "qty": 1}]', 40500.00, 'store_credit', TRUE, 'Inspected at East Depot. Pristine condition, repackaged for gallery catalog.')
 ON DUPLICATE KEY UPDATE `rma_number` = VALUES(`rma_number`);
 
 -- Seed Concierge Consultations

@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { query, queryRow } from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const revenueRow = await queryRow(`SELECT COALESCE(SUM(total_amount), 0) as total_revenue FROM orders WHERE status != 'cancelled'`);
