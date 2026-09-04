@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   Bell,
   Search,
+  Package,
 } from 'lucide-react';
 
 export default function AdminLayout({
@@ -24,6 +25,7 @@ export default function AdminLayout({
 
   const navigation = [
     { name: 'Operational Overview', href: '/admin', icon: LayoutDashboard },
+    { name: 'Product Catalog & Pricing', href: '/admin/products', icon: Package },
     { name: 'Multi-Warehouse WMS', href: '/admin/inventory', icon: Boxes },
     { name: 'Live Fleet Dispatch', href: '/admin/dispatch', icon: Truck },
     { name: 'OMS & E-Invoicing', href: '/admin/orders/1', icon: FileText },

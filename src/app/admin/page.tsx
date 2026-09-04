@@ -12,6 +12,7 @@ import {
   ArrowRight,
   Boxes,
   CheckCircle2,
+  Package,
 } from 'lucide-react';
 
 export default function AdminOverviewPage() {
@@ -61,10 +62,17 @@ export default function AdminOverviewPage() {
           </h1>
         </div>
 
-        <div className="flex items-center gap-xs">
+        <div className="flex items-center gap-xs flex-wrap">
+          <Link
+            href="/admin/products"
+            className="px-sm py-2 bg-primary text-on-primary font-label-md text-xs uppercase tracking-wider rounded-lg flex items-center gap-1.5 hover:bg-inverse-surface transition-colors shadow-sm"
+          >
+            <Package className="w-4 h-4" />
+            <span>Catalog & Pricing</span>
+          </Link>
           <Link
             href="/admin/dispatch"
-            className="px-sm py-2 bg-primary text-on-primary font-label-md text-xs uppercase tracking-wider rounded-lg flex items-center gap-1.5 hover:bg-inverse-surface transition-colors shadow-sm"
+            className="px-sm py-2 bg-surface-container-high text-on-surface font-label-md text-xs uppercase tracking-wider rounded-lg flex items-center gap-1.5 hover:bg-surface-container-highest transition-colors shadow-sm"
           >
             <Truck className="w-4 h-4" />
             <span>Launch Dispatch Map</span>

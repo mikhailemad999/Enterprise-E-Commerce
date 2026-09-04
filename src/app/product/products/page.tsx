@@ -42,15 +42,24 @@ export default function ProductProductsPage() {
           </h1>
         </div>
 
-        <div className="relative">
-          <Search className="w-4 h-4 text-secondary absolute left-3 top-2.5" />
-          <input
-            type="text"
-            placeholder="Search SKU or name..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="pl-9 pr-3 py-1.5 bg-surface-container-low border border-surface-container rounded-lg text-xs font-mono text-on-surface"
-          />
+        <div className="flex items-center gap-xs">
+          <a
+            href="/admin/products"
+            className="px-sm py-2 bg-primary text-on-primary font-label-md text-xs uppercase tracking-wider rounded-lg flex items-center gap-1.5 hover:bg-inverse-surface transition-colors shadow-sm font-bold"
+          >
+            <Package className="w-4 h-4" />
+            <span>Manage Catalog & Pricing</span>
+          </a>
+          <div className="relative">
+            <Search className="w-4 h-4 text-secondary absolute left-3 top-2.5" />
+            <input
+              type="text"
+              placeholder="Search SKU or name..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="pl-9 pr-3 py-1.5 bg-surface-container-low border border-surface-container rounded-lg text-xs font-mono text-on-surface"
+            />
+          </div>
         </div>
       </div>
 
